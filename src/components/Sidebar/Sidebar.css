@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #4F46E5;
+  --text-color: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #4F46E5;
+  --content-bg: #ffffff;
+  --content-text: #121212;
+  --sidebar-bg: #f9f9f9;
+  --transition-speed: 0.3s;
+}
+
+body.dark-theme {
+  --bg-color: #1e1e2f;
+  --text-color: #ffffff;
+  --button-bg: #4F46E5;
+  --button-text: #ffffff;
+  --content-bg: #1a1a1a;
+  --content-text: #eaeaea;
+  --sidebar-bg: #2a2a3a;
+  background-color: #121212;
+}
+
+/* ========== Sidebar Core ========== */
+.sidebar {
+  position:fixed;
+  top: 9vh;
+  width: 20%;
+  background-color: var(--sidebar-bg);
+  color: var(--button-text);
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 9vh);
+  transition: transform var(--transition-speed);
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transform: translateX(5px);
+}
+
+/* Sublist */
+.sublist {
+  list-style-type: circle;
+  margin-left: 20px;
+  display: none;
+}
+
+.sublist.show {
+  display: block;
+}
+
+.sublist li {
+  color: var(--bg-color);
+}
+
+/* ========== Toggle Button ========== */
+.sidebar-toggle {
+  display: none;
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  background: #444;
+  color: #fff;
+  font-size: 26px;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1040px) {
+  .sidebar {
+    position: fixed;
+    width: 40%;
+    top: 9vh;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 998;
+    background-color: var(--sidebar-bg);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .main-Section {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+/* ========== Dark Theme Fixes ========== */
+body.dark-theme .sidebar h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .sidebar .sublist li {
+  color: #eaeaea;
+}
+
+.sublist {
+  display: none;
+  list-style-type: circle;
+  margin-left: 20px;
+  padding-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sublist.show {
+  display: block;
+}
