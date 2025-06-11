@@ -141,6 +141,94 @@ a {
   }
 }
 /* top bar */
-.main-section{
+.app-layout {
   display: flex;
 }
+
+.sidebar {
+  width: 250px;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+
+/*  */
+
+
+ body.dark-theme .main-Section .sidebar h2{
+ color: #ffffff;
+ }
+
+
+  body.dark-theme .main-Section .sidebar .sublist  li{
+    color: #eaeaea;
+ }
+
+
+ 
+  body.dark-theme .content .var_main .navbar-variable{
+    color: black;
+ }
+
+ 
+  body.dark-theme .content {
+    --content-text:#333333;
+    
+ }
+
+  body.dark-theme .content .var_main{
+   background-color:transparent;
+    
+ }
+ 
+
+/* Remove background for general divs to avoid override issues */
+body.dark-theme .content > div:not(.code-container):not(.output-box):not(.content-container) {
+  background-color: transparent;
+}
+  
+  body.dark-theme .content div{
+  background-color: lightgrey;
+ }
+
+   
+  body.dark-theme .content pre,th{
+  background-color: #333333;
+  color: white;
+ }
+
+   body.dark-theme .section th{
+  background-color: #333333;
+  color: white;
+ }
+
+   body.dark-theme .content strong,h2{
+
+  color: #4F46E5;
+ }
+    body.dark-theme .content code{
+  background-color: #2d2d2d ;
+  color: #E5E5E5;
+ }
+
+    body.dark-theme .content  .output-box{
+          background-color:transparent;
+          color:black;
+ }
+
+   body.dark-theme .content .code-snippet{
+          background-color:transparent;
+          color:black;
+ }
+
+ 
+   body.dark-theme .content .content-container .code-block{
+       background-color: #333333;
+  color: white;
+ }

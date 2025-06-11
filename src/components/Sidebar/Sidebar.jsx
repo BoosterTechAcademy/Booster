@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ onSelect }) => {
   const [visible, setVisible] = useState(false);
   const [openSublist, setOpenSublist] = useState({});
 
@@ -25,21 +25,17 @@ const Sidebar = () => {
         <ul>
           <li onClick={() => toggleSublist('intro')}>Introduction</li>
 
-          <li onClick={() => toggleSublist('basics1')}>
-            Basics Level 1
-          </li>
+          <li onClick={() => toggleSublist('basics1')}>Basics Level 1</li>
           <ul className={`sublist ${openSublist.basics1 ? 'show' : ''}`}>
-            <li>Variables</li>
-            <li>Data Types</li>
-            <li>Operators</li>
-            <li>Control Flow</li>
-            <li>Looping Statements</li>
-            <li>Branching Statements</li>
+            <li onClick={() => onSelect('variables')}>Variables</li>
+            <li onClick={() => onSelect('datatypes')}>Data Types</li>
+            <li onClick={() => onSelect('operators')}>Operators</li>
+            <li onClick={() => onSelect('flow')}>Control Flow</li>
+            <li onClick={() => onSelect('loops')}>Looping Statements</li>
+            <li onClick={() => onSelect('branching')}>Branching Statements</li>
           </ul>
 
-          <li onClick={() => toggleSublist('basics2')}>
-            Basics Level 2
-          </li>
+          <li onClick={() => toggleSublist('basics2')}>Basics Level 2</li>
           <ul className={`sublist ${openSublist.basics2 ? 'show' : ''}`}>
             <li>Type Conversion</li>
             <li>Arrays</li>
@@ -48,9 +44,7 @@ const Sidebar = () => {
             <li>User Input / Output</li>
           </ul>
 
-          <li onClick={() => toggleSublist('inter1')}>
-            Intermediate Level 1
-          </li>
+          <li onClick={() => toggleSublist('inter1')}>Intermediate Level 1</li>
           <ul className={`sublist ${openSublist.inter1 ? 'show' : ''}`}>
             <li>Class and Objects</li>
             <li>Method Overloading</li>
@@ -60,9 +54,7 @@ const Sidebar = () => {
             <li>Method Overriding</li>
           </ul>
 
-          <li onClick={() => toggleSublist('inter2')}>
-            Intermediate Level 2
-          </li>
+          <li onClick={() => toggleSublist('inter2')}>Intermediate Level 2</li>
           <ul className={`sublist ${openSublist.inter2 ? 'show' : ''}`}>
             <li>Inheritance</li>
             <li>Polymorphism</li>
@@ -77,19 +69,19 @@ const Sidebar = () => {
           <li>Data Structures</li>
           <li>Algorithms</li>
 
-          <li onClick={() => toggleSublist('problems')}>
-            Basics Problems
-          </li>
+          <li onClick={() => toggleSublist('problems')}>Basics Problems</li>
           <ul className={`sublist ${openSublist.problems ? 'show' : ''}`}>
             <li>Program Sheet</li>
           </ul>
 
           <li>Projects</li>
           <li>Interview Prep</li>
-          <li>Video Tutorials</li>
+          <li onClick={() => onSelect('video-tutorials')}>Video Tutorials</li>
+
         </ul>
       </div>
 
+      {/* You can make this visible conditionally in ContentSection */}
       <div className="video-filter-controls" style={{ display: 'none' }}>
         <select id="speakingLanguageSelect">
           <option value="english">English</option>
