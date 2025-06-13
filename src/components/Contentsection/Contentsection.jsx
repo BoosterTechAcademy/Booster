@@ -1,12 +1,13 @@
-// components/Contentsection/ContentSection.jsx
 import React, { useState, useEffect } from 'react';
 import './Contentsection.css';
 import videoData from '../../data/videos';
+import programSheetData from '../../data/programSheet';
 
 const ContentSection = ({ content }) => {
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [category, setCategory] = useState('basics');
   const [speakingLanguage, setSpeakingLanguage] = useState('english');
+  const [expandedSections, setExpandedSections] = useState({});
 
   useEffect(() => {
     if (content === 'video-tutorials') {
@@ -18,6 +19,13 @@ const ContentSection = ({ content }) => {
       setFilteredVideos(filtered);
     }
   }, [content, category, speakingLanguage]);
+
+  const toggleSection = (topic) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [topic]: !prev[topic]
+    }));
+  };
 
   if (!content) {
     return <div className="content">Select a topic to view content.</div>;
@@ -45,7 +53,7 @@ const ContentSection = ({ content }) => {
         <div className="video-grid">
           {filteredVideos.length > 0 ? (
             filteredVideos.map((video) => (
-              <div className="video-card" key={video.id}>
+              <div className="video-card" key={video.id + video.speakingLanguage}>
                 <img
                   src={video.thumbnailUrl}
                   alt={video.title}
@@ -64,7 +72,70 @@ const ContentSection = ({ content }) => {
     );
   }
 
-  // Default: article/video/practice mode
+  if (content === 'program-sheet') {
+    return (
+      <div className="content">
+        {programSheetData.map((section, index) => (
+          <div className="dropdown-section" style={{ marginBottom: '20px' }} key={index}>
+            <div
+              className="dropdown-header"
+              style={{
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                background: '#f0f0f0',
+                padding: '10px',
+                borderRadius: '5px'
+              }}
+              onClick={() => toggleSection(section.topic)}
+            >
+              {section.topic}
+              <span className="arrow" style={{ float: 'right' }}>
+                {expandedSections[section.topic] ? '▲' : '▼'}
+              </span>
+            </div>
+
+            {expandedSections[section.topic] && (
+              <div className="dropdown-content" style={{ marginTop: '10px' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr>
+                      <th>Program</th>
+                      <th>Video Tutorial</th>
+                      <th>Article</th>
+                      <th>Practice Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {section.items.map((item, idx) => (
+                      <tr key={idx}>
+                        <td>{item.name}</td>
+                        <td>
+                          <a href={item.video} target="_blank" rel="noopener noreferrer">
+                            Watch
+                          </a>
+                        </td>
+                        <td>
+                          <a href={item.article} target="_blank" rel="noopener noreferrer">
+                            Read
+                          </a>
+                        </td>
+                        <td>
+                          <a href={item.practice} target="_blank" rel="noopener noreferrer">
+                            Practice
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="content">
       <h1>{content.title}</h1>

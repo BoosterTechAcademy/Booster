@@ -71,7 +71,7 @@ const Sidebar = ({ onSelect }) => {
 
           <li onClick={() => toggleSublist('problems')}>Basics Problems</li>
           <ul className={`sublist ${openSublist.problems ? 'show' : ''}`}>
-            <li>Program Sheet</li>
+           <li onClick={() => onSelect('program-sheet')}>Program Sheet</li>
           </ul>
 
           <li>Projects</li>

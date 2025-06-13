@@ -9,9 +9,12 @@ import './utils/copyCode';
 const App = () => {
   const [selectedContentId, setSelectedContentId] = useState('intro');
 
-  const content = selectedContentId === 'video-tutorials'
-    ? 'video-tutorials'
-    : contentMap[selectedContentId];
+  const content = 
+    selectedContentId === 'video-tutorials'
+      ? 'video-tutorials'
+      : selectedContentId === 'program-sheet'
+      ? 'program-sheet'
+      : contentMap[selectedContentId];
 
   return (
     <>
