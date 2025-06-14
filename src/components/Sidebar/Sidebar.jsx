@@ -71,28 +71,13 @@ const Sidebar = ({ onSelect }) => {
 
           <li onClick={() => toggleSublist('problems')}>Basics Problems</li>
           <ul className={`sublist ${openSublist.problems ? 'show' : ''}`}>
-           <li onClick={() => onSelect('program-sheet')}>Program Sheet</li>
+            <li onClick={() => onSelect('program-sheet')}>Program Sheet</li>
           </ul>
 
           <li>Projects</li>
           <li>Interview Prep</li>
           <li onClick={() => onSelect('video-tutorials')}>Video Tutorials</li>
-
         </ul>
-      </div>
-
-      {/* You can make this visible conditionally in ContentSection */}
-      <div className="video-filter-controls" style={{ display: 'none' }}>
-        <select id="speakingLanguageSelect">
-          <option value="english">English</option>
-          <option value="tamil">Tamil</option>
-        </select>
-
-        <select id="categorySelect">
-          <option value="basics">Basics</option>
-          <option value="oop">OOP</option>
-          <option value="advanced">Advanced</option>
-        </select>
       </div>
     </>
   );

@@ -22,15 +22,17 @@ body.dark-theme {
 
 /* ========== Sidebar Core ========== */
 .sidebar {
-  position:fixed;
+  position: fixed;
   top: 9vh;
+  left: 0;
   width: 20%;
+  height: calc(100vh - 9vh);
   background-color: var(--sidebar-bg);
   color: var(--button-text);
   padding: 20px;
   overflow-y: auto;
-  height: calc(100vh - 9vh);
   transition: transform var(--transition-speed);
+  z-index: 998;
 }
 
 .sidebar h2 {
@@ -43,14 +45,15 @@ body.dark-theme {
 .sidebar ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
   padding: 12px 16px;
   margin-bottom: 8px;
   border-radius: 8px;
-  transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
   cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
 }
 
 .sidebar ul li:hover {
@@ -63,7 +66,9 @@ body.dark-theme {
 .sublist {
   list-style-type: circle;
   margin-left: 20px;
+  padding-left: 10px;
   display: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .sublist.show {
@@ -72,13 +77,13 @@ body.dark-theme {
 
 .sublist li {
   color: var(--bg-color);
+  padding: 6px 0;
 }
 
 /* ========== Toggle Button ========== */
 .sidebar-toggle {
   display: none;
-  position: absolute;
-
+  position: fixed;
   top: 9vh;
   left: 10px;
   z-index: 999;
@@ -94,14 +99,8 @@ body.dark-theme {
 /* ========== Responsive Design ========== */
 @media (max-width: 1040px) {
   .sidebar {
-    position: fixed;
-    width: 40%;
-    top: 9vh;
-    left: 0;
-    height: 100%;
+    width: 75%;
     transform: translateX(-100%);
-    z-index: 998;
-    background-color: var(--sidebar-bg);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -129,16 +128,4 @@ body.dark-theme .sidebar h2 {
 
 body.dark-theme .sidebar .sublist li {
   color: #eaeaea;
-}
-
-.sublist {
-  display: none;
-  list-style-type: circle;
-  margin-left: 20px;
-  padding-left: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-.sublist.show {
-  display: block;
 }
