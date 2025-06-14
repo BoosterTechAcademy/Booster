@@ -9,6 +9,12 @@ const ContentSection = ({ content }) => {
   const [speakingLanguage, setSpeakingLanguage] = useState('english');
   const [expandedSections, setExpandedSections] = useState({});
 
+  // Helper to convert YouTube link to embed format
+  const convertYouTubeUrl = (url) => {
+    const match = url.match(/(?:youtu\.be\/|v=)([^&\s?]+)/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+  };
+
   useEffect(() => {
     if (content === 'video-tutorials') {
       const filtered = videoData.filter(
@@ -34,7 +40,7 @@ const ContentSection = ({ content }) => {
   if (content === 'video-tutorials') {
     return (
       <div className="content">
-        <div className="video-filter-controls" style={{ display: 'flex' }}>
+        <div className="video-filter-controls" style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
           <select
             value={speakingLanguage}
             onChange={(e) => setSpeakingLanguage(e.target.value)}
@@ -45,7 +51,7 @@ const ContentSection = ({ content }) => {
 
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
             <option value="basics">Basics</option>
-            <option value="oop">OOP</option>
+            <option value="oops">OOP</option>
             <option value="advanced">Advanced</option>
           </select>
         </div>
@@ -53,15 +59,19 @@ const ContentSection = ({ content }) => {
         <div className="video-grid">
           {filteredVideos.length > 0 ? (
             filteredVideos.map((video) => (
-              <div className="video-card" key={video.id + video.speakingLanguage}>
-                <img
-                  src={video.thumbnailUrl}
-                  alt={video.title}
-                  className="thumbnail"
-                />
+              <div className="video-card" key={video._id}>
+               
                 <h3>{video.title}</h3>
                 <p>{video.description}</p>
-                <video controls src={video.videoUrl}></video>
+                <iframe
+                  width="100%"
+                  height="250"
+                  src={convertYouTubeUrl(video.videoUrl)}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             ))
           ) : (
