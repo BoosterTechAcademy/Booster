@@ -33,9 +33,32 @@ const ContentSection = ({ content }) => {
     }));
   };
 
-  if (!content) {
-    return <div className="content">Select a topic to view content.</div>;
-  }
+if (!content) {
+  return (
+    <div className="content no-content-message">
+      <div className="circle-wrapper">
+        <div className="orbit">
+          <img
+            src="https://www.pngall.com/wp-content/uploads/8/Orbit-PNG-Images.png"
+            alt="Flying Airplane"
+            className="plane-icon"
+          />
+        </div>
+        <div className="message-box">
+          <h2>Thank you for your patience ✨</h2>
+          <p>
+            We're actively working on this content section.<br />
+            Please check back soon — updates will appear here!
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
 
   if (content === 'video-tutorials') {
     return (
