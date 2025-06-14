@@ -33,6 +33,7 @@ body.dark-theme {
   overflow-y: auto;
   transition: transform var(--transition-speed);
   z-index: 998;
+  box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -73,11 +74,13 @@ body.dark-theme {
 
 .sublist.show {
   display: block;
+margin-left: 25px;
 }
 
 .sublist li {
   color: var(--bg-color);
   padding: 6px 0;
+  padding-left: 20px; /* 👈 Adds indentation */
 }
 
 /* ========== Toggle Button ========== */
@@ -100,6 +103,8 @@ body.dark-theme {
 @media (max-width: 1040px) {
   .sidebar {
     width: 75%;
+    height: 100vh;
+    top: 12px;
     transform: translateX(-100%);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   }
@@ -129,3 +134,12 @@ body.dark-theme .sidebar h2 {
 body.dark-theme .sidebar .sublist li {
   color: #eaeaea;
 }
+
+
+.arrow {
+  margin-right: 8px;
+  font-size: 0.9em;
+  display: inline-block;
+  width: 1em;
+}
+
