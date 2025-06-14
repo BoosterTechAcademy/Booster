@@ -102,12 +102,17 @@ margin-left: 25px;
 /* ========== Responsive Design ========== */
 @media (max-width: 1040px) {
   .sidebar {
-    width: 75%;
-    height: 100vh;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 75%;
+    height: 100dvh;
+    padding-top: 9vh;
+    padding-bottom: 40px; /* crucial for visibility */
     transform: translateX(-100%);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding-top: 9vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .sidebar.show {
