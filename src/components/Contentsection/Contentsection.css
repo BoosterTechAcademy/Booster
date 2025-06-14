@@ -448,7 +448,7 @@ body.dark-theme .dropdown-section {
 
 body.dark-theme .dropdown-header {
   background-color: #2c2c3e;
-  color: #f1f1f1;
+  color:black;
 }
 
 body.dark-theme .dropdown-header:hover {
