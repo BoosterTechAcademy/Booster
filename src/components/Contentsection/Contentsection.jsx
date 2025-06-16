@@ -36,23 +36,24 @@ const ContentSection = ({ content }) => {
 if (!content) {
   return (
     <div className="content no-content-message">
-      <div className="circle-wrapper">
-        <div className="orbit">
-          <img
-            src="https://www.pngall.com/wp-content/uploads/8/Orbit-PNG-Images.png"
-            alt="Flying Airplane"
-            className="plane-icon"
-          />
-        </div>
-        <div className="message-box">
-          <h2>Thank you for your patience ✨</h2>
-          <p>
-            We're actively working on this content section.<br />
-            Please check back soon — updates will appear here!
-          </p>
-        </div>
+  <div className="programmer-wrapper">
+    <div className="computer-desk">
+      <div className="monitor">
+        <div className="typing-animation">Loading<span className="dots"></span></div>
       </div>
+      <div className="keyboard"></div>
+      <div className="programmer"></div>
     </div>
+    <div className="message-box">
+      <h2>Our Developer is Typing Code ⌨️</h2>
+      <p>
+        This section is still under development.<br />
+        Stay tuned for upcoming content!
+      </p>
+    </div>
+  </div>
+</div>
+
   );
 }
 

@@ -11,6 +11,16 @@ export const contentMap = {
       </div>
     `
   },
+  introduction: {
+    id: "introduction",
+    title: "Introduction to Java",
+    description: `
+      <div class="content-container">
+        <h1>Variables</h1>
+        <p>Learn about variables in Java with examples and types.</p>
+      </div>
+    `
+  },
     controlflow: {
     id: "controlflow",
     title: "control flow in Java",
