@@ -78,13 +78,23 @@ code {
 .styled-box-output{
   padding-top: 6px;
   padding-left: 25px;
+  padding-bottom: 6px;
 }
 
 .style-output-other{
   list-style: none;
   padding-top: 6px;
   padding-left: 25px;
+  
 
+}
+
+.reference-container{
+  padding-left: 20px;
+}
+
+.reference-container p{
+  margin-left: 20px;
 }
 
 /* code */

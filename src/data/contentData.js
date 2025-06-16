@@ -2706,14 +2706,14 @@ class Main extends FinalClass {
   </p>
   <p>
     A Java interface contains:
-    <ul>
+    <ul class="styled-box-output">
       <li>Static constants</li>
       <li>Abstract methods (without body)</li>
     </ul>
   </p>
 
   <h2>Key Properties of Interface:</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>Interfaces are used to achieve abstraction.</li>
     <li>All variables in an interface are <code>public static final</code> by default.</li>
     <li>All methods are <code>public abstract</code> unless default or static.</li>
@@ -2756,9 +2756,17 @@ class TestClass implements testInterface {
     Geek<br>
     10
   </div>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Explanation:</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li><code>testInterface</code> defines a constant <code>a</code> and an abstract method <code>display()</code>.</li>
     <li><code>TestClass</code> implements <code>testInterface</code> and provides an implementation for <code>display()</code>.</li>
     <li>When executed, the program prints the message from <code>display()</code> and the value of constant <code>a</code>.</li>
@@ -2766,7 +2774,6 @@ class TestClass implements testInterface {
 
   <h2>Syntax of Interface in Java</h2>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">interface InterfaceName {
 
     // Constant fields (public static final by default)  
@@ -2793,7 +2800,7 @@ class TestClass implements testInterface {
   </div>
 
   <h3>Important Notes:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Private methods</strong> can only be used within default or static methods inside the interface — they are not accessible by implementing classes.</li>
     <li><strong>Static methods</strong> can only be accessed via the interface name — not through implementing class objects.</li>
     <li>All methods in an interface are implicitly <code>public</code> and <code>abstract</code> unless otherwise specified (default, static, private).</li>
@@ -2824,83 +2831,84 @@ class TestClass implements testInterface {
   </p>
 
   <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Class</th>
-          <th>Interface</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Instantiation</td>
-          <td>Can create objects</td>
-          <td>Cannot create objects</td>
-        </tr>
-        <tr>
-          <td>Variables</td>
-          <td>Can have instance variables</td>
-          <td>Only <code>public static final</code> (constants)</td>
-        </tr>
-        <tr>
-          <td>Methods</td>
-          <td>Can have concrete methods</td>
-          <td>All methods are abstract by default</td>
-        </tr>
-        <tr>
-          <td>Inheritance</td>
-          <td>Supports single inheritance</td>
-          <td>Supports multiple inheritance</td>
-        </tr>
-        <tr>
-          <td>Constructors</td>
-          <td>Can have constructors</td>
-          <td>Constructors are not allowed</td>
-        </tr>
-        <tr>
-          <td>Access Modifiers</td>
-          <td>Supports <code>private</code>, <code>protected</code>, <code>public</code>, and <code>default</code></td>
-          <td>All members are <code>public</code> by default</td>
-        </tr>
-        <tr>
-          <td>Keyword</td>
-          <td>Defined using <code>class</code></td>
-          <td>Defined using <code>interface</code></td>
-        </tr>
-        <tr>
-          <td>Default Methods</td>
-          <td>Not supported</td>
-          <td>Supported (since JDK 8)</td>
-        </tr>
-        <tr>
-          <td>Static Methods</td>
-          <td>Can have static methods</td>
-          <td>Supported (since JDK 8)</td>
-        </tr>
-        <tr>
-          <td>Private Methods</td>
-          <td>Can have private methods</td>
-          <td>Supported (since JDK 9)</td>
-        </tr>
-        <tr>
-          <td>Main Method</td>
-          <td>Can have <code>main()</code> method</td>
-          <td>Can also have <code>main()</code> (since JDK 8)</td>
-        </tr>
-      </tbody>
-    </table>
+  <table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Feature</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Class</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Interface</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Instantiation</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can create objects</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Cannot create objects</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Variables</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have instance variables</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Only <code>public static final</code> (constants)</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have concrete methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">All methods are abstract by default</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Inheritance</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supports single inheritance</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supports multiple inheritance</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Constructors</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have constructors</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Constructors are not allowed</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Access Modifiers</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supports <code>private</code>, <code>protected</code>, <code>public</code>, and <code>default</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">All members are <code>public</code> by default</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Keyword</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Defined using <code>class</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Defined using <code>interface</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Default Methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Not supported</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supported (since JDK 8)</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Static Methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have static methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supported (since JDK 8)</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Private Methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have private methods</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Supported (since JDK 9)</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Main Method</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can have <code>main()</code> method</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Can also have <code>main()</code> (since JDK 8)</td>
+    </tr>
+  </tbody>
+</table>
+
   </div>
 
   <h2>When to Use a Class?</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>When you need to represent a real-world entity with both attributes (fields) and behaviors (methods).</li>
     <li>When you want to create objects that hold a specific state and perform actions.</li>
     <li>To define templates for objects with particular functionality and properties.</li>
   </ul>
 
   <h2>When to Use an Interface?</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>When you need to define a contract that multiple classes should follow.</li>
     <li>When you want to achieve abstraction without worrying about implementation details.</li>
     <li>To achieve multiple inheritance in Java.</li>
@@ -2931,6 +2939,14 @@ class Dog implements Animal {
   <div class="output-box">
     Bark
   </div>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Conclusion</h2>
   <p>
@@ -3041,7 +3057,14 @@ public class Main {
     Bicycle present state : speed: 2 gear: 2<br>
     Bike present state : speed: 1 gear: 1
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h2>Conclusion</h2>
   <p>
     This example illustrates how interfaces help standardize functionality across multiple classes while allowing each to maintain its own internal implementation. 
@@ -3106,6 +3129,14 @@ class GFG {
     Addition : 3<br>
     Subtraction : 1
   </div>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h1>New Features Added in Interfaces in JDK 8</h1>
 
@@ -3140,6 +3171,15 @@ class TestClass implements TestInterface {
   <div class="output-box">
     hello
   </div>
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
 </div>
 
 <!---->
@@ -3179,8 +3219,14 @@ class TestClass implements TestInterface {
   <div class="output-box">
     hello
   </div>
-
-  <hr>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h1>3. Private Methods in Interfaces</h1>
   <p>
@@ -3227,8 +3273,14 @@ public class Main {
     Engine started.<br>
     Vehicle is now driving.
   </div>
-
-  <hr>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h1>4. Functional Interface</h1>
   <p>
@@ -3241,7 +3293,6 @@ public class Main {
 
   <h2>Example: Functional Interface Declaration</h2>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">@FunctionalInterface
 interface MyFunctionalInterface {
     void singleAbstractMethod();
@@ -3303,8 +3354,14 @@ class GFG implements B {
     Method 2<br>
     Method 3
   </div>
-
-  <hr>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h1>Stepwise Interface and Abstract Class Implementation</h1>
   <p>
@@ -3314,7 +3371,7 @@ class GFG implements B {
   </p>
 
   <p>General development process:</p>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Level 1 - Interfaces:</strong> Define service contracts (method signatures).</li>
     <li><strong>Level 2 - Abstract Classes:</strong> Provide partial implementation.</li>
     <li><strong>Level 3 - Implementation Classes:</strong> Provide full implementation.</li>
@@ -3370,6 +3427,14 @@ class Main {
     Your deposit Amount :100<br>
     Your withdraw Amount :50
   </div>
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
 </div>
 
@@ -3381,21 +3446,21 @@ class Main {
   <p>
     Interfaces provide a way to achieve abstraction without worrying about the implementation details. They offer several benefits, including:
   </p>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Implementation Security:</strong> You can secure the implementation details by separating the interface from the class that implements it.</li>
     <li><strong>Multiple Inheritance:</strong> Java does not allow multiple inheritance with classes, but you can implement multiple interfaces to achieve similar functionality.</li>
   </ul>
 
   <h2>New Features Added in Interfaces (From JDK 9)</h2>
   <p>Starting from Java 9, interfaces have been enhanced to allow:</p>
-  <ul>
+  <ul class="styled-box-output">
     <li>Static methods</li>
     <li>Private methods</li>
     <li>Private static methods</li>
   </ul>
 
   <h2>Important Points About Interfaces</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>You cannot create an instance of an interface (interfaces cannot be instantiated).</li>
     <li>You can create a reference variable of an interface type that points to an object of a class implementing that interface.</li>
     <li>A class can implement multiple interfaces.</li>
@@ -3412,9 +3477,6 @@ class Main {
 
 </div>
 
-
-
-<!--ending-->
     `
   },
    accessmodifiers: {
@@ -4624,10 +4686,20 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    My name is Rohu<br>
-    I can eat
+    <ul class="style-output-other">
+     <li>My name is Rohu</li>
+     <li>I can eat</li>
+</ul>
   </div>
 
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In the above program, the <code>Dog</code> class extends the <code>Animal</code> class. It inherits the field <code>name</code> and method <code>eat()</code> from the superclass.
   </p>
@@ -4734,10 +4806,19 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    I eat dog food<br>
-    I can bark
+    <ul class="style-output-other">
+     <li> I eat dog food</li>
+     <li> I can bark</li>
+</ul>
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In this example, the <code>Dog</code> class overrides the <code>eat()</code> method from the <code>Animal</code> class.
   </p>
@@ -4828,11 +4909,21 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    I can eat<br>
-    I eat dog food<br>
-    I can bark
+    <ul class="style-output-other">
+     <li>I can eat</li>
+     <li>I eat dog food</li>
+     <li>I can bark</li>
+</ul>
   </div>
 
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In this example, the subclass <code>Dog</code> overrides the <code>eat()</code> method but also calls the superclass version using <code>super.eat()</code>.
   </p>
@@ -4908,13 +4999,21 @@ class Main {
   }
 }</pre>
   </div>
-
   <div class="output-box">
     <strong>Output:</strong><br>
-    I am an animal.<br>
-    My name is Rocky
+    <ul class="style-output-other">
+     <li>I am an animal.</li>
+      <li>My name is Rocky</li>
+</ul>
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In this example, the class <code>Animal</code> defines a protected field <code>name</code> and a protected method <code>display()</code>.
   </p>
@@ -4961,7 +5060,7 @@ class Main {
     <br><strong>Example:</strong> Class <code>A</code> inherits from class <code>B</code>.
   </p>
   <p><em>Structure:</em></p>
-  <ul>
+  <ul class="styled-box-output">
     <li>B → A</li>
   </ul>
 
@@ -4971,7 +5070,7 @@ class Main {
     <br><strong>Example:</strong> Class <code>B</code> inherits from <code>A</code>, and class <code>C</code> inherits from <code>B</code>.
   </p>
   <p><em>Structure:</em></p>
-  <ul>
+  <ul class="styled-box-output">
     <li>A → B → C</li>
   </ul>
 
@@ -4981,7 +5080,7 @@ class Main {
     <br><strong>Example:</strong> Both class <code>B</code> and class <code>C</code> inherit from class <code>A</code>.
   </p>
   <p><em>Structure:</em></p>
-  <ul>
+  <ul class="styled-box-output">
     <li>A → B</li>
     <li>A → C</li>
   </ul>
@@ -6149,7 +6248,7 @@ class Main {
   </p>
 
   <h2>Key Benefits of Encapsulation</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Better Code Management:</strong> You can change the internal implementation without affecting other code using the class, as long as method signatures remain the same.</li>
     <li><strong>Simpler Parameter Passing:</strong> Passing an object passes all its data and methods together, so you don’t need to pass individual members.</li>
     <li><strong>Getter and Setter Methods:</strong> These methods allow controlled access to private fields. The user can get or modify data using these methods, but cannot access the fields directly.</li>
@@ -6190,8 +6289,18 @@ public class Geeks {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Name => Booster
+    <ul class="style-output-other">
+     <li> Name => Booster</li>
+</ul>
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>
     In this example, the <code>Programmer</code> class encapsulates the <code>name</code> field by making it private.
@@ -6286,10 +6395,19 @@ public class Geeks {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Name: Sweta<br>
-    Age: 25
+    <ul class="style-output-other">
+     <li> Name: Sweta</li>
+     <li>Age: 25</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In this example, the <code>Person</code> class hides its <code>name</code> and <code>age</code> fields by declaring them <code>private</code>.
     These fields can only be accessed or modified through public getter and setter methods, ensuring data hiding and control over data values.
@@ -6334,9 +6452,18 @@ public class Geeks {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Area: 32
+    <ul class="style-output-other">
+     <li> Area: 32</li>
+</ul>
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     Explanation: The <code>Area</code> class uses a constructor to initialize length (<code>l</code>) and breadth (<code>b</code>). The <code>getArea()</code> method calculates and displays the area. This method hides the calculation logic (implementation) and only shows the functionality (area output), demonstrating abstraction.
   </p>
@@ -6388,9 +6515,9 @@ public class Geeks {
         o.setRoll(51);
 
         // displaying values
-        System.out.println("Geek's name: " + o.getName());
-        System.out.println("Geek's age: " + o.getAge());
-        System.out.println("Geek's roll: " + o.getRoll());
+        System.out.println("name: " + o.getName());
+        System.out.println("age: " + o.getAge());
+        System.out.println("roll: " + o.getRoll());
 
         // Direct access to variables is not possible:
         // System.out.println(o.geekName); // Error due to encapsulation
@@ -6400,10 +6527,20 @@ public class Geeks {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Geek's name: Boost<br>
-    Geek's age: 19<br>
-    Geek's roll: 51
+    <ul class="style-output-other">
+     <li>name: Boost</li>
+      <li>age: 19</li>
+       <li>roll: 51</li>
+</ul>
   </div>
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>
     Explanation: In the <code>Encapsulate</code> class, all variables are declared <code>private</code> and cannot be accessed directly from outside the class. Public getter and setter methods allow controlled access and modification of these variables, ensuring data hiding and integrity through encapsulation.
@@ -6468,20 +6605,29 @@ public class Geeks {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Account Number: 90482098491<br>
-    Name: ABC<br>
-    Email: abc@gmail.com<br>
-    Amount: 100000.0
+    <ul class="style-output-other">
+     <li>Account Number: 90482098491</li>
+     <li> Name: ABC</li>
+     <li>Email: abc@gmail.com</li>
+     <li>Amount: 100000.0</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     Explanation: All details inside the <code>Account</code> class are hidden by declaring the variables <code>private</code>. We access and modify these variables only via public getter and setter methods. This controlled access ensures data hiding and encapsulation. In the <code>main</code> method, an <code>Account</code> object is created and values are set and retrieved through these methods.
   </p>
 </div>
 
 <div class="content-container">
-  <h2>Advantages of Encapsulation</h2>
-  <ul>
+  <h1>Advantages of Encapsulation</h1>
+  <ul class="styled-box-output">
     <li><strong>Data Hiding:</strong> Internal details of a class are hidden from outside, providing controlled access through setter methods.</li>
     <li><strong>Data Integrity:</strong> Setter and getter methods ensure that only valid data is assigned and retrieved.</li>
     <li><strong>Reusability:</strong> Encapsulation increases code readability and makes modifying or adding new features easier.</li>
@@ -6491,16 +6637,16 @@ public class Geeks {
 </div>
 
 <div class="content-container">
-  <h2>Disadvantages of Encapsulation</h2>
-  <ul>
+  <h1>Disadvantages of Encapsulation</h1>
+  <ul class="styled-box-output">
     <li>Improper use can make code complex and harder to understand.</li>
     <li>Hiding parts of the program can sometimes make understanding overall flow difficult.</li>
   </ul>
 </div>
 
 <div class="content-container">
-  <h2>Common Mistakes to Avoid</h2>
-  <ul>
+  <h1>Common Mistakes to Avoid</h1>
+  <ul class="styled-box-output">
     <li><strong>Exposing Internal Data Directly:</strong> Avoid accessing or modifying class variables directly without getter/setter methods, as this breaks encapsulation.</li>
     <li><strong>Incorrect Access Modifiers:</strong> Wrong use of access modifiers may allow unauthorized data access.</li>
     <li><strong>Overusing Public Methods:</strong> Only necessary methods should be public to keep data safe.</li>
@@ -6509,8 +6655,8 @@ public class Geeks {
 </div>
 
 <div class="content-container">
-  <h2>Best Practices</h2>
-  <ul>
+  <h1>Best Practices</h1>
+  <ul class="styled-box-output">
     <li>Declare class variables <code>private</code> to restrict direct access.</li>
     <li>Use getter methods to retrieve variable values and setter methods to modify them.</li>
     <li>Use proper access modifiers to control visibility.</li>
@@ -6534,7 +6680,6 @@ public class Geeks {
   </p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">// Create an abstract class
 abstract class Language {
   // fields and methods
@@ -6555,8 +6700,7 @@ Language obj = new Language();</pre>
   </p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-    <pre class="code-block">abstract class Language {
+   <pre class="code-block">abstract class Language {
 
   // Abstract method (no body)
   abstract void method1();
@@ -6570,7 +6714,7 @@ Language obj = new Language();</pre>
 
   <p>
     In the example above:
-    <ul>
+    <ul class="styled-box-output">
       <li><code>method1()</code> is an <strong>abstract method</strong> and must be implemented by subclasses.</li>
       <li><code>method2()</code> is a <strong>regular method</strong> with its own implementation and can be used directly or overridden.</li>
     </ul>
@@ -6587,7 +6731,6 @@ Language obj = new Language();</pre>
   </p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">abstract void display();</pre>
   </div>
 
@@ -6601,7 +6744,6 @@ Language obj = new Language();</pre>
   </p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">// Error: class should be abstract
 class Language {
 
@@ -6643,12 +6785,19 @@ class Main extends Language {
   <div class="output-box">
     This is Java Programming
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
   <p>
     In the above example:
   </p>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Language</strong> is an abstract class that contains a regular method <code>display()</code>.</li>
     <li><strong>Main</strong> is a subclass that extends <code>Language</code>.</li>
     <li>We create an object <code>obj</code> of <code>Main</code> and call the <code>display()</code> method, which is inherited from the abstract class.</li>
@@ -6707,7 +6856,7 @@ class Main {
   <p>
     In this example:
   </p>
-  <ul>
+  <ul class="styled-box-output">
     <li><code>Animal</code> is an abstract class with one abstract method <code>makeSound()</code> and one regular method <code>eat()</code>.</li>
     <li>The subclass <code>Dog</code> inherits <code>Animal</code> and provides an implementation for <code>makeSound()</code>.</li>
     <li>Using an object of <code>Dog</code>, both methods <code>makeSound()</code> and <code>eat()</code> are called.</li>
@@ -6722,7 +6871,6 @@ class Main {
 
   <h3>Example: Accessing Abstract Class Constructor</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">abstract class Animal {
    Animal() {
       System.out.println("Animal constructor called.");
@@ -6740,7 +6888,7 @@ class Dog extends Animal {
   <p>
     In this example:
   </p>
-  <ul>
+  <ul class="styled-box-output">
     <li>The constructor of <code>Animal</code> is executed first because we use <code>super()</code> in the <code>Dog</code> constructor.</li>
     <li><code>super()</code> must always be the first statement in the subclass constructor.</li>
   </ul>
@@ -6816,7 +6964,7 @@ class Main {
   <p>
     In this example:
   </p>
-  <ul>
+  <ul class="styled-box-output">
     <li><code>MotorBike</code> is an abstract superclass with an abstract method <code>brake()</code>.</li>
     <li><code>SportsBike</code> and <code>MountainBike</code> are subclasses that provide their own implementation of the <code>brake()</code> method.</li>
     <li>This shows how different bikes implement the same behavior in different ways, demonstrating abstraction.</li>
@@ -6831,7 +6979,7 @@ class Main {
   </p>
 
   <h2>Key Points to Remember</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>Use the <code>abstract</code> keyword to declare abstract classes and methods.</li>
     <li>An abstract method does not have a method body.</li>
     <li>A class with at least one abstract method must be declared abstract.</li>
@@ -6868,7 +7016,7 @@ class Main {
   <p>Make sure you understand <a href="https://www.geeksforgeeks.org/inheritance-in-java/" target="_blank">Java Inheritance</a>.</p>
 
   <h2>Uses of <code>super</code> Keyword</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>To call a method of the superclass that has been overridden in the subclass.</li>
     <li>To access a field of the superclass if there is a field with the same name in the subclass.</li>
     <li>To call the constructor of the superclass from a subclass constructor.</li>
@@ -6916,10 +7064,18 @@ class Main {
     I am a dog
   </div>
 
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
   <p>
     In the above example:
-    <ul>
+    <ul class="styled-box-output">
       <li><code>display()</code> is defined in both the superclass (<code>Animal</code>) and subclass (<code>Dog</code>).</li>
       <li>The subclass version overrides the superclass version.</li>
       <li>When <code>dog1.printMessage()</code> is called, it executes <code>display()</code> from <code>Dog</code>.</li>
@@ -6973,9 +7129,16 @@ class Main {
     I am a dog<br>
     I am an animal
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li><code>display()</code> inside <code>printMessage()</code> calls the overridden method from the subclass.</li>
     <li><code>super.display()</code> explicitly calls the method from the superclass.</li>
   </ul>
@@ -7025,15 +7188,20 @@ class Main {
     I am a mammal<br>
     I am an animal
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li><code>type</code> refers to the attribute in the subclass <code>Dog</code>.</li>
     <li><code>super.type</code> refers to the attribute in the superclass <code>Animal</code>.</li>
     <li>Hence, the first line prints <code>I am a mammal</code> and the second line prints <code>I am an animal</code>.</li>
   </ul>
-
-  <hr>
 
   <h2>3. Use of <code>super()</code> to Access Superclass Constructor</h2>
   <p>
@@ -7075,16 +7243,23 @@ class Main {
     I am an animal<br>
     I am a dog
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li>When <code>Dog dog1 = new Dog()</code> is executed, the constructor of <code>Dog</code> is called.</li>
     <li>Inside the <code>Dog</code> constructor, <code>super()</code> calls the constructor of the <code>Animal</code> class.</li>
     <li>First, <code>I am an animal</code> is printed, then <code>I am a dog</code>.</li>
   </ul>
 
   <h3>Important Notes:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li>Using <code>super()</code> is optional if calling the default constructor. The compiler inserts it automatically.</li>
     <li><code>super()</code> is required if the superclass constructor has parameters (parameterized constructor).</li>
     <li><strong>Rule:</strong> A call to <code>super()</code> must be the first statement in the subclass constructor.</li>
@@ -7146,17 +7321,23 @@ class Main {
     Type: Animal<br>
     I am a dog
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>Explanation:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li>The <code>Animal</code> class has both a no-arg constructor and a parameterized constructor.</li>
     <li>The <code>Dog</code> constructor uses <code>super("Animal")</code> to explicitly call the parameterized constructor of the superclass.</li>
     <li>This prints <code>Type: Animal</code>, followed by <code>I am a dog</code>.</li>
     <li>The default constructor of <code>Animal</code> is not called because we specifically used the parameterized one.</li>
   </ul>
-
   <h3>Important Notes:</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li>The compiler <strong>cannot automatically</strong> call a parameterized constructor. You must explicitly call it using <code>super(arguments)</code>.</li>
     <li><code>super(arguments)</code> must be the <strong>first statement</strong> in the subclass constructor.</li>
     <li>If you don’t explicitly call a constructor using <code>super()</code>, the compiler tries to insert a call to the no-arg constructor by default.</li>
