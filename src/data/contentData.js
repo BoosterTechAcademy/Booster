@@ -2232,10 +2232,19 @@ public class Booster{
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    this reference = Main@23fc625e<br>
-    object reference = Main@23fc625e
+    <ul class="style-output-other">
+     <li>this reference = Main@23fc625e</li>
+     <li>object reference = Main@23fc625e</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>In the above example, we created an object named <code>obj</code> of the class <code>Main</code>. We then print the reference to the object <code>obj</code> and <code>this</code> keyword of the class.</p>
 
   <p>Here, we can see that the reference of both <code>obj</code> and <code>this</code> is the same. It means <code>this</code> is nothing but the reference to the current object.</p>
@@ -2252,7 +2261,7 @@ public class Booster{
   
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-    <pre class="code-block"><code>class MyClass {
+    <pre class="code-block">class MyClass {
     // instance variable
     int age;
 
@@ -2260,7 +2269,7 @@ public class Booster{
     MyClass(int age){
         age = age;
     }
-}</code></pre>
+}</pre>
   </div>
   
   <p>In the above program, the instance variable and the parameter have the same name: <code>age</code>. Here, the Java compiler is confused due to name ambiguity.</p>
@@ -2286,8 +2295,20 @@ public class Booster{
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    obj.age = 0
+    <ul class="style-output-other">
+     <li>obj.age = 0</li>
+</ul>
+    
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>In the above example, we have passed 8 as a value to the constructor. However, we are getting 0 as an output. This is because the Java compiler gets confused due to ambiguity between the instance variable and the parameter.</p>
 
@@ -2310,15 +2331,23 @@ public class Booster{
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    obj.age = 8
+    <ul class="style-output-other">
+     <li>obj.age = 0</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>Now, we are getting the expected output. It is because when the constructor is called, <code>this</code> inside the constructor is replaced by the object <code>obj</code> that has called the constructor. Hence the <code>age</code> variable is assigned value 8.</p>
 
   <p>Also, if the name of the parameter and instance variable is different, the compiler automatically appends <code>this</code> keyword. For example, the code:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Main {
     int age;
 
@@ -2331,7 +2360,6 @@ public class Booster{
   <p>is equivalent to:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Main {
     int age;
 
@@ -2344,7 +2372,7 @@ public class Booster{
 </div>
 <!-- part 3 -->
  <div class="content-container">
-  <h2>2. <code>this</code> with Getters and Setters</h2>
+  <h1>2. <code>this</code> with Getters and Setters</h1>
 
   <p>Another common use of <code>this</code> keyword is in setters and getters methods of a class. For example:</p>
 
@@ -2375,9 +2403,19 @@ public class Booster{
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    obj.name: Toshiba
+    <ul class="style-output-other">
+     <li>obj.name: Toshiba</li>
+   </ul>
+    
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>Here, we have used <code>this</code> keyword:</p>
 
   <ul class="bullet-list">
@@ -2387,7 +2425,7 @@ public class Booster{
 </div>
 <!-- part 4 -->
  <div class="content-container">
-  <h2>3. Using <code>this</code> in Constructor Overloading</h2>
+  <h1>3. Using <code>this</code> in Constructor Overloading</h1>
 
   <p>While working with constructor overloading, we might need to invoke one constructor from another constructor. In such a case, we use the <code>this()</code> keyword. Let's take an example:</p>
 
@@ -2442,10 +2480,22 @@ public class Booster{
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    2 + 3i<br>
-    3 + 3i<br>
-    0 + 0i
+    <ul class="style-output-other">
+     <li> 2 + 3i</li>
+     <li>3 + 3i</li>
+     <li>0 + 0i</li>
+</ul>
+  
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>In the above example, we used <code>this()</code> to:</p>
   <ul class="bullet-list">
@@ -2464,7 +2514,7 @@ public class Booster{
 </div>
 <!-- part 5 -->
  <div class="content-container">
-  <h2>Java <code>final</code> Keyword</h2>
+  <h1>Java <code>final</code> Keyword</h1>
 
   <p>In Java, the <code>final</code> keyword is used to denote constants. It can be used with variables, methods, and classes.</p>
 
@@ -2503,11 +2553,21 @@ public class Booster{
 
   <div class="output-box">
     <strong>Compilation Error:</strong><br>
-    cannot assign a value to final variable AGE<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;AGE = 45;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;^
+    <ul class="style-output-other">
+     <li>cannot assign a value to final variable AGE</li>
+     <li>&nbsp;&nbsp;&nbsp;&nbsp;AGE = 45;</li>
+     <li&nbsp;&nbsp;&nbsp;&nbsp;^</li>
+</ul>
+ 
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <div class="styled-box">
     <strong>Note:</strong> It is recommended to use uppercase letters when declaring <code>final</code> variables in Java to denote that their values are constants.
   </div>
@@ -2544,12 +2604,21 @@ class Main extends FinalDemo {
 
   <div class="output-box">
     <strong>Compilation Error:</strong><br>
-    display() in Main cannot override display() in FinalDemo<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;public final void display() {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
-    overridden method is final
+    <ul class="style-output-other">
+     <li>display() in Main cannot override display() in FinalDemo</li>
+      <li> &nbsp;&nbsp;&nbsp;&nbsp;public final void display() {</li>
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^</li>
+        <li> overridden method is final</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <div class="styled-box">
     <strong>Note:</strong> Use the <code>final</code> keyword in methods when you want to ensure that their implementation remains consistent and cannot be altered by subclasses.
   </div>
@@ -2586,11 +2655,21 @@ class Main extends FinalClass {
 
   <div class="output-box">
     <strong>Compilation Error:</strong><br>
-    cannot inherit from final FinalClass<br>
-    class Main extends FinalClass {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
-  </div>
+    <ul class="style-output-other">
+     <li>cannot inherit from final FinalClass</li>
+      <li> class Main extends FinalClass {</li>
+       <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^</li>
+</ul>
 
+  </div>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <div class="styled-box">
     <strong>Note:</strong> Declaring a class as <code>final</code> is a way to ensure the integrity of your class implementation and prevent any unwanted subclass behavior.
   </div>
@@ -2598,7 +2677,7 @@ class Main extends FinalClass {
 
 <div class="reference-container">
   <h3>Reference</h3>
-  <ul>
+  <ul class="style-output-other">
     <li>
       <a href="https://www.programiz.com/java-programming/final-keyword" target="_blank">
         Java final Keyword - Programiz
@@ -3815,7 +3894,7 @@ public class StringInput {
 <div class="content-container" id="method-overloading">
  
 
-  <h2>Java Method Overloading</h2>
+  <h1>Java Method Overloading</h1>
   <p>
     In Java, method overloading allows multiple methods to have the same name, as long as their parameter lists are different. This can involve:
   </p>
@@ -3854,7 +3933,7 @@ float func(int a, float b) {
 
 <!-- part-2 -->
  <div class="content-container" id="why-method-overloading">
-  <h2>Why Method Overloading?</h2>
+  <h1>Why Method Overloading?</h1>
   <p>
     Suppose you need to perform the addition of given numbers, but the number of arguments may vary—for instance, you may need to add either two or three numbers.
   </p>
@@ -3892,12 +3971,20 @@ public class Calculator {
   <div class="styled-box">
     <strong>Benefit:</strong> Method overloading helps improve code readability and usability by using the same method name for logically similar operations.
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 
 <!-- part-3 -->
 
 <div class="content-container" id="method-overloading-java">
-  <h2>How to Perform Method Overloading in Java?</h2>
+  <h1>How to Perform Method Overloading in Java?</h1>
   <p>Here are different ways to perform method overloading:</p>
 
   <h3>1. Overloading by Changing the Number of Parameters</h3>
@@ -3923,9 +4010,20 @@ class MethodOverloading {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Arguments: 1<br>
-    Arguments: 1 and 4
+    <ul class="style-output-other">
+     <li>Arguments: 1</li>
+     <li>Arguments: 1 and 4</li>
+    </ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h3>2. Overloading by Changing the Data Type of Parameters</h3>
   <div class="code-container">
@@ -3953,10 +4051,19 @@ class MethodOverloading {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Got Integer data.<br>
-    Got String object.
+    <ul class="style-output-other">
+     <li>Got Integer data.</li>
+     <li>Got String object.</li>
+    </ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h3>3. Real-world Example of Method Overloading</h3>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -3987,21 +4094,23 @@ class HelperService {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    500<br>
-    89.993<br>
-    550.00
+    <ul class="style-output-other">
+     <li>500</li>
+     <li>89.993</li>
+     <li>550.00</li>
+</ul>
   </div>
 
   <div class="styled-box">
     <strong>Note:</strong> In Java, you can also overload constructors using similar principles as method overloading.
   </div>
 
-  <p> <a href="https://www.programiz.com/java-programming/method-overloading" target="_blank">Recommended Reading: Java Constructor Overloading</a></p>
+  <p> Recommended Reading: <a href="https://www.programiz.com/java-programming/method-overloading" target="_blank" style="color: #1e88e5;";>Java Constructor Overloading</a></p>
 </div>
 <!-- part-4 -->
 <div class="content-container" id="method-overloading-points">
-  <h2>Important Points</h2>
-  <ul>
+  <h1>Important Points</h1>
+  <ul class="styled-box-output">
     <li><strong>Two or more methods</strong> can have the same name inside the same class if they accept different arguments. This feature is known as <strong>method overloading</strong>.</li>
     <li><strong>Method overloading is achieved</strong> by either:
       <ul>
@@ -4044,12 +4153,21 @@ class HelperService {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Absolute value of -12 = 12<br>
-    Value of PI = 3.141592653589793<br>
-    Value of E = 2.718281828459045<br>
-    2^2 = 4.0
+    <ul class="style-output-other">
+     <li>Absolute value of -12 = 12</li>
+     <li>Value of PI = 3.141592653589793</li>
+     <li>Value of E = 2.718281828459045</li>
+     <li>2^2 = 4.0</li>
+   </ul>  
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>In the above example, we have not created any instances of the <code>Math</code> class. But we are able to access its methods: <code>abs()</code> and <code>pow()</code> and variables: <code>PI</code> and <code>E</code>.</p>
 
   <p>It is possible because the methods and variables of the <code>Math</code> class are static.</p>
@@ -4063,7 +4181,6 @@ class HelperService {
   <p>And we can invoke static methods directly using the class name. For example,</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Test {
     // static method inside the Test class
     public static void method() {...}
@@ -4114,9 +4231,20 @@ public class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    2 * 2 = 4<br>
-    2 + 3 = 5
+    <ul class="style-output-other">
+     <li> 2 * 2 = 4</li>
+      <li>2 + 3 = 5</li>
+</ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>In the above program, we have declared a non-static method named <code>multiply()</code> and a static method named <code>add()</code> inside the class <code>StaticTest</code>.</p>
 
@@ -4129,7 +4257,6 @@ public class Main {
   <p>In Java, when we create objects of a class, then every object will have its own copy of all the variables of the class. For example,</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Test {
     // regular variable
     int age;
@@ -4147,7 +4274,6 @@ class Main {
   <p>However, if we declare a variable <strong>static</strong>, all objects of the class share the same static variable. It is because like static methods, static variables are also associated with the class. And, we don't need to create objects of the class to access the static variables. For example,</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Test {
     // static variable
     static int age;
@@ -4189,10 +4315,20 @@ public class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    min + 1 = 6<br>
-    max + 1 = 11
+    <ul class="style-output-other">
+     <li> min + 1 = 6</li>
+     <li> max + 1 = 11</li>
+</ul>
+    
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>In the above program, we have declared a non-static variable named <code>min</code> and a static variable named <code>max</code> inside the class <code>Test</code>.</p>
 
   <p>Inside the <code>Main</code> class, we can see that we are calling the non-static variable using the object of the class (<code>obj.min + 1</code>). However, we are calling the static variable by using the class name (<code>Test.max + 1</code>).</p>
@@ -4233,10 +4369,19 @@ public class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Age is 30<br>
-    Static Method
+    <ul class="style-output-other">
+     <li> Age is 30</li>
+     <li>Static Method</li>
+</ul>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>Here, we are able to access the static variable and method directly without using the class name. It is because static variables and methods are by default <code>public</code>. And, since we are accessing them from the same class, we don't have to specify the class name.</p>
 </div>
 
@@ -4247,7 +4392,6 @@ public class Main {
   <p>In Java, static blocks are used to initialize the static variables. For example,</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">class Test {
     // static variable
     static int age;
@@ -4262,7 +4406,6 @@ public class Main {
   <p>Here we can see that we have used a static block with the syntax:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">static {
     // variable initialization
 }</pre>
@@ -4310,13 +4453,23 @@ public class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    First Static block.<br>
-    Second Static block.<br>
-    a = 23<br>
-    b = 92<br>
-    max = 30
+    <ul class="style-output-other">
+     <li> First Static block.</li>
+      <li>Second Static block.</li>
+       <li> a = 23</li>
+        <li>b = 92</li>
+         <li> max = 30</li>
+</ul>
   </div>
 
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>In the above program, as soon as the <code>Main</code> class is loaded:</p>
 
   <ul class="bullet-list">
@@ -4339,9 +4492,9 @@ public class Main {
 
   <p>For example,</p>
 
-  <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-    <pre class="code-block">class OuterClass {
+ <div class="code-container">
+  <pre class="code-block">
+class OuterClass {
     // static nested class
     static class NestedClass {
         void display() {
@@ -4355,8 +4508,26 @@ public class Main {
             System.out.println("Inside non-static inner class");
         }
     }
-}</pre>
-  </div>
+}
+  </pre>
+  <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
+
+<div class="output-box">
+  <strong>Output:</strong><br>
+  <ul class="style-output-other">
+    <li>Inside static nested class</li>
+    <li>Inside non-static inner class</li>
+  </ul>
+</div>
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>Static nested classes are associated with the outer class itself (not with instances of the outer class). Hence, they can be instantiated without creating an object of the outer class.</p>
 
@@ -4892,13 +5063,16 @@ class Main {
 
   <div class="styled-box">
     <strong>Example:</strong> <br>
-    <code>Student</code> is a class while a particular student named <code>Ravi</code> is an object.
+    <ul class="style-output-other">
+     <li> <code>Student</code> is a class while a particular student named <code>Ravi</code> is an object.</li>
+    </ul>
+   
   </div>
 </div>
 <!-- from https://www.geekster.in/articles/java-classes-and-object/ -->
 <!-- syntax -->
 <div class="content-container">
-  <h2>Properties of Java Classes</h2>
+  <h1>Properties of Java Classes</h1>
   <p>
     A Java class serves as a blueprint for creating objects and doesn’t take up memory.
     It comprises variables of various types and methods. You can include data members, methods,
@@ -4939,7 +5113,7 @@ public class MyClass {
 </div>
 <!-- compontents -->
  <div class="content-container">
-  <h2>Components of Java Class</h2>
+  <h1>Components of Java Class</h1>
   <p>
     In Java, a class serves as a blueprint for creating objects. It encapsulates data and behavior into a single unit.
     Here are the main components of a Java class:
@@ -4950,7 +5124,6 @@ public class MyClass {
     The class declaration defines the name of the class and any inheritance or interfaces it implements.
   </p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 public class MyClass {
     // class body
@@ -4963,7 +5136,6 @@ public class MyClass {
     Fields represent the state or attributes of objects created from the class.
   </p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 private int age;
    </pre>
@@ -4974,7 +5146,6 @@ private int age;
     Constructors initialize objects of the class. They have the same name as the class and are called when objects are created.
   </p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 public MyClass(int age) {
     this.age = age;
@@ -4987,7 +5158,6 @@ public MyClass(int age) {
     Methods define the behavior or actions that objects of the class can perform.
   </p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 public void display() {
     System.out.println("Age: " + age);
@@ -5000,7 +5170,6 @@ public void display() {
     Access modifiers control the accessibility of class members (fields, constructors, methods).
   </p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 public class MyClass {
     private int age;
@@ -5024,7 +5193,7 @@ public class MyClass {
 
 <!-- objects -->
  <div class="content-container">
-  <h2>Java Objects</h2>
+  <h1>Java Objects</h1>
   <p>
     A Java object is an instance of a class. It represents a specific realization of the class blueprint, 
     with its own unique set of data values for the fields defined in the class.
@@ -5056,7 +5225,6 @@ public class MyClass {
   <h3>Syntax of an Object</h3>
   <p>The syntax for creating an object in Java is:</p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 ClassName objectName = new ClassName();
     </pre>
@@ -5064,7 +5232,6 @@ ClassName objectName = new ClassName();
 
   <p>For example:</p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">
 Car myCar = new Car();
    </pre>
@@ -5078,7 +5245,7 @@ Car myCar = new Car();
 
 <!-- initialize -->
  <div class="content-container">
-  <h2>Initializing an Object</h2>
+  <h1>Initializing an Object</h1>
   <p>
     In Java, we can initialize objects in 3 ways:
   </p>
@@ -5188,10 +5355,12 @@ public class Car {
   </div>
 
   <div class="output-box">
-    Output:<br>
-    Brand: Toyota<br>
-    Model: Camry<br>
-    Year: 2022
+   <strong> Output</strong>:<br>
+    <ul class="style-output-other">
+     <li>Brand: Toyota</li>
+     <li>Model: Camry</li>
+     <li>Year: 2022</li>
+     </ul>
   </div>
 
   <h2>Difference Between Java Classes and Objects</h2>
@@ -5234,10 +5403,10 @@ public class Car {
 <!-- refernce -->
 
 <div class="content-container">
-  <h2>Rules for Creating a Java Class</h2>
+  <h1>Rules for Creating a Java Class</h1>
   <p>To properly define a class in Java, you must follow a few important syntax and structure rules. These rules ensure consistency and avoid compilation errors in your Java program.</p>
 
-  <ul>
+  <ul class="styled-box-output">
     <li>The <code>class</code> keyword must be used to declare a class.</li>
     <li>The name of the class should start with an uppercase letter (as per Java naming conventions).</li>
     <li>You can include multiple classes in a single Java file, but only one public class is allowed.</li>
@@ -5266,9 +5435,11 @@ public class Student {
   </div>
 
   <div class="output-box">
-    Output (if called in main):<br>
-    Name: Ravi<br>
-    Age: 20
+   <strong> Output (if called in main):</strong><br>
+   <ul class="style-output-other">
+     <li>Name: Ravi</li>
+     <li>Age: 20</li>
+   </ul> 
   </div>
 
   <p>🔗 <strong>Reference:</strong> <a href="https://www.geekster.in/articles/java-classes-and-object/" target="_blank">Geekster - Java Classes and Object</a></p>
@@ -5283,7 +5454,7 @@ public class Student {
     description: `
       
 <div class="content-container" id="java-constructors">
-  <h2>Java Constructors</h2>
+  <h1>Java Constructors</h1>
   <p>A constructor in Java is similar to a method that is invoked when an object of the class is created.</p>
   <p>Unlike Java methods, a constructor has the same name as that of the class and does not have any return type. For example:</p>
 
@@ -5310,7 +5481,7 @@ class Main {
   // constructor
   Main() {
     System.out.println("Constructor Called:");
-    name = "Programiz";
+    name = "Booster";
   }
 
   public static void main(String[] args) {
@@ -5326,10 +5497,20 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Constructor Called:<br>
-    The name is Programiz
+    <ul class="style-output-other">
+     <li>Constructor Called:</li>
+     <li>The name is Booster</li>
+    </ul>
+  
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>In the above example, we have created a constructor named <code>Main()</code>.</p>
   <p>Inside the constructor, we are initializing the value of the <code>name</code> variable.</p>
   <p>Notice the statement creating an object of the <code>Main</code> class:</p>
@@ -5345,7 +5526,7 @@ class Main {
   <p>Hence, the program prints the value of the <code>name</code> variable as <strong>Programiz</strong>.</p>
 
   <h3>Types of Constructor</h3>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>No-Arg Constructor</strong></li>
     <li><strong>Parameterized Constructor</strong></li>
     <li><strong>Default Constructor</strong></li>
@@ -5354,7 +5535,7 @@ class Main {
 
 <!-- part-2 -->
 <div class="content-container" id="java-no-arg-constructors">
-  <h2>Java No-Arg Constructors</h2>
+  <h1>Java No-Arg Constructors</h1>
   <p>Similar to methods, a Java constructor may or may not have any parameters (arguments).</p>
   <p>If a constructor does not accept any parameters, it is known as a no-argument constructor. For example,</p>
 
@@ -5395,9 +5576,20 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Constructor is called<br>
-    Value of i: 5
+    <ul class="style-output-other">
+     <li>Constructor is called</li>
+    <li>Value of i: 5</li>
+</ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>In the above example, we have created a constructor <code>Main()</code>.</p>
   <p>Here, the constructor does not accept any parameters. Hence, it is known as a no-arg constructor.</p>
@@ -5442,7 +5634,7 @@ class Main {
 
 <!-- part-3 -->
 <div class="content-container" id="java-parameterized-constructor">
-  <h2>Java Parameterized Constructor</h2>
+  <h1>Java Parameterized Constructor</h1>
   <p>A Java constructor can also accept one or more parameters. Such constructors are known as parameterized constructors (constructors with parameters).</p>
 
   <h3>Example: Parameterized Constructor</h3>
@@ -5473,10 +5665,21 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Java Programming Language<br>
-    Python Programming Language<br>
-    C Programming Language
+    <ul class="style-output-other">
+     <li>Java Programming Language</li>
+     <li>Python Programming Language</li>
+     <li>C Programming Language</li>
+</ul>
   </div>
+
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>In the above example, we have created a constructor named <code>Main()</code>.</p>
   <p>Here, the constructor takes a single parameter. Notice the expression:</p>
@@ -5486,7 +5689,7 @@ class Main {
 </div>
 <!-- part 4 -->
  <div class="content-container" id="java-default-constructor">
-  <h2>Java Default Constructor</h2>
+  <h1>Java Default Constructor</h1>
   <p>If we do not create any constructor, the Java compiler automatically creates a no-arg constructor during the execution of the program.</p>
   <p>This constructor is called the default constructor.</p>
 
@@ -5515,62 +5718,71 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Default Value:<br>
-    a = 0<br>
-    b = false
+    <ul class="style-output-other">
+     <li>Default Value:</li>
+     <li>a = 0</li>
+     <li>b = false</li>
+</ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <p>Here, we haven't created any constructors.</p>
   <p>Hence, the Java compiler automatically creates the default constructor.</p>
   <p>The default constructor initializes any uninitialized instance variables with default values.</p>
-
- <table style="width: 100%; border-collapse: collapse; font-size: 1rem; max-width: 600px;">
+<table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem; max-width: 600px;">
   <thead>
     <tr style="background-color: #e3f2fd;">
-      <th style="padding: 10px; border: 1px solid #ccc;">Type</th>
-      <th style="padding: 10px; border: 1px solid #ccc;">Default Value</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Type</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Default Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">boolean</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">false</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">boolean</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">false</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">byte</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">byte</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">short</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">short</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">int</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">int</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">long</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0L</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">long</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0L</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">char</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">\u0000</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">char</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">\u0000</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">float</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0.0f</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">float</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0.0f</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">double</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0.0d</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">double</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">0.0d</td>
     </tr>
     <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">object</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Reference null</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">object</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Reference null</td>
     </tr>
   </tbody>
 </table>
-
 
   <p>To learn more, visit <a href="https://www.geekster.in/articles/java-data-types/" target="_blank" rel="noopener noreferrer">Java Data Types</a>.</p>
 
@@ -5605,16 +5817,27 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    Default Value:<br>
-    a = 0<br>
-    b = false
+   <ul class="style-output-other">
+     <li>Default Value:</li>
+     <li>a = 0</li>
+     <li>b = false</li>
+</ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 <!-- part 5 -->
 <div class="content-container" id="important-notes-java-constructors">
-  <h2>Important Notes on Java Constructors</h2>
+  <h1>Important Notes on Java Constructors</h1>
   
-  <ul>
+  <ul class="styled-box-output">
     <li>Constructors are invoked implicitly when you instantiate objects.</li>
     <li>The two rules for creating a constructor are:
       <ol>
@@ -5626,7 +5849,7 @@ class Main {
   </ul>
 
   <p><strong>Constructor types:</strong></p>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>No-Arg Constructor</strong> - a constructor that does not accept any arguments</li>
     <li><strong>Parameterized Constructor</strong> - a constructor that accepts arguments</li>
     <li><strong>Default Constructor</strong> - a constructor automatically created by the Java compiler if it is not explicitly defined</li>
@@ -5639,10 +5862,12 @@ class Main {
 </div>
 <!-- part-6 -->
   <div class="content-container" id="constructors-overloading-java">
-  <h2>Constructors Overloading in Java</h2>
+  <h1>Constructors Overloading in Java</h1>
   <p>Similar to Java method overloading, we can also create two or more constructors with different parameters. This is called constructor overloading.</p>
 
   <p><strong>Example: Java Constructor Overloading</strong></p>
+  
+ <div class="code-container">
   <pre class="code-block">
 class Main {
 
@@ -5675,12 +5900,17 @@ class Main {
   }
 }
   </pre>
+  <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+</div>
 
-  <p><strong>Output</strong></p>
-  <pre class="code-block">
-Programming Language: Booster
-Programming Language: Python
-  </pre>
+<div class="output-box">
+  <strong>Output:</strong><br>
+  <ul class="style-output-other">
+    <li>Programming Language: Booster</li>
+    <li>Programming Language: Python</li>
+  </ul>
+</div>
+
 
   <p>In the above example, we have two constructors: <code>Main()</code> and <code>Main(String language)</code>.</p>
   <p>Here, both the constructors initialize the value of the variable <code>language</code> with different values.</p>
@@ -5697,7 +5927,7 @@ Programming Language: Python
     title: "",
     description: `
       <div class="content-container">
-  <h1>Java Method Overriding</h1>
+  <h1 >Java Method Overriding</h1>
 
   <p>
     Now, if the same method is defined in both the superclass and the subclass, then the method of the subclass class overrides the method of the superclass. This is known as method overriding.
@@ -5729,9 +5959,18 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    I am a dog.
+    <ul class="style-output-other">
+     <li>I am a dog.</li>
+    </ul>
   </div>
-
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>
     In the above program, the <code>displayInfo()</code> method is present in both the <code>Animal</code> superclass and the <code>Dog</code> subclass.
   </p>
@@ -5795,8 +6034,10 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    I am an animal.<br>
-    I am a dog.
+    <ul class="style-output-other">
+     <li>I am an animal.</li>
+     <li>I am a dog.</li>
+</ul>  
   </div>
 
   <p>
@@ -5860,9 +6101,10 @@ class Main {
 
   <div class="output-box">
     <strong>Output:</strong><br>
-    I am a dog.
+    <ul class="style-output-other">
+     <li>I am a dog.</li>
+</ul>
   </div>
-
   <p>
     In the above example, the subclass <code>Dog</code> overrides the method <code>displayInfo()</code> of the superclass <code>Animal</code>.
   </p>
@@ -5878,7 +6120,8 @@ class Main {
 <!-- part 4 -->
 <div class="reference-container">
   <h3>Reference</h3>
-  <p>
+  <p class="style-output-other"
+>
     For more detailed explanations and examples, visit the original article on
     <a href="https://www.programiz.com/java-programming/method-overriding" target="_blank" rel="noopener noreferrer">
       Programiz: Java Method Overriding
