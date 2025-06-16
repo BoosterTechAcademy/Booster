@@ -349,5 +349,65 @@ body.dark-theme .signup-form {
 }
 
 
-/* logo */
+/* dark them of unvailable message */
 
+/* pop up */
+
+.floating-popup {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #fff;
+  color: #000;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 999;
+  max-width: 300px;
+  width: 90%;
+  animation: fadeInPopup 0.4s ease;
+}
+
+body.dark-theme .floating-popup {
+  background: #222;
+  color: #fff;
+}
+
+.popup-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+.popup-message h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.popup-message p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.popup-message a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+@keyframes fadeInPopup {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
