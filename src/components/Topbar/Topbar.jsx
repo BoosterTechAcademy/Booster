@@ -54,6 +54,7 @@ const Topbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
+          
           <h1>
             Booster<span>Learning Partner</span>
           </h1>
