@@ -280,7 +280,7 @@ class SwitchCaseDemo {
   },
   operators: {
     id: "operators",
-    title: "operators in Java",
+    title: "",
     description: `
       <div class="content-container">
   
@@ -796,7 +796,7 @@ variable = Expression ? expression1 : expression2
   </pre>
 
   <p>Here's how it works.</p>
-  <ul>
+  <ul class="styled-list">
     <li>If the Expression is true, <code>expression1</code> is assigned to the variable.</li>
     <li>If the Expression is false, <code>expression2</code> is assigned to the variable.</li>
   </ul>
@@ -831,7 +831,7 @@ Leap year
 
   <p>Shift operators in Java, namely left shift (<code>&lt;&lt;</code>) and right shift (<code>&gt;&gt;</code>), allow for bit-level manipulation by shifting the bits of a binary number.</p>
 
-  <ul>
+  <ul  class="styled-list">
     <li><strong>Left Shift:</strong> <code>&lt;&lt;</code></li>
     <li><strong>Signed Right Shift:</strong> <code>&gt;&gt;</code></li>
     <li><strong>Unsigned Right Shift:</strong> <code>&gt;&gt;&gt;</code></li>
