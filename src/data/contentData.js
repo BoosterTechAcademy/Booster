@@ -13,7 +13,7 @@ export const contentMap = {
   },
     controlflow: {
     id: "controlflow",
-    title: "Variables in Java",
+    title: "control flow in Java",
     description: `
       <div class="content-container">
     <h1>Control Flow Statements in Java</h1>
@@ -904,7 +904,7 @@ Unsigned Right Shift Result: 5
   },
    loops: {
     id: "loops",
-    title: "Variables in Java",
+    title: "loops in Java",
     description: `
      <div class="content-container">
   <h1>Looping Statements in Java with Examples</h1>
@@ -919,7 +919,7 @@ Unsigned Right Shift Result: 5
   </p>
 
   <h2>Types of Looping Statements in Java</h2>
-  <ul>
+  <ul  class="styled-list">
     <li><strong><code>for</code> loop</strong>: Used when the number of iterations is known.</li>
     <li><strong><code>while</code> loop</strong>: Used when the number of iterations is not known and the condition is checked before the loop runs.</li>
     <li><strong><code>do-while</code> loop</strong>: Similar to <code>while</code>, but the condition is checked after the loop executes at least once.</li>
@@ -929,7 +929,7 @@ Unsigned Right Shift Result: 5
 </div>
 <!-- for loop -->
  <div class="content-container">
-  <h2>For Loop in Java</h2>
+  <h1>For Loop in Java</h1>
 
   <p>
     The <strong>for loop</strong> in Java is used when the number of iterations is known. It repeatedly executes a block of code as long as the condition remains true. It's compact and often used for counting.
@@ -989,7 +989,7 @@ Unsigned Right Shift Result: 5
 
 <!-- enhanced for loop -->
  <div class="content-container">
-  <h2>Enhanced for Loop in Java</h2>
+  <h1>Enhanced for Loop in Java</h1>
 
   <p>
     The <strong>enhanced for loop</strong> provides a more readable way to iterate through elements of arrays or collections. It eliminates the need for an index variable and is best used when you simply want to traverse all items sequentially without modifying them.
@@ -1041,10 +1041,19 @@ Unsigned Right Shift Result: 5
   <div class="output-box">
     Ron<br>Harry<br>Hermoine
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 <!-- while loop -->
  <div class="content-container">
-  <h2>While Loop in Java</h2>
+  <h1>While Loop in Java</h1>
 
   <p>
     The <strong>while loop</strong> in Java is used to repeatedly execute a block of statements as long as a specified condition remains true. This loop is useful when you don’t know in advance how many times a block of code should run.
@@ -1098,12 +1107,20 @@ Unsigned Right Shift Result: 5
     Value of x: 3<br>
     Value of x: 4
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 
 <!-- do while -->
 
 <div class="content-container">
-  <h2>Do-while Loop in Java</h2>
+  <h1>Do-while Loop in Java</h1>
 
   <p>
     The <strong>do-while loop</strong> in Java is similar to the while loop, but with one key difference: it evaluates the condition after executing the loop body. This means the code inside the <code>do</code> block will run at least once, even if the condition is false from the start.
@@ -1155,6 +1172,14 @@ while (condition);</pre>
   <div class="output-box">
     Value of x: 21
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 
 
@@ -1361,7 +1386,7 @@ class ReturnStatementDemo
       <li>Narrowing Type Casting</li>
     </ul>
 
-    <h2>Widening Type Casting</h2>
+    <h1>Widening Type Casting</h1>
     <p>In Widening Type Casting, Java automatically converts one data type to another data type.</p>
     <p><strong>Example: Converting int to double</strong></p>
 
@@ -1380,7 +1405,7 @@ class ReturnStatementDemo
 
     <div class="output-box">
       <strong>Output</strong>
-      <ol>
+      <ol class="styled-box-output">
         <li>The integer value: 10</li>
         <li>The double value: 10.0</li>
       </ol>
@@ -1390,7 +1415,7 @@ class ReturnStatementDemo
       In Widening Type Casting, smaller data types are converted into larger types automatically. Hence, no data is lost. This is also known as <strong>Implicit Type Casting</strong>.
     </div>
 
-    <h2>Narrowing Type Casting</h2>
+    <h1>Narrowing Type Casting</h1>
     <p>In Narrowing Type Casting, we manually convert one data type into another using parentheses.</p>
     <p><strong>Example: Converting double into int</strong></p>
 
@@ -1409,7 +1434,7 @@ class ReturnStatementDemo
 
     <div class="output-box">
       <strong>Output</strong>
-      <ol>
+      <ol class="styled-box-output">
         <li>The double value: 10.99</li>
         <li>The integer value: 10</li>
       </ol>
@@ -1419,7 +1444,7 @@ class ReturnStatementDemo
       In Narrowing Type Casting, larger data types are manually converted into smaller types. This can result in data loss. It is also known as <strong>Explicit Type Casting</strong>.
     </div>
 
-    <h2>Other Type Conversion Examples</h2>
+    <h1>Other Type Conversion Examples</h1>
 
     <p><strong>Example 1: Type conversion from int to String</strong></p>
     <div class="code-container">
@@ -1437,7 +1462,7 @@ class ReturnStatementDemo
 
     <div class="output-box">
       <strong>Output</strong>
-      <ol>
+      <ol class="styled-box-output">
         <li>The integer value is: 10</li>
         <li>The string value is: 10</li>
       </ol>
@@ -1459,7 +1484,7 @@ class ReturnStatementDemo
 
     <div class="output-box">
       <strong>Output</strong>
-      <ol>
+      <ol class="styled-box-output">
         <li>The string value is: 10</li>
         <li>The integer value is: 10</li>
       </ol>
@@ -1484,7 +1509,7 @@ class ReturnStatementDemo
   <p>If you want to store the names of 100 people, you can create an array of the String type:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    
     <pre class="code-block">String[] array = new String[100];</pre>
   </div>
 
@@ -1494,7 +1519,6 @@ class ReturnStatementDemo
   <p>In Java, you declare an array like this:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">dataType[] arrayName;</pre>
   </div>
 
@@ -1513,7 +1537,6 @@ class ReturnStatementDemo
   <p>To specify the number of elements, allocate memory:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">// declare an array
 double[] data;
 
@@ -1525,7 +1548,6 @@ data = new double[10];</pre>
   <p>You can also declare and allocate memory in a single statement:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">double[] data = new double[10];</pre>
   </div>
 
@@ -1533,7 +1555,6 @@ data = new double[10];</pre>
   <p>Arrays can be initialized during declaration:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">int[] age = {12, 4, 5, 2, 5};</pre>
   </div>
 
@@ -1559,7 +1580,6 @@ age[2] = 5;
   <p>Access elements using the index:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">array[index]</pre>
   </div>
 
@@ -1579,6 +1599,14 @@ age[2] = 5;
   }
 }</pre>
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Looping Through Array Elements</h2>
   <p>Using <code>for</code> loop:</p>
@@ -1595,7 +1623,14 @@ age[2] = 5;
   }
 }</pre>
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <p>Using <code>for-each</code> loop:</p>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -1610,6 +1645,14 @@ age[2] = 5;
   }
 }</pre>
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Example: Compute Sum and Average of Array Elements</h2>
   <div class="code-container">
@@ -1633,8 +1676,18 @@ age[2] = 5;
   }
 }</pre>
   </div>
+  
+
 
   <p>Note how we used the <code>length</code> property and type casting for average calculation.</p>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 </div>
 
 <!--multi dimensional arrays-->
@@ -1648,21 +1701,19 @@ age[2] = 5;
   <p>For example:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">int[][] a = new int[3][4];</pre>
   </div>
 
   <p>Here, <code>a</code> is a 2-dimensional array that can hold a maximum of 12 elements (3 rows × 4 columns).</p>
 
   <h3>2-dimensional Array in Java</h3>
-  <img src="https://www.programiz.com/sites/tutorial2program/files/java-2d-array.jpg" alt="2-dimensional array diagram" style="width:100%; max-width:600px;"/>
+  <img src="https://www.programiz.com/sites/tutorial2program/files/java-2d-array.jpg" alt="2-dimensional array diagram" style="width:100%; max-width:600px;margin-bottom:1rem;"/>
   <p>Remember, Java uses zero-based indexing, so the index starts at 0, not 1.</p>
 
   <h2>Example of a 3-dimensional Array</h2>
   <p>You can create a 3-dimensional array as well:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">String[][][] data = new String[3][4][2];</pre>
   </div>
 
@@ -1672,7 +1723,6 @@ age[2] = 5;
   <p>Here is an example of initializing a 2-dimensional array:</p>
 
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">int[][] a = {
   {1, 2, 3}, 
   {4, 5, 6, 9}, 
@@ -1704,13 +1754,22 @@ age[2] = 5;
 
   <div class="output-box">
     <strong>Output</strong><br/>
-    Length of row 1: 3<br/>
-    Length of row 2: 4<br/>
-    Length of row 3: 1
+    <ul class="style-output-other">
+       <li> Length of row 1: 3</li>
+       <li> Length of row 2: 4</li>
+       <li> Length of row 3: 1</li>
+    </ul>
   </div>
 
   <p>Here, <code>a[0]</code>, <code>a[1]</code>, and <code>a[2]</code> are arrays themselves, and the <code>length</code> property gives their size.</p>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h2>Example: Print All Elements of 2D Array Using Loop</h2>
 
   <div class="code-container">
@@ -1733,15 +1792,26 @@ age[2] = 5;
 
   <div class="output-box">
     <strong>Output</strong><br/>
-    1<br/>
-    -2<br/>
-    3<br/>
-    -4<br/>
-    -5<br/>
-    6<br/>
-    9<br/>
-    7
+    <ul class="style-output-other">
+     <li>1</li>
+     <li>-2</li>
+     <li>3</li>
+     <li>-4</li>
+     <li>-5</li>
+     <li>6</li>
+     <li>9</li>
+     <li>7</li>
+    </ul>
+    
   </div>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Example: Using for...each Loop to Access 2D Array Elements</h2>
 
@@ -1765,17 +1835,27 @@ age[2] = 5;
 
   <div class="output-box">
     <strong>Output</strong><br/>
-    1<br/>
-    -2<br/>
-    3<br/>
-    -4<br/>
-    -5<br/>
-    6<br/>
-    9<br/>
-    7
+     <ul class="style-output-other">
+     <li>1</li>
+     <li>-2</li>
+     <li>3</li>
+     <li>-4</li>
+     <li>-5</li>
+     <li>6</li>
+     <li>9</li>
+     <li>7</li>
+    </ul>
   </div>
 
   <p>We first access each row (which is an array) and then iterate through the elements of that row.</p>
+<div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>How to Initialize a 3D Array in Java?</h2>
   <p>3D arrays are arrays of 2D arrays. You can initialize a 3D array similar to 2D arrays:</p>
@@ -1843,6 +1923,16 @@ int[][][] test = {
     2<br/>
     3
   </div>
+
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
 </div>
     `
   },
@@ -1861,10 +1951,10 @@ int[][][] test = {
   <h2>Example: Creating and Using a Method</h2>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-    <pre class="code-block">public class Geeks {
+    <pre class="code-block">public class Booster {
     // Method to print a message
     public void printMessage() {
-        System.out.println("Hello, Geeks!");
+        System.out.println("Hello, Booster!");
     }
 
     public static void main(String[] args) {
@@ -1875,17 +1965,28 @@ int[][][] test = {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Hello, Geeks!
+    <ul class="style-output-other">
+     <li>Hello, Booster!</li>
+    </ul>
   </div>
+
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
 
   <h2>Syntax of a Method</h2>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">&lt;access_modifier&gt; &lt;return_type&gt; &lt;method_name&gt;(parameters) {
     // method body
 }</pre>
   </div>
-  <ul>
+  <ul class="styled-box-output">
     <li><strong>Access Modifier:</strong> Defines visibility (public, private, protected, or default).</li>
     <li><strong>Return Type:</strong> Type of value returned (void if nothing is returned).</li>
     <li><strong>Method Name:</strong> Follows camelCase; should be a verb.</li>
@@ -1897,14 +1998,12 @@ int[][][] test = {
   <h2>Types of Methods in Java</h2>
   <h3>1. Predefined Methods</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">Math.random();  // Returns a random value
 Math.PI;        // Returns value of pi</pre>
   </div>
 
   <h3>2. User-defined Methods</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">public void sayHello() { ... }
 public int add(int a, int b) { ... }</pre>
   </div>
@@ -1912,7 +2011,6 @@ public int add(int a, int b) { ... }</pre>
   <h2>Ways to Define Methods</h2>
   <h3>Instance Method</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">void show() {
     // instance method body
 }</pre>
@@ -1920,7 +2018,6 @@ public int add(int a, int b) { ... }</pre>
 
   <h3>Static Method</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">static void display() {
     // static method body
 }</pre>
@@ -1929,12 +2026,11 @@ public int add(int a, int b) { ... }</pre>
   <h2>Method Signature</h2>
   <p>A method signature includes the method name and parameter list (number, type, and order). Return type and exceptions are not part of the signature.</p>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">max(int x, int y)</pre>
   </div>
 
   <h2>Naming a Method</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>Start with a lowercase verb (e.g., getName, printData)</li>
     <li>Use camelCase for multiple words</li>
     <li>Be descriptive and concise</li>
@@ -1950,7 +2046,7 @@ public int add(int a, int b) { ... }</pre>
     }
 }
 
-public class Geeks {
+public class Booster {
     public static void main(String[] args) {
         Add obj = new Add();
         int result = obj.addTwoInt(1, 2);
@@ -1960,9 +2056,19 @@ public class Geeks {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Sum: 3
+    <ul class="style-output-other">
+     <li>Sum: 3</li>
+    </ul>
+    
   </div>
-
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
   <h2>Example: Calling Methods Inside Class</h2>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -1988,7 +2094,7 @@ public class Geeks {
     }
 }
 
-public class Geeks {
+public class Booster{
     public static void main(String[] args) {
         Test obj = new Test();
         int i = obj.method1();
@@ -1999,16 +2105,26 @@ public class Geeks {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Inside method1<br/>
-    Inside method2<br/>
-    Returned: 1<br/>
-    Objects created: 1
+    
+    <ul class="style-output-other">
+     <li> Inside method1</li>
+      <li>Inside method2</li>
+       <li>Returned: 1</li>
+        <li>Objects created: 1</li>
+    </ul>
+    
   </div>
-
-  <h2>Passing Parameters to Methods</h2>
+ <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+  <h1>Passing Parameters to Methods</h1>
   <h3>Array as Argument</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">public void printArray(int[] arr) {
     for(int i : arr) System.out.println(i);
 }</pre>
@@ -2016,7 +2132,6 @@ public class Geeks {
 
   <h3>Variable Arguments (Varargs)</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">public void printNumbers(int... nums) {
     for(int n : nums) System.out.println(n);
 }</pre>
@@ -2052,12 +2167,25 @@ public class Geeks {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Number: 123<br/>
-    Name: GFG Write
+    <ul class="style-output-other">
+     <li>Number: 123</li>
+     <li>Name: GFG Write</li>
+    </ul> 
   </div>
 
+  <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
+
+
   <h2>Memory Allocation of Method Calls</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li>Java uses stack memory for method calls.</li>
     <li>When a method is called, a stack frame is created.</li>
     <li>Once execution completes, the frame is removed.</li>
@@ -2065,7 +2193,7 @@ public class Geeks {
   </ul>
 
   <h2>Advantages of Using Methods</h2>
-  <ul>
+  <ul class="styled-box-output">
     <li> <strong>Code Reusability</strong> – Define once, use many times.</li>
     <li><strong>Abstraction</strong> – Hide complex logic behind a simple interface.</li>
     <li><strong>Encapsulation</strong> – Group logic with related data.</li>
@@ -3220,7 +3348,7 @@ class Main {
 
   <h2>What are Access Modifiers?</h2>
   <p>Access modifiers in Java are keywords used to define the scope or accessibility of classes, constructors, methods, and data members. Java provides four types of access modifiers:</p>
-  <ul>
+  <ul class="styled-box-output">
     <li>default (no modifier)</li>
     <li>private</li>
     <li>protected</li>
@@ -3253,8 +3381,20 @@ public class Test {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Error: The method addTwoNumbers(int, int) from the type Addition is not visible
+    <ul class="style-output-other">
+     <li>Error: The method addTwoNumbers(int, int) from the type Addition is not visible</li>
+    </ul>
+    
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>2. Private Access Modifier</h2>
   <p>The <code>private</code> modifier restricts access to within the class only. Classes and interfaces cannot be private.</p>
@@ -3277,8 +3417,19 @@ public class Example {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Compile-time error
+    <ul class="style-output-other">
+     <li> Compile-time error</li>
+</ul>
+   
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>3. Protected Access Modifier</h2>
   <p>Protected members are accessible within the same package and subclasses in other packages. It is commonly used in inheritance.</p>
@@ -3306,8 +3457,19 @@ class Test extends Addition {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    33
+    <ul class="style-output-other">
+     <li>33</li>
+</ul>
+    
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>4. Public Access Modifier</h2>
   <p>The <code>public</code> modifier allows the widest level of access. Members declared public can be accessed from any other class.</p>
@@ -3335,28 +3497,69 @@ class Test {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    101
+    <ul class="style-output-other">
+     <li> 101</li>
+</ul>
+   
   </div>
 
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
   <h2>Access Modifier Scope Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Modifier</th>
-        <th>Class</th>
-        <th>Package</th>
-        <th>Subclass (same package)</th>
-        <th>Subclass (diff package)</th>
-        <th>Outside Class</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>public</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
-      <tr><td>protected</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
-      <tr><td>default</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td><td>❌</td></tr>
-      <tr><td>private</td><td>✔️</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
-    </tbody>
-  </table>
+ <table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Modifier</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Class</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Package</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Subclass (same package)</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Subclass (diff package)</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Outside Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">public</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">protected</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">default</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">private</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">✔️</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">❌</td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
     `
   },
@@ -3373,25 +3576,22 @@ class Test {
   <p>The <code>Scanner</code> class provides many built-in methods to take different types of user inputs.</p>
 
   <h2>How to Use Scanner Class to Take User Input?</h2>
-  <ol>
+  <ol class="styled-box-output">
     <li><strong>Import Scanner Class</strong><br/>
-      First, import the Scanner class using the statement:
+      <p>First, import the Scanner class using the statement:</p>
       <div class="code-container">
-        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
         <pre class="code-block">import java.util.Scanner;</pre>
       </div>
     </li>
     <li><strong>Create Scanner Object</strong><br/>
-      Create an object of the Scanner class by invoking its constructor:
+      <p>Create an object of the Scanner class by invoking its constructor:</P>
       <div class="code-container">
-        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
         <pre class="code-block">Scanner obj = new Scanner(System.in);</pre>
       </div>
     </li>
     <li><strong>Take User Input</strong><br/>
-      Use appropriate methods of the Scanner object to read input. For example, to read an integer:
+      <p>Use appropriate methods of the Scanner object to read input. For example, to read an integer:</p>
       <div class="code-container">
-        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
         <pre class="code-block">int age = obj.nextInt();</pre>
       </div>
     </li>
@@ -3421,36 +3621,81 @@ public class AddTwoNumbers {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Enter the first number: 10<br/>
-    Enter the second number: 20<br/>
-    The sum of the two numbers is: 30
+    <ul class="style-output-other">
+     <li>Enter the first number: 10</li>
+     <li>Enter the second number: 20</li>
+     <li>The sum of the two numbers is: 30</li>
+    </ul>
+    
   </div>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
 
   <h2>Methods for Different Types of User Inputs</h2>
   <p>The Scanner class provides several methods to take various types of inputs. Here's a summary:</p>
-  <table>
-    <thead>
-      <tr>
-        <th>Sr.No.</th>
-        <th>Method & Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td><code>String next()</code>: Returns the next complete token as a String.</td></tr>
-      <tr><td>2</td><td><code>BigDecimal nextBigDecimal()</code>: Reads next token as BigDecimal.</td></tr>
-      <tr><td>3</td><td><code>BigInteger nextBigInteger()</code>: Reads next token as BigInteger.</td></tr>
-      <tr><td>4</td><td><code>boolean nextBoolean()</code>: Reads next token as boolean.</td></tr>
-      <tr><td>5</td><td><code>byte nextByte()</code>: Reads next token as byte.</td></tr>
-      <tr><td>6</td><td><code>double nextDouble()</code>: Reads next token as double.</td></tr>
-      <tr><td>7</td><td><code>float nextFloat()</code>: Reads next token as float.</td></tr>
-      <tr><td>8</td><td><code>int nextInt()</code>: Reads next token as int.</td></tr>
-      <tr><td>9</td><td><code>String nextLine()</code>: Reads the entire line as String.</td></tr>
-      <tr><td>10</td><td><code>long nextLong()</code>: Reads next token as long.</td></tr>
-      <tr><td>11</td><td><code>short nextShort()</code>: Reads next token as short.</td></tr>
-    </tbody>
-  </table>
+<table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Sr.No.</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Method & Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">1</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>String next()</code>: Returns the next complete token as a String.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">2</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>BigDecimal nextBigDecimal()</code>: Reads next token as BigDecimal.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">3</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>BigInteger nextBigInteger()</code>: Reads next token as BigInteger.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">4</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>boolean nextBoolean()</code>: Reads next token as boolean.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">5</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>byte nextByte()</code>: Reads next token as byte.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">6</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>double nextDouble()</code>: Reads next token as double.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">7</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>float nextFloat()</code>: Reads next token as float.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">8</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>int nextInt()</code>: Reads next token as int.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">9</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>String nextLine()</code>: Reads the entire line as String.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">10</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>long nextLong()</code>: Reads next token as long.</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">11</td>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>short nextShort()</code>: Reads next token as short.</td>
+    </tr>
+  </tbody>
+</table>
 
-  <h2>Integer Input from the User</h2>
+
+  <h1>Integer Input from the User</h1>
   <p>The <code>nextInt()</code> method is used to take integer input from the user.</p>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -3470,11 +3715,22 @@ public class IntegerInput {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Input an integer value: 101<br/>
-    The input is : 101
+    <ul class="style-output-other">
+     <li>Input an integer value: 101</li>
+     <li>The input is : 101</li>
+    </ul>
   </div>
 
-  <h2>Float Input from the User</h2>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
+  <h1>Float Input from the User</h1>
   <p>The <code>nextFloat()</code> method is used to take float input from the user.</p>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -3494,11 +3750,22 @@ public class FloatInput {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Input a float value: 12.345<br/>
-    The input is : 12.345
+    <ul class="style-output-other">
+     <li> Input a float value: 12.345</li>
+     <li> The input is : 12.345</li>
+    </ul>
   </div>
 
-  <h2>String Input from the User</h2>
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
+
+  <h1>String Input from the User</h1>
   <p>The <code>nextLine()</code> method is used to take string input (including spaces) from the user.</p>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
@@ -3518,9 +3785,20 @@ public class StringInput {
   </div>
   <div class="output-box">
     <strong>Output</strong><br/>
-    Input a string value: Hello World<br/>
-    The input is : Hello World
+    <ul class="style-output-other">
+     <li> Input a string value: Hello World</li>
+     <li> The input is : Hello World</li>
+    </ul>
   </div>
+
+   <div class="try-code-cta">
+  <p>
+    <strong>Try this code online:</strong>
+    <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener noreferrer">
+      Open in Java Compiler
+    </a>
+  </p>
+</div>
     `
   },
 
