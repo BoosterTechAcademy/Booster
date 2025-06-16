@@ -459,6 +459,330 @@ const videoData = [
     "videoUrl": "https://youtu.be/NYuoR06Fyy4?si=HbD8xZISDkK690bh",
     "thumbnailUrl": "https://example.com/thumbnails/telusko-java-intro.png"
   },
+  {
+    "_id": "1",
+    "title": "Java for Beginners -  Introduction to Java Programming",
+    "description": "Get a quick overview of Java, its features, uses, and why it's a popular programming language.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/IT2durkDCXM?si=LB4eTwS8CaUqMAbG"
+},
+{
+    "_id": "2",
+    "title": "Java for Beginners -  Setting Up Java Environment",
+    "description": "Learn how to set up the Java Development Kit (JDK) and configure your system to start writing and running Java programs.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/XTkqv5y7Rjg?si=wJPxOu3ADovaCuWv"
+},
+{
+    "_id": "3",
+    "title": "Java for Beginners -  Variables and Datatypes in Java",
+    "description": "Understand how to declare variables and use different data types in Java to store various kinds of values.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/SkKJDwpMdvA?si=SZ2Kj5D3-Gvsxlqd"
+},
+{
+    "_id": "4",
+    "title": "Java for Beginners -  How to Get User Input in Java",
+    "description": "Learn how to get input from users in Java using the Scanner class for different data types like int, String, and double.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/oMmAdViiVr8?si=R-W87BhmqStlm8NG"
+},
+{
+    "_id": "5",
+    "title": "Java for Beginners -  Java Data Types Explained",
+    "description": "Explore Java's data types including primitive types like int, float, char, and reference types like arrays and objects.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/3EAWqy9skV4?si=iOwU9GZEvzX2MUgI"
+},
+{
+    "_id": "6",
+    "title": "Java for Beginners -  Logical & Relational Operators",
+    "description": "Understand how logical and relational operators in Java are used to compare values and make decisions based on multiple conditions.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/1EWSzvD-uuc?si=klYJ9--LRnpSB0ci"
+},
+{
+    "_id": "7",
+    "title": "Java for Beginners -  Arithmetic Operators | Type Casting",
+    "description": "Learn how arithmetic operators perform basic math in Java and how type casting helps convert data types during operations.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/RuMbO5T2Ev0?si=Ahl-kDkL8Qj4J4TE"
+},
+{
+    "_id": "8",
+    "title": "Java for Beginners -  If Else with examples",
+    "description": "Learn how to use if, else if, and else statements in Java to control program flow based on conditions.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/HG2C-vd5XLM?si=KynEnQRxdUZ1ljdI"
+},
+{
+    "_id": "9",
+    "title": "Java for Beginners -  Understanding Else if and Nested If",
+    "description": "Explore how else-if and nested if statements in Java allow checking multiple conditions and embedding decisions within decisions.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/8XTcagpacRg?si=uWUI2kPrKfaHa7xL"
+},
+{
+    "_id": "10",
+    "title": "Java for Beginners -  Ternary Operator Explained",
+    "description": "Learn how the ternary operator in Java offers a concise way to write simple if-else conditions in a single line.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/-yJC5N3CNL8?si=jU1FHZLBAny4dGQl"
+},
+{
+    "_id": "11",
+    "title": "Java for Beginners -   For loop explained",
+    "description": "Understand how the for loop in Java is used to repeat a block of code a specific number of times with initialization, condition, and increment.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/BtaIHsGv5dA?si=C4MeNlDj6eETcFI5"
+},
+{
+    "_id": "12",
+    "title": "Java for Beginners -   Exploring While Loops",
+    "description": "Learn how while loops in Java repeatedly execute a block of code as long as a given condition is true.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/Bs2LH5_vSXE?si=oIywyO9TV3FiTluy"
+},
+{
+    "_id": "13",
+    "title": "Java for Beginners -   Understanding the Do-While Loop",
+    "description": "Explore the do-while loop in Java, which ensures the code block runs at least once before checking the condition.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/tWAaYONoyjc?si=vri98Rmoy7jB0Pxp"
+},
+{
+    "_id": "14",
+    "title": "Java for Beginners -   Array & Common Array Mistakes in Java Explained",
+    "description": "Learn how to use arrays in Java and avoid common mistakes like index out of bounds and incorrect initialization.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/sMI4pXjQBRU?si=lJp6tkaNqNRu8aZo"
+},
+{
+    "_id": "15",
+    "title": "Java for Beginners -   Mastering Nested Loops",
+    "description": "Understand how nested loops work in Java and how to use them for patterns, matrices, and complex iterations.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/802Ft8cSvbQ?si=Vimo-86jPXIGYyqv"
+},
+{
+    "_id": "16",
+    "title": "Java for Beginners -   2D-Arrays",
+    "description": "Learn how to declare, initialize, and use 2D arrays in Java to store data in rows and columns.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/w1wusS-Jglw?si=yHKBG6ytVMfdfNzd"
+},
+{
+    "_id": "17",
+    "title": "Java for Beginners -   Get to know the power of functions in Java",
+    "description": "Discover how functions (methods) in Java help organize code, improve reusability, and simplify complex tasks.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/wUzda_ge-Ak?si=DrlvKQGWxzsVgO7N"
+},
+{
+    "_id": "18",
+    "title": "Java for Beginners -   Function with Parameters in Java",
+    "description": "Learn how to pass values to functions in Java using parameters to make methods more flexible and dynamic.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/YCDkDF8EwFU?si=VNRmpbVu1tUl3S9g"
+},
+{
+    "_id": "19",
+    "title": "Java for Beginners -   Access Modifiers in Java",
+    "description": "Understand how access modifiers like public, private, protected, and default control the visibility of classes and members in Java.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/XVa1BGP1YPk?si=RpzpGg8lRWFHg9rm"
+},
+{
+    "_id": "20",
+    "title": "Java for Beginners -   How to Get User Input in Java",
+    "description": "Learn how to take user input in Java using the Scanner class for reading different types of data from the console.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "basics",
+    "videoUrl": "https://youtu.be/oMmAdViiVr8?si=PGT4pvByFHH_6aJF"
+},
+{
+    "_id": "21",
+    "title": "Java for Beginners -   Explore the Java objects and classes",
+    "description": "Dive into Java’s object-oriented world by understanding how classes define structure and objects bring them to life in programs.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/z_QODD8oors?si=weZtYV17Q3pvpXc_"
+},
+{
+    "_id": "22",
+    "title": "Java for Beginners -  Method Overloading in Java ",
+    "description": "Learn how method overloading in Java allows multiple methods with the same name but different parameters to coexist in a class.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/Mzlddw0AOkY?si=-G8m4THy1CBNKbYM"
+},
+{
+    "_id": "23",
+    "title": "Java for Beginners -  Constructor in Java ",
+    "description": "Understand how constructors in Java are special methods used to initialize objects when a class is instantiated.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/_noV7hnLsdg?si=UBxOoF2ZFrkApaN1"
+},
+{
+    "_id": "24",
+    "title": "Java for Beginners -  Static Keyword in Java ",
+    "description": "Learn how the static keyword in Java is used to create class-level variables and methods that can be accessed without creating objects.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/1C2WpNxq0r0?si=SWgdS970qgG7KPYk"
+},
+{
+    "_id": "25",
+    "title": "Java for Beginners -  Final Keyword in Java",
+    "description": "Understand how the final keyword in Java is used to declare constants, prevent method overriding, and inheritance.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/e8Nhylh6lOM?si=85NBNYQzxj6kC9eG"
+},
+{
+    "_id": "26",
+    "title": "Java for Beginners -  This Keyword in Java",
+    "description": "Learn how the 'this' keyword in Java refers to the current object and is used to resolve naming conflicts and call constructors.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/JX48ttQGfhw?si=CcBCpW-UbpuAP7Vq"
+},
+{
+    "_id": "27",
+    "title": "Java for Beginners -  Method Overriding",
+    "description": "Understand how method overriding in Java lets a subclass provide a specific implementation of a method already defined in its superclass.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/Kanv7fmIuJw?si=Gyimui6CL1pQsW7Q"
+},
+{
+    "_id": "28",
+    "title": "Java for Beginners -  INHERITANCE in Java",
+    "description": "Learn how inheritance in Java enables a class to acquire properties and behaviors of another class, promoting code reuse and hierarchy",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/siFdmP3Eer8?si=1i_USA2j-21EC1-p"
+},
+{
+    "_id": "29",
+    "title": "Java for Beginners -  Inheritance Types in Java",
+    "description": "Explore different types of inheritance in Java—single, multilevel, hierarchical, and how Java handles multiple inheritance using interfaces.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/-UYYAt2fcMg?si=tsvkljjkVJXcJKqS"
+},
+{
+    "_id": "30",
+    "title": "Java for Beginners -  Abstract Method in Java",
+    "description": "Learn how abstract methods in Java define method signatures without implementation, requiring subclasses to provide the actual behavior.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/IGy5P9auRZs?si=KB2ueUiaF1ww4YEz"
+},
+{
+    "_id": "31",
+    "title": "Java for Beginners -  Super Keyword in Java",
+    "description": "Understand how the super keyword in Java is used to access superclass methods, constructors, and variables from a subclass.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/5AF24vRJbeE?si=abxLdUNyFMy7gP24"
+},
+{
+    "_id": "32",
+    "title": "Java for Beginners -  Interface in Java",
+    "description": "Learn how interfaces in Java define method contracts that classes must implement, enabling abstraction and multiple inheritance.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "oops",
+    "videoUrl": "https://youtu.be/26fNJRePfQ8?si=vzHSIAWwSJrqeOzj"
+},
+{
+    "_id": "33",
+    "title": "Java for Beginners -  Exception Handling in Java",
+    "description": "Understand how exception handling in Java ensures robust programs by managing runtime errors using try, catch, throw, throws, and finally blocks.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "Advanced",
+    "videoUrl": "https://youtu.be/cklET8UVxQI?si=vBVYb7ZtNUYE8qGe"
+},
+{
+    "_id": "34",
+    "title": "Java for Beginners -  FINALLY keyword in Java",
+    "description": "Learn how the finally block in Java is used to execute important code such as resource cleanup, regardless of whether an exception occurs or not.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "Advanced",
+    "videoUrl": "https://youtu.be/J_edM8t2GKM?si=6HiJWRNxpo4zzBCM"
+},
+{
+    "_id": "35",
+    "title": "Java for Beginners -  THROW keyword in Java",
+    "description":  "Discover how the throw keyword in Java is used to explicitly throw an exception, either built-in or custom, during program execution.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "Advanced",
+    "videoUrl": "https://youtu.be/-p8HLZnY62A?si=-_seD4KyDhWOxw-Z"
+},
+{
+    "_id": "33",
+    "title": "Java for Beginners -  Custom Exception Handling in Java",
+    "description": "Learn how to create and use custom exceptions in Java to handle specific error scenarios more precisely and meaningfully.",
+    "language": "java",
+    "speakingLanguage": "tamil",
+    "category": "Advanced",
+    "videoUrl": "https://youtu.be/0jkFiFDJNrQ?si=1vozTjzFJOTHYrYs"
+},
 
 ];
 
