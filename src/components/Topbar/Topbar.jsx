@@ -65,11 +65,13 @@ const Topbar = () => {
         </button>
 
         <div className={`nav-content ${menuOpen ? "show" : ""}`}>
-          <ul>
-            <li>
-              <a href="#" onClick={handleHomeClick}>Home</a> {/* ✅ Popup trigger */}
-            </li>
-          </ul>
+          <ul className="home-nav">
+  <li>
+    <a href="#" onClick={handleHomeClick} className="home-link">
+      Home
+    </a>
+  </li>
+</ul>
 
           <div className="actions">
             {signedIn ? (

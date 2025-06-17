@@ -108,17 +108,49 @@ a {
   gap: 15px;
 }
 
+/* home button */
+/* Light theme */
+.home-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #4a90e2, #007bff);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s ease, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  font-size: 1rem;
+}
+
+.home-link:hover {
+  background: linear-gradient(135deg, #0056b3, #004b99);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Dark theme override */
+body.dark-theme .home-link {
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8); /* deeper blue shades */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+body.dark-theme .home-link:hover {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.5);
+}
+
+
 @media (max-width: 700px) {
   .menu-toggle {
     display: block;
   }
 
-
-
-  
-  .nav-content {
+  .nav-content  {
     display: none;
     position: absolute;
+    border-radius: 20px;
     top: 60px;
     right: 0;
     background: white;
@@ -128,7 +160,14 @@ a {
     width: 200px;
     z-index: 1000;
   }
-
+ 
+  #usernameDisplay{
+    color: black;
+  }
+    .nav-content .home{
+    
+    color: black;
+  }
   .nav-content.show {
     display: flex;
   }
@@ -430,7 +469,6 @@ body.dark-theme .floating-popup {
 }
 
 .popup-message ul.popup-features li::before {
-  content: '⭐';
   position: absolute;
   left: 0;
   top: 0;

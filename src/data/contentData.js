@@ -830,7 +830,7 @@ class HelloWorld {
 
     <h2>Types of Control Flow Statements</h2>
     <div class="styled-box">
-      <ul>
+      <ul class="styled-box-output">
         <li><strong>Decision-making statements:</strong> <code>if-then</code>, <code>if-then-else</code>, <code>switch</code></li>
         <li><strong>Looping statements:</strong> <code>for</code>, <code>while</code>, <code>do-while</code></li>
         <li><strong>Branching statements:</strong> <code>break</code>, <code>continue</code>, <code>return</code></li>
@@ -853,7 +853,7 @@ class HelloWorld {
   <h2>Types of Decision-Making Statements</h2>
 
   <div class="styled-box">
-    <ul>
+    <ul class="styled-box-output">
       <li><strong><code>if</code> Statement:</strong> Executes a block only when a specified condition is true.</li>
       <li><strong><code>if-else</code> Statement:</strong> Executes one block if the condition is true, otherwise runs the alternative block.</li>
       <li><strong><code>if-else-if</code> Ladder:</strong> Used to test multiple conditions in sequence, executing the block for the first true condition.</li>
