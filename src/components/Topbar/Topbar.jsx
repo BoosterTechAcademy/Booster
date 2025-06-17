@@ -128,18 +128,35 @@ const Topbar = () => {
       </div>
 
       {/* ✅ Floating Popup */}
-      {showOffer && (
-        <div className="floating-popup">
-          <button className="popup-close" onClick={() => setShowOffer(false)}>&times;</button>
-          <div className="popup-message">
-            <h3>🎉 Welcome to Booster Learning!</h3>
-            <p>This is a prototype of our major working project combining trending tech and interview related preparation LMS.</p>
-            <p>Main features(combing apptitude,all high tech company used programming language,preparation sheet and video tutorials..etc..) will be released soon with new address. Stay tuned!</p>
-            <p>please provide your valuable user feedback and any other brainstrom tips for us in the following group..</p>
-            <a href="" target="_blank" rel="noreferrer">📌 join feedback community</a>
-          </div>
-        </div>
-      )}
+{showOffer && (
+  <div className="floating-popup">
+    <button className="popup-close" onClick={() => setShowOffer(false)}>&times;</button>
+    <div className="popup-message">
+      <h2>🎉 Welcome to <strong>Booster Learning</strong>!</h2>
+      <p>
+        You're exploring a prototype of our upcoming all-in-one learning platform designed for tech aspirants and job seekers.
+      </p>
+      <p><strong>🌟 What’s coming soon:</strong></p>
+      <ul className="popup-features">
+        <li>✅ Aptitude training & logical reasoning</li>
+        <li>💻 Programming practice for top-tier tech interviews</li>
+        <li>🧾 Curated preparation roadmaps & sheets</li>
+        <li>🎬 High-quality video tutorials</li>
+      </ul>
+      <p>
+        🚧 Full platform launch coming soon with a new address and features.
+        Stay tuned and be part of the journey!
+      </p>
+      <p>
+        💬 Got ideas or feedback? Help us improve and grow!
+      </p>
+      <a href="https://chat.whatsapp.com/FzBoYKWEw4S5tSvwS5Qxxz" target="_blank" rel="noreferrer">
+        📌 Join our Feedback Community
+      </a>
+    </div>
+  </div>
+)}
+
     </>
   );
 };

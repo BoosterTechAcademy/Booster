@@ -2,7 +2,7 @@
 
 const programSheetData = [
   {
-    topic: "Data Structures",
+    topic: "Basic Level One",
     items: [
       {
         name: "Arrays",
@@ -37,7 +37,7 @@ const programSheetData = [
     ]
   },
   {
-    topic: "Algorithms",
+    topic: "Basic Level Two",
     items: [
       {
         name: "Recursion",
