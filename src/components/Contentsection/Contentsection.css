@@ -275,6 +275,7 @@ img {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 20px;
+  margin-left: 30px;
   justify-content: flex-start;
 }
 
@@ -339,6 +340,12 @@ img {
 
 /* programsheet */
 /* PROGRAM SHEET - CONTAINER */
+
+
+.dropdown-section{
+  margin-top: 30px;
+ 
+}
 .dropdown-content {
   padding: 16px;
   background: #fff;
@@ -540,3 +547,7 @@ body.dark-theme .dropdown-content td a {
   line-height: 1.5;
 }
 
+/* final */
+.title{
+  margin-left: 30px;
+}

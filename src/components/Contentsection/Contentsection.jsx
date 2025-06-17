@@ -172,7 +172,7 @@ if (!content) {
 
   return (
     <div className="content">
-      <h1>{content.title}</h1>
+      <h1 className="title">{content.title}</h1>
       {content.article && <p>{content.article}</p>}
       {content.video && (
         <iframe

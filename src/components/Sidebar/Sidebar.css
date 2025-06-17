@@ -85,18 +85,24 @@ margin-left: 25px;
 
 /* ========== Toggle Button ========== */
 .sidebar-toggle {
-  display: none;
-  position: fixed;
-  top: 9vh;
-  left: 10px;
-  z-index: 999;
-  background: #444;
-  color: #fff;
-  font-size: 26px;
+  display: none; /* Make sure it's visible */
+  position: fixed; /* Keeps it in place when scrolling */
+  top: 8vh; /* Adjust vertically based on your layout */
+  z-index: 999; /* Higher than sidebar or any other elements */
+  color:black;
+  background: transparent;
   border: none;
-  padding: 6px 10px;
+  width: 35px;
+  height: 35px;
+  font-weight: bold;
+  font-size: xx-large;
   cursor: pointer;
-  border-radius: 4px;
+  
+}
+
+
+body.dark-theme .sidebar-toggle{
+  color: #eaeaea;
 }
 
 /* ========== Responsive Design ========== */
@@ -121,6 +127,7 @@ margin-left: 25px;
 
   .sidebar-toggle {
     display: block;
+    
   }
 
   .main-Section {

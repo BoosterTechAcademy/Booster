@@ -16,9 +16,13 @@ const Sidebar = ({ onSelect }) => {
   );
 
   return (
-    <>
-      <button className="sidebar-toggle" onClick={toggleSidebar} aria-label="Toggle Sidebar">
-        &#9776;
+    <div className={`sidebar-wrapper ${visible ? 'sidebar-open' : ''}`}>
+      <button
+        className={`sidebar-toggle ${visible ? 'toggle-inside' : ''}`}
+        onClick={toggleSidebar}
+        aria-label="Toggle Sidebar"
+      >
+        {visible ? '<' : '>'}
       </button>
 
       <div className={`sidebar ${visible ? 'show' : ''}`}>
@@ -45,11 +49,11 @@ const Sidebar = ({ onSelect }) => {
           </li>
           {openSublist === 'basics2' && (
             <ul className="sublist show">
-              <li  onClick={()=> onSelect('typecasting')}>Type Conversion</li>
-              <li onClick={()=>  onSelect('arrays')}>Arrays</li>
-              <li onClick={()=>  onSelect('methods')}>Methods</li>
-              <li  onClick={()=>  onSelect('accessmodifiers')}>Access Modifiers</li>
-              <li onClick={()=>  onSelect('inout')}>User Input / Output</li>
+              <li onClick={() => onSelect('typecasting')}>Type Conversion</li>
+              <li onClick={() => onSelect('arrays')}>Arrays</li>
+              <li onClick={() => onSelect('methods')}>Methods</li>
+              <li onClick={() => onSelect('accessmodifiers')}>Access Modifiers</li>
+              <li onClick={() => onSelect('inout')}>User Input / Output</li>
             </ul>
           )}
 
@@ -58,12 +62,12 @@ const Sidebar = ({ onSelect }) => {
           </li>
           {openSublist === 'inter1' && (
             <ul className="sublist show">
-              <li onClick={()=>onSelect('classobject')}>Class and Objects</li>
-              <li onClick={()=> onSelect('methodoverloading')}>Method Overloading</li>
-              <li onClick={()=> onSelect('constructor')}>Constructor</li>
-              <li  onClick={()=> onSelect('static')}>Static Keyword</li>
-              <li onClick={()=> onSelect('thiskeyward')}>this and final keyword</li>
-              <li onClick={()=> onSelect('methodoverriding')}>Method Overriding</li>
+              <li onClick={() => onSelect('classobject')}>Class and Objects</li>
+              <li onClick={() => onSelect('methodoverloading')}>Method Overloading</li>
+              <li onClick={() => onSelect('constructor')}>Constructor</li>
+              <li onClick={() => onSelect('static')}>Static Keyword</li>
+              <li onClick={() => onSelect('thiskeyward')}>this and final keyword</li>
+              <li onClick={() => onSelect('methodoverriding')}>Method Overriding</li>
             </ul>
           )}
 
@@ -72,12 +76,12 @@ const Sidebar = ({ onSelect }) => {
           </li>
           {openSublist === 'inter2' && (
             <ul className="sublist show">
-              <li onClick={()=>  onSelect('inheritance')}>Inheritance</li>
-              <li >Polymorphism</li>
-              <li onClick={()=>  onSelect('encapsulation')}>Encapsulation</li>
-              <li onClick={()=>  onSelect('AbstractClassMethods')}>Abstract Class and Methods</li>
-              <li onClick={()=>  onSelect('javaSuper')}>Java Super</li>
-              <li onClick={()=>onSelect('interface')}>Interface</li>
+              <li onClick={() => onSelect('inheritance')}>Inheritance</li>
+              <li>Polymorphism</li>
+              <li onClick={() => onSelect('encapsulation')}>Encapsulation</li>
+              <li onClick={() => onSelect('AbstractClassMethods')}>Abstract Class and Methods</li>
+              <li onClick={() => onSelect('javaSuper')}>Java Super</li>
+              <li onClick={() => onSelect('interface')}>Interface</li>
             </ul>
           )}
 
@@ -100,7 +104,7 @@ const Sidebar = ({ onSelect }) => {
           <li onClick={() => onSelect('video-tutorials')}>Video Tutorials</li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
