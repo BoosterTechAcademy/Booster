@@ -133,9 +133,10 @@ const Topbar = () => {
           <button className="popup-close" onClick={() => setShowOffer(false)}>&times;</button>
           <div className="popup-message">
             <h3>🎉 Welcome to Booster Learning!</h3>
-            <p>This is a prototype of our major academic project combining Java and MERN Stack technologies.</p>
-            <p>More features will be released soon. Stay tuned!</p>
-            <a href="https://github.com/yourproject" target="_blank" rel="noreferrer">📌 View GitHub</a>
+            <p>This is a prototype of our major working project combining trending tech and interview related preparation LMS.</p>
+            <p>Main features(combing apptitude,all high tech company used programming language,preparation sheet and video tutorials..etc..) will be released soon with new address. Stay tuned!</p>
+            <p>please provide your valuable user feedback and any other brainstrom tips for us in the following group..</p>
+            <a href="" target="_blank" rel="noreferrer">📌 join feedback community</a>
           </div>
         </div>
       )}

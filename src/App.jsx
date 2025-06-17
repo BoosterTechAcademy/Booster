@@ -7,7 +7,7 @@ import { contentMap } from './data/contentData';
 import './utils/copyCode';
 
 const App = () => {
-  const [selectedContentId, setSelectedContentId] = useState('intro');
+  const [selectedContentId, setSelectedContentId] = useState('introduction');
 
   const content = 
     selectedContentId === 'video-tutorials'

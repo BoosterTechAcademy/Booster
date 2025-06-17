@@ -28,7 +28,7 @@ const Sidebar = ({ onSelect }) => {
       <div className={`sidebar ${visible ? 'show' : ''}`}>
         <h2>Course Topics</h2>
         <ul>
-          <li onClick={() => onSelect('intro')}>Introduction</li>
+          <li onClick={() => onSelect('introduction')}>Introduction</li>
 
           <li onClick={() => toggleSublist('basics1')}>
             {renderArrow('basics1')} Basics Level 1

@@ -97,6 +97,10 @@ code {
   margin-left: 20px;
 }
 
+.bullet-list{
+  margin-left: 20px;
+}
+
 /* code */
 .code-container {
   position: relative;

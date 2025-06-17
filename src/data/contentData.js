@@ -3,22 +3,746 @@ export const contentMap = {
  
   variables: {
     id: "variables",
-    title: "Variables in Java",
+    title: "",
     description: `
-      <div class="content-container">
-        <h1>Variables</h1>
-        <p>Learn about variables in Java with examples and types.</p>
-      </div>
+     <div class="content-container">
+  <h1>Variables in Java</h1>
+  <p>In Java, a <strong>variable</strong> is a symbolic name for a memory location that stores data used by a program. Variables are essential for handling dynamic data and enabling interaction within programs.</p>
+
+  <h3>Key Features of Variables</h3>
+  <ul class="bullet-list">
+    <li>Temporarily store data during program execution.</li>
+    <li>Act as containers for various data types (e.g., numbers, text, boolean).</li>
+    <li>Enhance program flexibility by managing changing data.</li>
+  </ul>
+
+  <h3>Java Variable Declaration Syntax</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">dataType variableName = value;</pre>
+  </div>
+  <ul class="bullet-list">
+    <li><strong>dataType:</strong> Defines the type of data (e.g., int, double, String).</li>
+    <li><strong>variableName:</strong> The identifier for accessing the variable.</li>
+    <li><strong>value:</strong> (Optional) Initial value assigned during declaration.</li>
+  </ul>
+
+  <h3>Types of Variables in Java</h3>
+  <ol class="numbered-list">
+    <li><strong>Local Variables:</strong> Declared inside methods, constructors, or blocks. Accessible only within the declared scope.</li>
+    <li><strong>Instance Variables:</strong> Declared inside a class but outside any method. Each object gets its own copy.</li>
+    <li><strong>Static Variables:</strong> Declared with the <code>static</code> keyword. Shared among all objects of the class.</li>
+  </ol>
+
+  <h3>Declaring Variables in Java</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">int number;
+String name;
+double price;</pre>
+  </div>
+  <p>Variables must be declared before use. This allows the compiler to allocate memory accordingly.</p>
+
+  <h3>Initializing Variables in Java</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">int experience = 5;  // Direct initialization
+String domain = "Java Programming";  // String initialization
+
+double stipend;
+stipend = 15000.75;  // Initialized later</pre>
+  </div>
+
+  <h3>Variable Naming Conventions in Java</h3>
+  <ul class="bullet-list">
+    <li>Must begin with a letter, underscore (_) or dollar sign ($).</li>
+    <li>Cannot start with a digit.</li>
+    <li>No spaces or special characters except _ and $.</li>
+    <li>Avoid using Java reserved keywords.</li>
+    <li>Use camelCase (e.g., javaProgram).</li>
+  </ul>
+
+  <h3>Example: Local Variable</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">public class LocalExample {
+  public void displayCount() {
+    int count = 50;
+    System.out.println("Total MCQs: " + count);
+  }
+}</pre>
+  </div>
+  <div class="output-section"><strong>Output:</strong> Total MCQs: 50</div>
+
+  <h3>Example: Instance Variable</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">public class Quiz {
+  int totalMarks = 100;
+
+  public void displayMarks() {
+    int scored = 80;
+    System.out.println("Total Marks: " + totalMarks);
+    System.out.println("Marks Scored: " + scored);
+  }
+}</pre>
+  </div>
+  <div class="output-section"><strong>Output:</strong> Total Marks: 100<br>Marks Scored: 80</div>
+
+  <h3>Example: Static Variable</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">public class TestSeries {
+  static int totalQuizzes = 1000;
+
+  public static void displayQuizzes() {
+    System.out.println("Total Quizzes: " + totalQuizzes);
+  }
+}</pre>
+  </div>
+  <div class="output-section"><strong>Output:</strong> Total Quizzes: 1000</div>
+
+  <h3>Type Inference with <code>var</code> (Java 10+)</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">public class VarExample {
+  public static void main(String[] args) {
+    var mcqs = 500;
+    var name = "Sanfoundry";
+    var fee = 1499.99;
+    System.out.println("Total MCQs: " + mcqs);
+    System.out.println("Website Name: " + name);
+    System.out.println("Course Fee: $" + fee);
+  }
+}</pre>
+  </div>
+  <div class="output-section"><strong>Output:</strong><br>Total MCQs: 500<br>Website Name: Sanfoundry<br>Course Fee: $1499.99</div>
+
+  <h3>Instance vs Static Variables</h3>
+  <table>
+    <tr><th>Feature</th><th>Instance Variables</th><th>Static Variables</th></tr>
+    <tr><td>Definition</td><td>Belong to an object</td><td>Belong to the class</td></tr>
+    <tr><td>Memory Allocation</td><td>Created per object</td><td>Created once for the class</td></tr>
+    <tr><td>Access Method</td><td>objectName.variableName</td><td>ClassName.variableName</td></tr>
+    <tr><td>Default Value</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Shared?</td><td>No</td><td>Yes</td></tr>
+    <tr><td>Example</td><td>int age;</td><td>static int totalStudents;</td></tr>
+  </table>
+
+  <h3>Advantages of Using Variables</h3>
+  <ul class="bullet-list">
+    <li>Code Reusability</li>
+    <li>Flexibility</li>
+    <li>Efficient Memory Management</li>
+    <li>Improved Readability</li>
+    <li>Supports Data Manipulation</li>
+    <li>Encapsulation and Scope Control</li>
+  </ul>
+
+  <h3>Limitations</h3>
+  <ul class="bullet-list">
+    <li>Memory Consumption if used excessively</li>
+    <li>Scope Restrictions for local variables</li>
+    <li>Strict Type Constraints</li>
+    <li>Uninitialized local variables cause errors</li>
+    <li>Potential for logic/runtime errors</li>
+  </ul>
+</div>
     `
   },
+
+    datatypes: {
+    id: "datatypes",
+    title: "",
+    description: `
+    <div class="content-container">
+  <h1>Java Primitive Data Types – Explained Simply</h1>
+
+  <p>Java is a <strong>statically-typed</strong> language, meaning every variable must be declared with a specific data type:</p>
+
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">int gear = 1;</pre>
+  </div>
+
+  <h3>What Are Primitive Data Types?</h3>
+  <p>Java provides <strong>8 primitive data types</strong> which are built-in and not objects.</p>
+
+<div 
+class="table-container">
+
+<table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Data Type</th>
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Size</th>
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Range</th>
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">byte</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">8-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">-128 to 127</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Memory-efficient arrays</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">short</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">16-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">-32,768 to 32,767</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Slightly larger than byte</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">int</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">32-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">-2<sup>31</sup> to 2<sup>31</sup>–1</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Default integer type</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">long</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">64-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">-2<sup>63</sup> to 2<sup>63</sup>–1</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">For large numbers</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">float</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">32-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">±3.4e38</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Less precise decimals</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">double</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">64-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">±1.8e308</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Default decimal type</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">boolean</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">1-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">true or false</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Logic checks</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">char</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">16-bit</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Unicode <code>\u0000</code> to <code>\uffff</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Single character</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+  <h2>Default Values for Fields</h2>
+<div>
+
+<table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;margin-bottom:6px">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Data Type</th>
+      <th style="padding: 10px; border: 1px solid #ccc; text-align: left;">Default Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">byte, short, int, long</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">0, 0L</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">float, double</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">0.0f, 0.0d</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">char</td>
+      <td style="padding: 10px; border: 1px solid #ccc;"><code>'\u0000'</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">boolean</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">false</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">String / Objects</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">null</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+  <p><strong>Note:</strong> Local variables <u>do not</u> get default values. You must initialize them!</p>
+
+  <h2>Literals in Java</h2>
+  <p>Fixed values assigned directly to variables.</p>
+  <div class="code-container">
+    <pre class="code-block">boolean result = true;
+char letter = 'A';
+int number = 100;
+float pi = 3.14f;</pre>
+  </div>
+
+  <h3>Integer Literal Types</h3>
+  <ul class="bullet-list">
+    <li><strong>Default:</strong> int</li>
+    <li><strong>Use L for long:</strong> <code>long big = 12345678900L;</code></li>
+  </ul>
+
+  <h3>Number Systems</h3>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">int decimal = 26;
+int hex = 0x1A;
+int binary = 0b11010;</pre>
+  </div>
+
+  <h3>Floating-Point Literals</h3>
+  <p>Default type is <code>double</code>. Use <code>f</code> for float.</p>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">double d1 = 123.4;
+double d2 = 1.234e2; // scientific notation
+float f1 = 123.4f;</pre>
+  </div>
+
+  <h3>Character & String Literals</h3>
+  <ul class="bullet-list">
+    <li><code>char</code> uses single quotes. <code>String</code> uses double quotes.</li>
+  </ul>
+
+  <h4>Escape Sequences</h4>
+ <div class="table-container">
+ <table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;margin-bottom:6px">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Escape</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>\\n</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">New line</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>\\t</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Tab</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>\\\\</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Backslash</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>\\'</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Single quote</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><code>\\&quot;</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Double quote</td>
+    </tr>
+  </tbody>
+</table>
+
+ 
+ 
+ </div>
+
+  <h3>null and Class Literals</h3>
+  <ul class="bullet-list">
+    <li><code>null</code> is for objects, not primitives.</li>
+    <li><code>String.class</code> refers to class metadata.</li>
+  </ul>
+
+  <h3>Underscores in Numeric Literals (Java 7+)</h3>
+  <div class="code-container">
+    <pre class="code-block">int million = 1_000_000;
+long card = 1234_5678_9012_3456L;
+byte bits = 0b0010_0101;</pre>
+  </div>
+
+  <h4>Invalid Usage</h4>
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">int x = _52;
+float y = 3_.14f;
+long z = 999_99_9999_L;</pre>
+  </div>
+
+  <h3>Summary</h3>
+  <ul class="bullet-list">
+    <li><strong>8 primitive types:</strong> byte, short, int, long, float, double, boolean, char</li>
+    <li><strong>Default values:</strong> Only for fields, not for local variables</li>
+    <li><strong>Literals:</strong> Fixed values like <code>100</code>, <code>'A'</code>, <code>true</code></li>
+    <li><strong>Use underscores:</strong> For readable numbers (Java 7+)</li>
+    <li><strong>String:</strong> Not a primitive, but supported specially</li>
+  </ul>
+</div>
+    `
+  },
+  
   introduction: {
     id: "introduction",
     title: "Introduction to Java",
     description: `
-      <div class="content-container">
-        <h1>Variables</h1>
-        <p>Learn about variables in Java with examples and types.</p>
+     <div class="content-container">
+  <h1>Understanding JDK, JRE, and JVM in Java</h1>
+
+  <h2>About Java Founder</h2>
+  <p>
+    Java was created by <strong>James Gosling</strong> in 1995 at Sun Microsystems.
+    Initially named <strong>Oak</strong>, it was later renamed to <strong>Java</strong>, inspired by Java coffee.
+    Java is now maintained by <strong>Oracle Corporation</strong>.
+  </p>
+
+  <h2>What are JDK, JRE, and JVM?</h2>
+  <p>
+    These are the three core components of the Java environment. Understanding them is essential for writing and running Java programs effectively:
+  </p>
+
+  <ul class="bullet-list">
+    <li><strong>JDK (Java Development Kit):</strong> Includes tools for developing Java applications — compiler, debugger, and JRE.</li>
+    <li><strong>JRE (Java Runtime Environment):</strong> Allows running Java programs. It includes JVM and standard class libraries.</li>
+    <li><strong>JVM (Java Virtual Machine):</strong> Executes compiled bytecode by converting it into machine-specific instructions.</li>
+  </ul>
+
+  <h2>Comparison Table</h2>
+  <div class="table-container">
+    <table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Aspect</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">JDK</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">JRE</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">JVM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><strong>Purpose</strong></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Develop and run Java applications</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Run Java applications</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Execute compiled bytecode</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><strong>Includes</strong></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">JRE + compiler, debugger, etc.</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">JVM + standard libraries</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">ClassLoader, JIT compiler, Garbage Collector</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;"><strong>Use Case</strong></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Writing, compiling, and testing code</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Running Java applications</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Executing bytecode instructions</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+
+  <p>
+    <strong>Note:</strong> Java bytecode is platform-independent, but each JVM implementation is platform-specific to interact with the host OS.
+  </p>
+
+  <h2>Component Workflow</h2>
+
+  <h3>JDK - Development</h3>
+  <p>
+    The JDK is used by developers to write, compile, and test Java applications:
+  </p>
+  <ul class="bullet-list">
+    <li>Developers write code in <code>.java</code> files.</li>
+    <li>The <code>javac</code> compiler converts the source code to bytecode (<code>.class</code> files).</li>
+    <li>Bytecode is passed to the JVM for execution.</li>
+  </ul>
+
+  <div class="code-container">
+    <pre class="code-block">javac HelloWorld.java</pre>
+  </div>
+
+  <h3>JRE - Runtime Environment</h3>
+  <p>
+    The JRE provides the runtime environment for Java applications:
+  </p>
+  <ul class="bullet-list">
+    <li>Loads and verifies bytecode files.</li>
+    <li>Uses the JVM to execute the code.</li>
+    <li>Provides core libraries and manages system resources.</li>
+  </ul>
+
+  <h3>JVM - Execution Engine</h3>
+  <p>
+    JVM is the core of the Java platform. It:
+  </p>
+  <ul class="bullet-list">
+    <li>Converts bytecode into machine code for execution.</li>
+    <li>Manages memory via Garbage Collection.</li>
+    <li>Handles runtime exceptions and provides system-level optimizations like JIT compilation.</li>
+  </ul>
+</div>
+
+<div class="content-container">
+  <h1>JDK, JRE, and JVM in Java</h1>
+
+  <h2>Additional Responsibilities of JVM</h2>
+  <ul class="bullet-list">
+    <li>Loads, verifies, and links classes.</li>
+    <li>Performs Just-In-Time (JIT) compilation for performance.</li>
+    <li>Manages garbage collection and optimization at runtime.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    JDK, JRE, and JVM form the backbone of Java's <strong>write-once, run-anywhere</strong> philosophy. Understanding how they interact helps in developing efficient and portable Java applications.
+  </p>
+
+  <h2>Visual Diagram</h2>
+  <p>Refer to the diagram below to understand the flow from source code to execution:</p>
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210218150010/JDK.png" alt="JDK JRE JVM Flowchart" style="max-width: 100%; border: 1px solid #ccc; border-radius: 10px;">
+
+  <h2>Summary</h2>
+  <ul class="bullet-list">
+    <li><strong>JDK:</strong> For writing and compiling Java programs.</li>
+    <li><strong>JRE:</strong> For running Java programs.</li>
+    <li><strong>JVM:</strong> For executing Java bytecode.</li>
+  </ul>
+
+  <h2>How to Install Java</h2>
+
+  <h3>Installing Java on Windows (7, 8, 10, 11)</h3>
+  <ol class="bullet-list">
+    <li><strong>Download the Java JDK Installer:</strong>
+      <ul class="bullet-list">
+        <li>Visit <a href="https://www.oracle.com/in/java/" target="_blank">Oracle Java Downloads</a></li>
+        <li>Click <strong>Download Java</strong> → Select <strong>Windows tab</strong></li>
+        <li>Choose latest version (e.g., JDK 23) → Download x64 Installer (.exe)</li>
+      </ul>
+    </li>
+
+    <li><strong>Run the Installer:</strong>
+      <ul class="bullet-list">
+        <li>Double-click the file (e.g., <code>jdk-23_windows-x64_bin.exe</code>)</li>
+        <li>Follow setup: Next → Choose install location → Next → Finish</li>
+      </ul>
+    </li>
+
+    <li><strong>Set Environment Variables:</strong>
+      <ul class="bullet-list">
+        <li>Copy path: <code>C:\\Program Files\\Java\\jdk-23\\bin</code></li>
+        <li>Search “Environment Variables” → Open System Properties</li>
+        <li>Edit Path under System Variables → Add New → Paste the path</li>
+      </ul>
+    </li>
+
+    <li><strong>Verify Installation:</strong>
+      <div class="code-container">
+        <pre class="code-block">java --version</pre>
       </div>
+      <div class="output-box">
+        Expected output: <br>
+        java 23 <br>
+        Java(TM) SE Runtime Environment ...
+      </div>
+    </li>
+
+    <li><strong>Run Your First Java Program:</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">public class file {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}</pre>
+      </div>
+
+      <ul class="bullet-list">
+        <li>Save file as <code>file.java</code></li>
+        <li>Open Command Prompt → Navigate to file location</li>
+      </ul>
+
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">javac file.java
+java file</pre>
+      </div>
+      <div class="output-box">Output: Hello, Java!</div>
+    </li>
+  </ol>
+
+  <h3>Installing Java on Linux (Ubuntu)</h3>
+  <ol class="bullet-list">
+    <li ><strong>Download the Java JDK:</strong>
+      <ul class="bullet-list">
+        <li>Go to Oracle's Java Page → Accept license → Choose Linux → Download <code>.tar.gz</code> file</li>
+      </ul>
+    </li>
+
+    <li><strong>Extract and Move Java:</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">cd ~/Downloads
+tar -xvzf jdk-23_linux-x64_bin.tar.gz
+sudo mv jdk-23 /opt/</pre>
+      </div>
+    </li>
+
+    <li><strong>Set Environment Variables:</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">nano ~/.bashrc</pre>
+      </div>
+      Add the following lines at the bottom:
+      <div class="code-container">
+        <pre class="code-block">export JAVA_HOME=/opt/jdk-23
+export PATH=$JAVA_HOME/bin:$PATH</pre>
+      </div>
+      Apply changes:
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">source ~/.bashrc</pre>
+      </div>
+    </li>
+
+    <li><strong>Verify Installation:</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">java --version</pre>
+      </div>
+      <div class="output-box">Expected output: java 23<br>Java(TM) SE Runtime Environment ...</div>
+    </li>
+  </ol>
+
+  <h1>Installing Java on macOS</h1>
+  <ol class="bullet-list">
+    <li><strong>Download Java JDK:</strong>
+      <ul class="bullet-list">
+        <li>Visit Oracle’s Java website and download the macOS installer (.dmg)</li>
+      </ul>
+    </li>
+
+    <li><strong>Install Java:</strong>
+      <ul class="bullet-list">
+        <li>Open downloaded .dmg → Run installer and follow prompts</li>
+      </ul>
+    </li>
+
+    <li><strong>Set Environment Variables (Optional):</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">nano ~/.zshrc</pre>
+      </div>
+      Add the following lines:
+      <div class="code-container">
+        <pre class="code-block">export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH</pre>
+      </div>
+      Apply changes:
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">source ~/.zshrc</pre>
+      </div>
+    </li>
+
+    <li><strong>Verify Installation:</strong>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+        <pre class="code-block">java --version</pre>
+      </div>
+    </li>
+  </ol>
+</div>
+
+<div class="content-container">
+  <h2>Summary Table: Java Installation on OS</h2>
+
+  <div class="table-container">
+<table class="styled-table" style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">OS</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">File Type</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Steps</th>
+      <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Set PATH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Windows</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">.exe</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Run installer, set in System Env</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Yes</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">Linux</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">.tar.gz</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Extract &amp; edit <code>.bashrc</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Yes</td>
+    </tr>
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">macOS</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">.dmg</td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Run installer &amp; edit <code>.zshrc</code></td>
+      <td style="padding: 8px; border: 1px solid #ddd;">Optional</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+  <h2>Java Hello World Program</h2>
+  <p>This is a basic program that prints a message to the console:</p>
+
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre class="code-block">// Your First Program  
+class HelloWorld {  
+  public static void main(String[] args) {  
+    System.out.println("Hello, World!");  
+  }  
+}</pre>
+  </div>
+
+  <div class="output-box">Output: Hello, World!</div>
+
+  <ul class="bullet-list">
+    <li><code>class HelloWorld</code>: Declares the class.</li>
+    <li><code>public static void main</code>: Entry point of the program.</li>
+    <li><code>System.out.println</code>: Prints the output.</li>
+  </ul>
+
+  <h2>Basic Structure of a Java Program</h2>
+  <p>This is the standard structure used when writing Java programs:</p>
+
+  <div class="code-container">
+    <pre class="code-block">public class HelloWorld {  
+  public static void main(String[] args) {  
+    // code goes here  
+  }  
+}</pre>
+  </div>
+
+  <h2>How Java Works</h2>
+  <p>
+    Java programs are compiled into bytecode, which runs on the Java Virtual Machine (JVM). This design enables Java to be platform-independent.
+  </p>
+
+  <h3>Execution Flow</h3>
+  <ol class="bullet-list">
+    <li>Write code in a <code>.java</code> file.</li>
+    <li>Compile the file to <code>.class</code> bytecode using <code>javac</code>.</li>
+    <li>Run the bytecode using the <code>java</code> command.</li>
+  </ol>
+
+  <h3>Key Components</h3>
+  <ul class="bullet-list">
+    <li><strong>JDK:</strong> Java Development Kit (includes compiler and tools)</li>
+    <li><strong>JRE:</strong> Java Runtime Environment (includes JVM and libraries)</li>
+    <li><strong>JVM:</strong> Executes Java bytecode on your machine</li>
+  </ul>
+
+  <p>This setup allows developers to <strong>"write once, run anywhere"</strong>.</p>
+</div>
+
     `
   },
     controlflow: {
