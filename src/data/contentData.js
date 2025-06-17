@@ -18,7 +18,6 @@ export const contentMap = {
 
   <h3>Java Variable Declaration Syntax</h3>
   <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">dataType variableName = value;</pre>
   </div>
   <ul class="bullet-list">
@@ -27,14 +26,14 @@ export const contentMap = {
     <li><strong>value:</strong> (Optional) Initial value assigned during declaration.</li>
   </ul>
 
-  <h3>Types of Variables in Java</h3>
+  <h2>Types of Variables in Java</h2>
   <ol class="numbered-list">
-    <li><strong>Local Variables:</strong> Declared inside methods, constructors, or blocks. Accessible only within the declared scope.</li>
-    <li><strong>Instance Variables:</strong> Declared inside a class but outside any method. Each object gets its own copy.</li>
-    <li><strong>Static Variables:</strong> Declared with the <code>static</code> keyword. Shared among all objects of the class.</li>
+    <li class="bullet-list"><strong>Local Variables:</strong> Declared inside methods, constructors, or blocks. Accessible only within the declared scope.</li>
+    <li class="bullet-list"><strong>Instance Variables:</strong> Declared inside a class but outside any method. Each object gets its own copy.</li>
+    <li class="bullet-list"><strong>Static Variables:</strong> Declared with the <code>static</code> keyword. Shared among all objects of the class.</li>
   </ol>
 
-  <h3>Declaring Variables in Java</h3>
+  <h2>Declaring Variables in Java</h2>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">int number;
@@ -43,7 +42,7 @@ double price;</pre>
   </div>
   <p>Variables must be declared before use. This allows the compiler to allocate memory accordingly.</p>
 
-  <h3>Initializing Variables in Java</h3>
+  <h2>Initializing Variables in Java</h2>
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
     <pre class="code-block">int experience = 5;  // Direct initialization
@@ -72,7 +71,12 @@ stipend = 15000.75;  // Initialized later</pre>
   }
 }</pre>
   </div>
-  <div class="output-section"><strong>Output:</strong> Total MCQs: 50</div>
+  <div class="output-box"><strong>Output:</strong> 
+  
+  <ul class="style-output-other">
+     <li>Total MCQs: 50</li>
+  </ul>
+ </div>
 
   <h3>Example: Instance Variable</h3>
   <div class="code-container">
@@ -87,7 +91,12 @@ stipend = 15000.75;  // Initialized later</pre>
   }
 }</pre>
   </div>
-  <div class="output-section"><strong>Output:</strong> Total Marks: 100<br>Marks Scored: 80</div>
+  <div class="output-box"><strong>Output:</strong> 
+  <ul class="style-output-other">
+     <li>Total Marks: 100</li>
+     <li>Marks Scored: 80</li>
+  </ul>
+  </div>
 
   <h3>Example: Static Variable</h3>
   <div class="code-container">
@@ -100,7 +109,11 @@ stipend = 15000.75;  // Initialized later</pre>
   }
 }</pre>
   </div>
-  <div class="output-section"><strong>Output:</strong> Total Quizzes: 1000</div>
+  <div class="output-box"><strong>Output:</strong> 
+  <ul class="style-output-other">
+     <li>Total Quizzes: 1000</li>
+</ul>
+  </div>
 
   <h3>Type Inference with <code>var</code> (Java 10+)</h3>
   <div class="code-container">
@@ -116,20 +129,63 @@ stipend = 15000.75;  // Initialized later</pre>
   }
 }</pre>
   </div>
-  <div class="output-section"><strong>Output:</strong><br>Total MCQs: 500<br>Website Name: Sanfoundry<br>Course Fee: $1499.99</div>
+  <div class="output-box"><strong>Output:</strong><br>
+  <ul class="style-output-other">
+     <li>Total MCQs: 500</li>
+     <li>Website Name: Sanfoundry</li>
+     <li>Course Fee: $1499.99</li>
+</ul>
+</div>
 
   <h3>Instance vs Static Variables</h3>
-  <table>
-    <tr><th>Feature</th><th>Instance Variables</th><th>Static Variables</th></tr>
-    <tr><td>Definition</td><td>Belong to an object</td><td>Belong to the class</td></tr>
-    <tr><td>Memory Allocation</td><td>Created per object</td><td>Created once for the class</td></tr>
-    <tr><td>Access Method</td><td>objectName.variableName</td><td>ClassName.variableName</td></tr>
-    <tr><td>Default Value</td><td>Yes</td><td>Yes</td></tr>
-    <tr><td>Shared?</td><td>No</td><td>Yes</td></tr>
-    <tr><td>Example</td><td>int age;</td><td>static int totalStudents;</td></tr>
-  </table>
+  <div 
+class="table-container">
 
-  <h3>Advantages of Using Variables</h3>
+<table class="styled-table" style="width: 100%; border-collapse: collapse; font-size: 1rem; margin-top: 1rem;marigin-bottom:6px;">
+  <thead>
+    <tr style="background-color: #e3f2fd;">
+      <th style="padding: 10px; border: 1px solid #ccc;">Feature</th>
+      <th style="padding: 10px; border: 1px solid #ccc;">Instance Variables</th>
+      <th style="padding: 10px; border: 1px solid #ccc;">Static Variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Definition</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Belong to an object</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Belong to the class</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Memory Allocation</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Created per object</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Created once for the class</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Access Method</td>
+      <td style="padding: 10px; border: 1px solid #ccc;"><code>objectName.variableName</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc;"><code>ClassName.variableName</code></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Default Value</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Yes</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Yes</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Shared?</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">No</td>
+      <td style="padding: 10px; border: 1px solid #ccc;">Yes</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ccc;">Example</td>
+      <td style="padding: 10px; border: 1px solid #ccc;"><code>int age;</code></td>
+      <td style="padding: 10px; border: 1px solid #ccc;"><code>static int totalStudents;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+  <h2>Advantages of Using Variables</h2>
   <ul class="bullet-list">
     <li>Code Reusability</li>
     <li>Flexibility</li>
@@ -139,7 +195,7 @@ stipend = 15000.75;  // Initialized later</pre>
     <li>Encapsulation and Scope Control</li>
   </ul>
 
-  <h3>Limitations</h3>
+  <h2>Limitations</h2>
   <ul class="bullet-list">
     <li>Memory Consumption if used excessively</li>
     <li>Scope Restrictions for local variables</li>
