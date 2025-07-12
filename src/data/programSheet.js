@@ -2,37 +2,49 @@
 
 const programSheetData = [
   {
-    topic: "Basic Level One",
-    items: [
+       topic: "Basic Level One",
+    items:[
       {
-        name: "Arrays",
-        video: "https://www.youtube.com/watch?v=ZROxWcQ2yNg",
-        article: "https://www.geeksforgeeks.org/arrays-in-c-cpp/",
-        practice: "https://leetcode.com/tag/array/"
+        name: "Hello World Program",
+        video: "https://youtu.be/gS7azO8ybEc?si=-TXBQ8PItVBdfJwy",
+        article: "https://www.programiz.com/c-programming/examples/print-sentence",
+        practice: "https://www.geeksforgeeks.org/problems/java-hello-world4004/1"
       },
       {
-        name: "Linked List",
-        video: "https://www.youtube.com/watch?v=6IRFKr7Jv0A",
-        article: "https://www.geeksforgeeks.org/data-structures/linked-list/",
-        practice: "https://leetcode.com/tag/linked-list/"
+        name: "variables",
+        video: "https://youtu.be/Ls14YnfR7Hg?si=MhuBEJJ7DXBl2PIB",
+        article: "https://www.geekster.in/articles/java-variables/",
+        practice: "https://codegym.cc/java-coding-practice#types-exercises"
       },
       {
-        name: "Stacks",
-        video: "https://www.youtube.com/watch?v=zwb3GmNAtFk",
-        article: "https://www.geeksforgeeks.org/stack-data-structure/",
-        practice: "https://leetcode.com/tag/stack/"
+        name: "Swapping Two Numbers",
+        video: "https://youtu.be/Le25I331_yU?si=Z4vF1cFFpJ2n-n0z",
+        article: "https://www.geeksforgeeks.org/java/java-program-to-swap-two-numbers/",
+        practice: "https://www.geeksforgeeks.org/problems/swap-two-numbers3844/1"
       },
       {
-        name: "Queues",
-        video: "https://www.youtube.com/watch?v=okr-XE8yTO8",
-        article: "https://www.geeksforgeeks.org/queue-data-structure/",
-        practice: "https://leetcode.com/tag/queue/"
+        name: "Addition of Two Numbers",
+        video: "https://www.youtube.com/watch?v=QmnQfeOXjn0",
+        article: "https://www.programiz.com/java-programming/examples/add-numbers",
+        practice: "https://www.programiz.com/java-programming/examples/add-numbers"
       },
       {
-        name: "Hash Map",
-        video: "https://www.youtube.com/watch?v=2zjVdGxg2s8",
-        article: "https://www.geeksforgeeks.org/hashing-data-structure/",
-        practice: "https://leetcode.com/tag/hash-table/"
+        name: "If else problem",
+        video: "https://youtu.be/MY03bt_0JQI?si=g8NiIXYrxJSv7oZC",
+        article: "https://programmingoneonone.com/hackerrank-java-if-else-problem-problem-solution.html",
+        practice: "https://www.hackerrank.com/challenges/java-if-else/problem"
+      },
+      {
+        name: "check the number is prime or not",
+        video: "https://www.youtube.com/watch?v=vwjhT_OTp1w",
+        article: "https://www.geeksforgeeks.org/java/java-prime-number-program/",
+        practice: "https://www.geeksforgeeks.org/problems/prime-number2314/1"
+      },
+      {
+        name: "sum of Prime numbers from given range",
+        video: "https://www.youtube.com/watch?v=h4TNEMjr96Y",
+        article: "https://www.geeksforgeeks.org/dsa/program-to-print-first-n-prime-numbers/",
+        practice: "https://www.geeksforgeeks.org/problems/sum-of-all-prime-numbers-between-1-and-n4404/1"
       }
     ]
   },
