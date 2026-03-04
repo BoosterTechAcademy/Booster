@@ -6,6 +6,10 @@ import ContentView from "./components/Content/ContentView";
 import Hero from './components/Hero/Hero';
 import Roadmap from './components/Content/Roadmap';
 import { contentMap } from './data/contentData';
+import WelcomeForm from './components/JoinCommunity/WelcomeForm';
+import CommunityHero from './components/BusinessServices/CommunityHero';
+import BusinessServices from './components/BusinessServices/BusinessServices';
+import FreeClass from './components/BusinessServices/FreeClass';
 import './utils/copyCode';
 
 const App = () => {
@@ -31,10 +35,25 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navbar onHomeClick={handleNavHome} onToggleSidebar={toggleSidebar} showSidebarToggle={selectedContentId !== 'home'} />
+      <Navbar onHomeClick={handleNavHome} onToggleSidebar={toggleSidebar} showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class'} />
 
       {selectedContentId === 'home' ? (
-        <Hero onStartLearning={() => setSelectedContentId('roadmap')} />
+        <Hero
+          onStartLearning={() => setSelectedContentId('roadmap')}
+          onJoinCommunity={() => setSelectedContentId('join-community')}
+        />
+      ) : selectedContentId === 'join-community' ? (
+        <WelcomeForm onValidationSuccess={() => setSelectedContentId('community-hero')} />
+      ) : selectedContentId === 'community-hero' ? (
+        <CommunityHero
+          onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
+          onNavigateToFreeClass={() => setSelectedContentId('free-class')}
+          onHomeClick={handleNavHome}
+        />
+      ) : selectedContentId === 'business-services' ? (
+        <BusinessServices onNavigateToFreeClass={() => setSelectedContentId('free-class')} onHomeClick={handleNavHome} />
+      ) : selectedContentId === 'free-class' ? (
+        <FreeClass onHomeClick={handleNavHome} />
       ) : selectedContentId === 'roadmap' ? (
         <div className="learning-environment roadmap-page">
           <Roadmap onNavigate={(id) => setSelectedContentId(id)} />

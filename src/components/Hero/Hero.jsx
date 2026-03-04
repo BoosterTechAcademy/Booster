@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = ({ onStartLearning }) => {
+const Hero = ({ onStartLearning, onJoinCommunity }) => {
     return (
         <div className="hero-wrapper">
             <div className="hero-container">
@@ -22,9 +22,9 @@ const Hero = ({ onStartLearning }) => {
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
-                        <a href="https://chat.whatsapp.com/FzBoYKWEw4S5tSvwS5Qxxz" target="_blank" rel="noreferrer" className="btn-outline hero-btn">
+                        <button className="btn-outline hero-btn" onClick={onJoinCommunity}>
                             Join Community
-                        </a>
+                        </button>
                     </div>
 
                     <div className="hero-stats">
