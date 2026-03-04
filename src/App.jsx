@@ -1,29 +1,59 @@
 import React, { useState } from 'react';
 import './App.css';
-import TopBar from './components/Topbar/Topbar';
-import SideBar from './components/Sidebar/Sidebar';
-import ContentSection from './components/Contentsection/Contentsection';
+import Navbar from './components/Layout/Navbar';
+import Sidebar from './components/Layout/Sidebar';
+import ContentView from "./components/Content/ContentView";
+import Hero from './components/Hero/Hero';
+import Roadmap from './components/Content/Roadmap';
 import { contentMap } from './data/contentData';
 import './utils/copyCode';
 
 const App = () => {
-  const [selectedContentId, setSelectedContentId] = useState('introduction');
+  const [selectedContentId, setSelectedContentId] = useState('home');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const content = 
+  // Derive the active content object from the map
+  const content =
     selectedContentId === 'video-tutorials'
-      ? 'video-tutorials'
+      ? { type: 'video-tutorials' }
       : selectedContentId === 'program-sheet'
-      ? 'program-sheet'
-      : contentMap[selectedContentId];
+        ? { type: 'program-sheet' }
+        : contentMap[selectedContentId];
+
+  const handleNavHome = () => {
+    setSelectedContentId('home');
+    setIsSidebarOpen(false);
+  };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
-    <>
-      <TopBar />
-      <div className="app-layout">
-        <SideBar onSelect={setSelectedContentId} />
-        <ContentSection content={content} />
-      </div>
-    </>
+    <div className="app-container">
+      <Navbar onHomeClick={handleNavHome} onToggleSidebar={toggleSidebar} showSidebarToggle={selectedContentId !== 'home'} />
+
+      {selectedContentId === 'home' ? (
+        <Hero onStartLearning={() => setSelectedContentId('roadmap')} />
+      ) : selectedContentId === 'roadmap' ? (
+        <div className="learning-environment roadmap-page">
+          <Roadmap onNavigate={(id) => setSelectedContentId(id)} />
+        </div>
+      ) : (
+        <div className="learning-environment">
+          <Sidebar
+            isOpen={isSidebarOpen}
+            onSelect={(id) => {
+              setSelectedContentId(id);
+              if (window.innerWidth <= 900) setIsSidebarOpen(false); // Close on mobile after selection
+            }}
+          />
+          <main className="content-area">
+            <ContentView content={content} />
+          </main>
+        </div>
+      )}
+    </div>
   );
 };
 

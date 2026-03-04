@@ -54,7 +54,7 @@ const Topbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          
+
           <h1>
             Booster<span>Learning Partner</span>
           </h1>
@@ -66,12 +66,12 @@ const Topbar = () => {
 
         <div className={`nav-content ${menuOpen ? "show" : ""}`}>
           <ul className="home-nav">
-  <li>
-    <a href="#" onClick={handleHomeClick} className="home-link">
-      Home
-    </a>
-  </li>
-</ul>
+            <li>
+              <a href="#" onClick={handleHomeClick} className="home-link">
+                Home
+              </a>
+            </li>
+          </ul>
 
           <div className="actions">
             {signedIn ? (
@@ -130,34 +130,34 @@ const Topbar = () => {
       </div>
 
       {/* ✅ Floating Popup */}
-{showOffer && (
-  <div className="floating-popup">
-    <button className="popup-close" onClick={() => setShowOffer(false)}>&times;</button>
-    <div className="popup-message">
-      <h2>🎉 Welcome to <strong>Booster Learning</strong>!</h2>
-      <p>
-        You're exploring a prototype of our upcoming all-in-one learning platform designed for tech aspirants and job seekers.
-      </p>
-      <p><strong>🌟 What’s coming soon:</strong></p>
-      <ul className="popup-features">
-        <li>✅ Aptitude training & logical reasoning</li>
-        <li>💻 Programming practice for top-tier tech interviews</li>
-        <li>🧾 Curated preparation roadmaps & sheets</li>
-        <li>🎬 High-quality video tutorials</li>
-      </ul>
-      <p>
-        🚧 Full platform launch coming soon with a new address and features.
-        Stay tuned and be part of the journey!
-      </p>
-      <p>
-        💬 Got ideas or feedback? Help us improve and grow!
-      </p>
-      <a href="https://chat.whatsapp.com/FzBoYKWEw4S5tSvwS5Qxxz" target="_blank" rel="noreferrer">
-        📌 Join our Feedback Community
-      </a>
-    </div>
-  </div>
-)}
+      {showOffer && (
+        <div className="floating-popup">
+          <button className="popup-close" onClick={() => setShowOffer(false)}>&times;</button>
+          <div className="popup-message">
+            <h2>🎉 Welcome to <strong>Booster Learning</strong>!</h2>
+            <p>
+              You're exploring a prototype of our upcoming all-in-one learning platform designed for tech aspirants and job seekers.
+            </p>
+            <p><strong>🌟 What’s coming soon:</strong></p>
+            <ul className="popup-features">
+              <li>✅ Aptitude training & logical reasoning</li>
+              <li>💻 Programming practice for top-tier tech interviews</li>
+              <li>🧾 Curated preparation roadmaps & sheets</li>
+              <li>🎬 High-quality video tutorials</li>
+            </ul>
+            <p>
+              🚧 Full platform launch coming soon with a new address and features.
+              Stay tuned and be part of the journey!
+            </p>
+            <p>
+              💬 Got ideas or feedback? Help us improve and grow!
+            </p>
+            <a href="https://chat.whatsapp.com/FzBoYKWEw4S5tSvwS5Qxxz" target="_blank" rel="noreferrer">
+              📌 Join our Feedback Community
+            </a>
+          </div>
+        </div>
+      )}
 
     </>
   );

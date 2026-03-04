@@ -1,6 +1,6 @@
 // src/data/contentData.js
 export const contentMap = {
- 
+
   variables: {
     id: "variables",
     title: "",
@@ -207,7 +207,7 @@ class="table-container">
     `
   },
 
-    datatypes: {
+  datatypes: {
     id: "datatypes",
     title: "",
     description: `
@@ -435,7 +435,7 @@ long z = 999_99_9999_L;</pre>
 </div>
     `
   },
-  
+
   introduction: {
     id: "introduction",
     title: "Introduction to Java",
@@ -801,7 +801,7 @@ class HelloWorld {
 
     `
   },
-    controlflow: {
+  controlflow: {
     id: "controlflow",
     title: "control flow in Java",
     description: `
@@ -1692,7 +1692,7 @@ Unsigned Right Shift Result: 5
   </div>
     `
   },
-   loops: {
+  loops: {
     id: "loops",
     title: "loops in Java",
     description: `
@@ -2159,7 +2159,7 @@ class ReturnStatementDemo
     `
   },
 
-    typecasting: {
+  typecasting: {
     id: "typecasting",
     title: "",
     description: `
@@ -2286,7 +2286,7 @@ class ReturnStatementDemo
 </div>
     `
   },
-   
+
   arrays: {
     id: "arrays",
     title: "",
@@ -2726,7 +2726,7 @@ int[][][] test = {
 </div>
     `
   },
-  
+
   methods: {
     id: "methods",
     title: "",
@@ -2994,7 +2994,7 @@ public class Booster{
 </div>
     `
   },
-    thiskeyward: {
+  thiskeyward: {
     id: "thiskeyward",
     title: "",
     description: `
@@ -3480,7 +3480,7 @@ class Main extends FinalClass {
     `
   },
 
-    interface: {
+  interface: {
     id: "interface",
     title: "",
     description: `
@@ -4269,7 +4269,7 @@ class Main {
 
     `
   },
-   accessmodifiers: {
+  accessmodifiers: {
     id: "accessmodifiers",
     title: "",
     description: `
@@ -4494,7 +4494,7 @@ class Test {
 </div>
     `
   },
-    inout: {
+  inout: {
     id: "inout",
     title: "",
     description: `
@@ -4733,7 +4733,7 @@ public class StringInput {
     `
   },
 
-    methodoverloading: {
+  methodoverloading: {
     id: "methodoverloading",
     title: "",
     description: `
@@ -4976,7 +4976,7 @@ class HelperService {
 
     `
   },
-    static: {
+  static: {
     id: "static",
     title: "",
     description: `
@@ -5398,7 +5398,7 @@ class OuterClass {
 </div>
     `
   },
-    inheritance: {
+  inheritance: {
     id: "inheritance",
     title: "",
     description: `
@@ -5910,7 +5910,7 @@ class Main {
 </div>
     `
   },
-   
+
   classobject: {
     id: "classobject",
     title: "",
@@ -6336,7 +6336,7 @@ public class Student {
 
     `
   },
-  
+
   constructor: {
     id: "constructor",
     title: "",
@@ -6811,7 +6811,7 @@ class Main {
 </div>
     `
   },
-   methodoverriding: {
+  methodoverriding: {
     id: "methodoverriding",
     title: "",
     description: `
@@ -7019,7 +7019,7 @@ class Main {
 </div>
     `
   },
-    encapsulation: {
+  encapsulation: {
     id: "encapsulation",
     title: "",
     description: `
@@ -7456,7 +7456,7 @@ public class Geeks {
 
     `
   },
-    AbstractClassMethods: {
+  AbstractClassMethods: {
     id: "AbstractClassMethods",
     title: "",
     description: `
@@ -7788,7 +7788,7 @@ class Main {
 <!--ending-->
     `
   },
-   javaSuper: {
+  javaSuper: {
     id: "javaSuper",
     title: "",
     description: `
@@ -8145,4 +8145,252 @@ class Main {
     `
   },
 
+  algorithms: {
+    id: "algorithms",
+    type: "algorithm-guide",
+    title: "25 Essential Algorithms",
+    description: "Master the most common algorithms required for technical interviews and competitive programming. This structured guide will walk you through concepts, visual flows, and Java implementations.",
+    list: [
+      {
+        name: "Two Pointers Technique",
+        difficulty: "Easy / Medium",
+        concept: "The Two Pointers technique involves using two pointers to iterate through an array or list, typically from both ends towards the center or in the same direction. It is incredibly efficient for solving problems involving sorted arrays, finding pairs, or reversing elements in O(N) time with O(1) space.",
+        visualization: "👉 [ Left ] -> 1, 2, 3, 4, 5 <- [ Right ] 👈\n\nIf (sum < target) Left++\nIf (sum > target) Right--\nIf (sum == target) Found!",
+        iterations: [
+          {
+            description: "Initialize left pointer at index 0 and right pointer at index 4.",
+            state: "Array: [ 2 , 7 , 11 , 15 , 19 ]\n         ^              ^\n      left=0        right=4\n\nTarget: 26",
+            codeSnippet: "int left = 0;\nint right = arr.length - 1;"
+          },
+          {
+            description: "Calculate sum of elements at left and right pointers.",
+            state: "Array: [ 2 , 7 , 11 , 15 , 19 ]\n         ^              ^\n        left          right\n\nSum = 2 + 19 = 21",
+            codeSnippet: "int sum = arr[left] + arr[right];"
+          },
+          {
+            description: "Sum (21) is less than Target (26). We need a bigger sum, so move left pointer to the right.",
+            state: "Array: [ 2 , 7 , 11 , 15 , 19 ]\n             ^          ^\n           left=1     right=4",
+            codeSnippet: "if (sum < target) left++;"
+          },
+          {
+            description: "Calculate sum again for new pointers.",
+            state: "Array: [ 2 , 7 , 11 , 15 , 19 ]\n             ^          ^\n            left      right\n\nSum = 7 + 19 = 26",
+            codeSnippet: "int sum = arr[left] + arr[right];"
+          },
+          {
+            description: "Sum equals Target! Pair found. Return true.",
+            state: "Array: [ 2 , 7 , 11 , 15 , 19 ]\n             ^          ^\n            left      right\n\nMATCH FOUND! (7 + 19 == 26)",
+            codeSnippet: "if (sum == target) return true;"
+          }
+        ],
+        code: `public boolean hasPairWithSum(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length - 1;
+    
+    while (left < right) {
+        int sum = arr[left] + arr[right];
+        if (sum == target) return true;
+        if (sum < target) left++; // Need a bigger sum
+        else right--; // Need a smaller sum
+    }
+    return false;
+}`,
+        videoSrc: "https://www.youtube.com/watch?v=On03HWe2tZM",
+        articleLink: "https://www.geeksforgeeks.org/two-pointers-technique/",
+        practiceLink: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+      },
+      {
+        name: "Hashing Techniques",
+        difficulty: "Easy / Medium",
+        concept: "Hashing uses a Hash Map or Hash Set to store data for O(1) constant time lookups. It is highly effective for frequency counting, finding duplicates, or caching previous results to avoid nested O(N^2) loops.",
+        visualization: "Key 'Apple' ➡️ [ Hash Function ] ➡️ Index 4 ➡️ HashMap Storage Bucket\nLookup 'Apple' ➡️ O(1) time complexity.",
+        iterations: [
+          {
+            description: "Start iteration. Index 0, Value 3. Target is 6.",
+            state: "Array: [ 3 , 2 , 4 ]\n         ^\n       i=0\n\nHashMap: {}\nTarget: 6",
+            codeSnippet: "for (int i = 0; i < nums.length; i++) {\n    int complement = target - nums[i];"
+          },
+          {
+            description: "Check if complement (6 - 3 = 3) is in map. It is not.",
+            state: "HashMap: {}\nComplement: 3\n\nResult: Not found.",
+            codeSnippet: "if (map.containsKey(complement)) {"
+          },
+          {
+            description: "Add current value and index to HashMap.",
+            state: "HashMap: {\n  3: 0  // Key: Value, Value: Index\n}",
+            codeSnippet: "map.put(nums[i], i);"
+          },
+          {
+            description: "Next iteration. Index 1, Value 2.",
+            state: "Array: [ 3 , 2 , 4 ]\n             ^\n           i=1\n\nHashMap: { 3: 0 }\nTarget: 6",
+            codeSnippet: "int complement = target - nums[i];"
+          },
+          {
+            description: "Check if complement (6 - 2 = 4) is in map. It is not.",
+            state: "HashMap: { 3: 0 }\nComplement: 4\n\nResult: Not found.",
+            codeSnippet: "if (map.containsKey(complement)) {"
+          },
+          {
+            description: "Add current value and index to HashMap.",
+            state: "HashMap: {\n  3: 0,\n  2: 1\n}",
+            codeSnippet: "map.put(nums[i], i);"
+          },
+          {
+            description: "Next iteration. Index 2, Value 4.",
+            state: "Array: [ 3 , 2 , 4 ]\n                 ^\n               i=2\n\nHashMap: { 3:0, 2:1 }\nTarget: 6",
+            codeSnippet: "int complement = target - nums[i];"
+          },
+          {
+            description: "Check if complement (6 - 4 = 2) is in map. IT IS!",
+            state: "HashMap: { 3:0, 2:1 }\nComplement: 2\n\nResult: FOUND at index 1!",
+            codeSnippet: "if (map.containsKey(complement)) {"
+          },
+          {
+            description: "Return current index (2) and complement's index (1).",
+            state: "Match found!\nnums[1] = 2\nnums[2] = 4\n2 + 4 = 6 (Target)\n\nResult: [1, 2]",
+            codeSnippet: "return new int[] { map.get(complement), i };"
+          }
+        ],
+        code: `public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    
+    for (int i = 0; i < nums.length; i++) {
+        int complement = target - nums[i];
+        if (map.containsKey(complement)) {
+            // Found a match in O(1) lookup time
+            return new int[] { map.get(complement), i };
+        }
+        map.put(nums[i], i);
+    }
+    return new int[] {};
+}`,
+        videoSrc: "https://www.youtube.com/watch?v=HDejcNIzJus",
+        articleLink: "https://www.geeksforgeeks.org/hashing-data-structure/",
+        practiceLink: "https://leetcode.com/problems/two-sum/"
+      }
+    ]
+  },
+
+  projects: {
+    id: "projects",
+    type: "project-guide",
+    title: "Java Mastery Projects",
+    description: "Build robust, scalable, and real-world applications. These level-by-level projects are designed to transition you from writing simple scripts to engineering complete software systems.",
+    levels: [
+      {
+        levelName: "Level 1: Fundamentals (CLI)",
+        description: "Focus on syntax, control flow, loops, and basic Data Structures using the Command Line Interface.",
+        projects: [
+          {
+            name: "Banking System CLI App",
+            difficulty: "Beginner",
+            timeEstimate: "2 - 4 Hours",
+            problemStatement: "Create a console-based application simulating a simple bank account. Users should be able to create an account, check balance, deposit money, and withdraw money. Handle basic validation like insufficient funds or negative deposits.",
+            featuresToImplement: [
+              "Interactive Menu Loop (while, switch)",
+              "Scanner for User Input",
+              "Variables holding state (balance)",
+              "If/Else conditions for withdrawals"
+            ],
+            articleLink: "https://www.geeksforgeeks.org/bank-management-system-in-java/",
+            videoSrc: "https://www.youtube.com/watch?v=w-9ZTE2CSYm"
+          },
+          {
+            name: "Number Guessing Game",
+            difficulty: "Beginner",
+            timeEstimate: "1 - 2 Hours",
+            problemStatement: "Generate a random number between 1 and 100. Let the user guess the number, giving them hints like 'Too High' or 'Too Low' until they get it correctly. Track the number of attempts.",
+            featuresToImplement: [
+              "java.util.Random for RNG",
+              "While loop for continuous guessing",
+              "Scanner for input and counters for attempts"
+            ],
+            articleLink: "https://www.geeksforgeeks.org/number-guessing-game-in-java/",
+            videoSrc: "https://www.youtube.com/watch?v=hZJEUOEX5Qk"
+          },
+          {
+            name: "Calculator Application",
+            difficulty: "Beginner",
+            timeEstimate: "2 - 3 Hours",
+            problemStatement: "Build a comprehensive console calculator that can parse mathematical operators (+, -, *, /, %) and dynamically calculate the floating point response.",
+            featuresToImplement: [
+              "Switch statement for operator routing",
+              "Floating-point data types (double/float)",
+              "Exception handling for Division by Zero"
+            ],
+            articleLink: "https://www.programiz.com/java-programming/examples/calculator-switch-case",
+            videoSrc: "https://www.youtube.com/watch?v=02cZg-M-6yU"
+          }
+        ]
+      },
+      {
+        levelName: "Level 2: Object-Oriented Design",
+        description: "Apply Encapsulation, Inheritance, and Polymorphism to structure complex codebases.",
+        projects: [
+          {
+            name: "Library Management System",
+            difficulty: "Intermediate",
+            timeEstimate: "5 - 8 Hours",
+            problemStatement: "Design a system managing Books, Members, and Transactions. Books should have titles, authors, and availability states. Members can borrow up to 3 books. Use Collections (ArrayLists) to track inventories.",
+            featuresToImplement: [
+              "Create Classes: Book, Member, Library",
+              "ArrayList integration for storing dynamic data",
+              "Constructors and Getter/Setter encapsulation",
+              "Custom Exception Handling (e.g., BookNotAvailableException)"
+            ],
+            articleLink: "https://www.javatpoint.com/library-management-system-project-in-java",
+            videoSrc: "https://www.youtube.com/watch?v=lSnvmHtzIQM"
+          },
+          {
+            name: "E-Commerce Cart System",
+            difficulty: "Intermediate",
+            timeEstimate: "6 - 10 Hours",
+            problemStatement: "Create an object-oriented cart where users can browse Products, add them to a Cart, and checkout. Integrate an inheritance tree simulating different discounts (SeasonalBonus, VIPDiscount).",
+            featuresToImplement: [
+              "Inheritance and Polymorphism (Discount types)",
+              "HashMaps to map Product IDs to Quantities",
+              "Static variables for unique Order IDs",
+              "Interfaces for PaymentProcessors"
+            ],
+            articleLink: "https://www.geeksforgeeks.org/design-an-e-commerce-system/",
+            videoSrc: "https://www.youtube.com/watch?v=pTbMmCGaqEo"
+          },
+          {
+            name: "File-Based Contact Book",
+            difficulty: "Intermediate",
+            timeEstimate: "4 - 7 Hours",
+            problemStatement: "Build a Contact Book application (Add, View, Search, Delete) that saves state persistently using Java File I/O (txt or csv files) instead of memory.",
+            featuresToImplement: [
+              "File, FileWriter, and Scanner for Java I/O",
+              "Parsing CSV formats logically into Objects",
+              "Java Streams for rapid searching",
+              "Try-With-Resources block"
+            ],
+            articleLink: "https://www.geeksforgeeks.org/phonebook-management-system-in-java/",
+            videoSrc: "https://www.youtube.com/watch?v=t1lYf-fX3yU"
+          }
+        ]
+      },
+      {
+        levelName: "Level 3: Advanced & Full Stack",
+        description: "Integrate Databases (JDBC), GUI frameworks, or build Spring Boot REST APIs.",
+        projects: [
+          {
+            name: "Student Record Management with Database",
+            difficulty: "Advanced",
+            timeEstimate: "10+ Hours",
+            problemStatement: "Build a persistent CRUD application that connects to a MySQL database using JDBC. Add, Read, Update, and Delete student records. Validate data and handle SQL constraints.",
+            featuresToImplement: [
+              "JDBC Driver setup and Database Connection",
+              "SQL Queries (SELECT, INSERT, UPDATE, DELETE)",
+              "PreparedStatements for preventing SQL Injection",
+              "DAO (Data Access Object) Design Pattern"
+            ],
+            articleLink: "https://www.geeksforgeeks.org/student-management-system-in-java-with-jdbc/",
+            videoSrc: "https://www.youtube.com/watch?v=d_K2tJpWDEw"
+          }
+        ]
+      }
+    ]
+  }
 };

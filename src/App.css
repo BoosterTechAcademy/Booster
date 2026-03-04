@@ -1,38 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 :root {
-  --bg-color: #4F46E5;
-  --text-color: #ffffff;
-  --button-bg: #ffffff;
-  --button-text: #4F46E5;
-  --content-bg: #ffffff;
-  --content-text: #121212;
-  --sidebar-bg: #f9f9f9;
+  /* Core Brand Colors */
+  --primary-color: #0d6efd;
+  /* Modern Blue */
+  --primary-hover: #0b5ed7;
+  --secondary-color: #f8f9fa;
+  /* Off-white for section backgrounds */
+
+  /* Backgrounds & Surfaces */
+  --bg-main: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #f8f9fa;
+  --bg-navbar: #ffffff;
+
+  /* Text Colors */
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --text-inverse: #ffffff;
+
+  /* Borders & Shadows */
+  --border-color: #dee2e6;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --navbar-height: 70px;
+  --sidebar-width: 280px;
   --transition-speed: 0.3s;
 }
 
+/* Dark Theme Variables */
 body.dark-theme {
-  --bg-color: #1e1e2f;
-  --text-color: #ffffff;
-  --button-bg: #4F46E5;
-  --button-text: #ffffff;
-  --content-bg: #1a1a1a;
-  --content-text: #eaeaea;
-  --sidebar-bg: #2a2a3a;
-  background-color: #121212;
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --secondary-color: #1e293b;
+
+  --bg-main: #0B1120;
+  --bg-surface: #1e293b;
+  --bg-sidebar: #131B2C;
+  --bg-navbar: #0B1120;
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-inverse: #0B1120;
+
+  --border-color: #334155;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* Base Styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: whitesmoke;
-  color: var(--text-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
-  height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -40,460 +77,70 @@ a {
   color: inherit;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 9vh;
-  background-color: var(--bg-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  color: var(--text-color);
-  z-index: 1000;
-}
-
-.navbar .logo h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.navbar .logo span {
-  font-size: 14px;
-  display: block;
-  font-weight: normal;
-  color: #d1d5db;
-}
-
-.navbar ul {
+ul {
   list-style: none;
-  display: flex;
-  gap: 25px;
 }
 
-.navbar .actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.navbar button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  padding: 8px 18px;
-  border-radius: 25px;
-  font-weight: bold;
+button {
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
-.theme-toggle img {
-  width: 28px;
-  height: 28px;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* home button */
-/* Light theme */
-.home-link {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  border-radius: 25px;
-  background: linear-gradient(135deg, #4a90e2, #007bff);
+/* Global Utility Classes */
+.btn-primary {
+  background-color: var(--primary-color);
   color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s ease, box-shadow 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
   font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
 }
 
-.home-link:hover {
-  background: linear-gradient(135deg, #0056b3, #004b99);
+.btn-primary:hover {
+  background-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
 }
 
-/* Dark theme override */
-body.dark-theme .home-link {
-  background: linear-gradient(135deg, #1e3a8a, #1d4ed8); /* deeper blue shades */
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+body.dark-theme .btn-primary {
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
 }
 
-body.dark-theme .home-link:hover {
-  background: linear-gradient(135deg, #1e40af, #1e3a8a);
-  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.5);
-}
-
-
-@media (max-width: 700px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-content  {
-    display: none;
-    position: absolute;
-    border-radius: 20px;
-    top: 60px;
-    right: 0;
-    background: white;
-    padding: 15px;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    width: 200px;
-    z-index: 1000;
-  }
- 
-  #usernameDisplay{
-    color: black;
-  }
-    .nav-content .home{
-    
-    color: black;
-  }
-  .nav-content.show {
-    display: flex;
-  }
-
-  .nav-content ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .actions {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-/* top bar */
-.app-layout {
-  display: flex;
-}
-
-.sidebar {
-  width: 250px;
-  background: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 20px;
-}
-
-
-/*  */
-
-
- body.dark-theme .main-Section .sidebar h2{
- color: #ffffff;
- }
-
-
-  body.dark-theme .main-Section .sidebar .sublist  li{
-    color: #eaeaea;
- }
-
-
- 
-  body.dark-theme .content .var_main .navbar-variable{
-    color: black;
- }
-
- 
-  body.dark-theme .content {
-    --content-text:#333333;
-    
- }
-
-  body.dark-theme .content .var_main{
-   background-color:transparent;
-    
- }
- 
-
-/* Remove background for general divs to avoid override issues */
-body.dark-theme .content > div:not(.code-container):not(.output-box):not(.content-container) {
-  background-color: transparent;
-}
-  
-  body.dark-theme .content div{
-  background-color: lightgrey;
- }
-
-   
-  body.dark-theme .content pre,th{
-  background-color: #333333;
-  color: white;
- }
-
-   body.dark-theme .section th{
-  background-color: #333333;
-  color: white;
- }
-
-   body.dark-theme .content strong,h2{
-
-  color: #4F46E5;
- }
-    body.dark-theme .content code{
-  background-color: #2d2d2d ;
-  color: #E5E5E5;
- }
-
-    body.dark-theme .content  .output-box{
-          background-color:transparent;
-          color:black;
- }
-
-   body.dark-theme .content .code-snippet{
-          background-color:transparent;
-          color:black;
- }
-
- 
-   body.dark-theme .content .content-container .code-block{
-       background-color: #333333;
-  color: white;
- }
-
-
- /* login */
-/* Center the form horizontally & vertically */
-.signup-form {
-  position: absolute;
-  top: 150%;
-  left: 50%;
-  transform: translate(-50%, -50%);  /* ✅ This keeps it centered */
-  padding: 2rem 3rem;
-  max-width: 400px;
-  width: 90%;
+/* Layout Architecture */
+.app-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  animation: fadeIn 0.4s ease-out;
+  min-height: 100vh;
 }
 
-/* Dark mode compatibility */
-body.dark-theme .signup-form {
-  background-color: #222;
-  border-color: #444;
-  color: #fff;
-}
-
-/* Input field */
-.signup-form input[type="email"] {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.2s;
-}
-
-.signup-form input[type="email"]:focus {
-  border-color: #4a90e2;
-}
-
-/* Submit button */
-.signup-form button[type="submit"] {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #4a90e2;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.signup-form button[type="submit"]:hover {
-  background-color: #3a78c2;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* 📱 Responsive adjustment for smaller screens */
-@media (max-width: 750px) {
-  .signup-form {
-    width: 90%;
-    
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-
- 
-}
-
-
-.close-btn {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #555;
-  cursor: pointer;
-  z-index: 1001;
-  transition: color 0.2s ease;
-}
-
-.close-btn:hover {
-  color: #e74c3c;
-}
-
-@media (max-width: 750px) {
-  .close-btn {
-    top: 6px;
-    right: 10px;
-    font-size: 1.25rem;  /* slightly smaller */
-  }
-
-  .close-btn{
-    display: none;
-  }
-}
-
-
-/* dark them of unvailable message */
-
-/* pop up */
-
-.floating-popup {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: #fff;
-  color: #000;
-  padding: 1.2rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  z-index: 999;
-  max-width: 300px;
-  width: 90%;
-  animation: fadeInPopup 0.4s ease;
-}
-
-body.dark-theme .floating-popup {
-  background: #222;
-  color: #fff;
-}
-
-.popup-close {
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: inherit;
-  cursor: pointer;
-}
-
-.popup-message h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-
-.popup-message p {
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
-}
-
-.popup-message a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #4a90e2;
-  text-decoration: underline;
-}
-
-@keyframes fadeInPopup {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.popup-message ul.popup-features {
-  list-style: none;
-  padding-left: 0;
-  margin: 0.5rem 0;
-}
-
-.popup-message ul.popup-features li {
-  font-size: 0.9rem;
-  padding-left: 1.2rem;
+.learning-environment {
+  display: flex;
+  flex: 1;
+  margin-top: var(--navbar-height);
   position: relative;
-  margin-bottom: 0.4rem;
-  line-height: 1.4;
 }
 
-.popup-message ul.popup-features li::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1rem;
-  color: #f39c12;
+.content-area {
+  flex: 1;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--navbar-height));
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-speed) ease;
 }
 
-.popup-message h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-  color: #333;
-  font-weight: bold;
-}
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .learning-environment {
+    flex-direction: column;
+  }
 
-.popup-message strong {
-  color: #4a90e2;
-}
-
-.popup-message a:hover {
-  color: #1a73e8;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-body.dark-theme .popup-message h2{
-  
-    color: white;
+  .content-area {
+    margin-left: 0;
+  }
 }
