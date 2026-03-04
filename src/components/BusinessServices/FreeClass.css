@@ -295,12 +295,70 @@
     font-size: 1.1rem;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .fc-topbar,
+    .fc-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .fc-topbar {
-        padding: 1.2rem 2rem;
+        padding: 1rem;
     }
 
-    .fc-grid {
-        grid-template-columns: 1fr;
+    .fc-header h1 {
+        font-size: 2rem;
+    }
+
+    .fc-list-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .fc-card-action {
+        width: 100%;
+        min-width: unset;
+        border-left: none;
+        border-top: 1px solid #e2e8f0;
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+
+    .fc-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fc-topbar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .fc-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .fc-title {
+        font-size: 1.4rem;
+    }
+
+    .fc-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .fc-instructor-profile {
+        width: 100%;
+        flex-wrap: wrap;
     }
 }
