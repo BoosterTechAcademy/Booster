@@ -102,6 +102,7 @@ body.dark-theme .navbar-glass {
     transition: color 0.2s;
 }
 
+.nav-link-btn.active,
 .nav-link-btn:hover {
     color: var(--primary-color);
 }

@@ -4,18 +4,7 @@ import './CommunityHero.css';
 const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, onHomeClick }) => {
     return (
         <div className="ch-wrapper">
-            {/* Topbar Navigation */}
-            <nav className="ch-topbar">
-                <div className="ch-logo" onClick={onHomeClick} style={{ cursor: 'pointer' }}>
-                    <span className="logo-icon blue-text">&lt;/&gt;</span>
-                    <span className="logo-text">Learning<span className="text-secondary">Sheet</span></span>
-                </div>
-                <div className="ch-nav-links">
-                    <button className="nav-link-btn" onClick={onNavigateToBusinessServices}>Business Services</button>
-                    <button className="nav-link-btn" onClick={onNavigateToFreeClass}>Free Class</button>
-                    <button className="btn-secondary nav-btn" onClick={onHomeClick}>Home</button>
-                </div>
-            </nav>
+
 
             {/* Hero Main Content */}
             <main className="ch-hero-content">

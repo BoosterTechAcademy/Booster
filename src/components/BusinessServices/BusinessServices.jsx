@@ -58,18 +58,7 @@ const BusinessServices = ({ onNavigateToFreeClass, onHomeClick }) => {
 
     return (
         <div className="bs-wrapper">
-            {/* Topbar Navigation */}
-            <nav className="bs-topbar">
-                <div className="bs-logo" onClick={onHomeClick} style={{ cursor: 'pointer' }}>
-                    <span className="logo-icon blue-text">&lt;/&gt;</span>
-                    <span className="logo-text">Learning<span className="text-secondary">Sheet</span></span>
-                </div>
-                <div className="bs-nav-links">
-                    <button className="nav-link-btn active">Services</button>
-                    <button className="nav-link-btn" onClick={onNavigateToFreeClass}>Free Class</button>
-                    <button className="btn-secondary nav-btn" onClick={onHomeClick}>Home</button>
-                </div>
-            </nav>
+
 
             {/* Services Component */}
             <section id="services" className="bs-services-section">

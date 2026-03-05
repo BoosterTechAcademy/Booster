@@ -2,6 +2,7 @@
     min-height: 100vh;
     background: #ffffff;
     color: #1e293b;
+    padding-top: var(--navbar-height);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 

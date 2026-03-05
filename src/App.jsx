@@ -35,7 +35,14 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navbar onHomeClick={handleNavHome} onToggleSidebar={toggleSidebar} showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class'} />
+      <Navbar 
+        onHomeClick={handleNavHome} 
+        onToggleSidebar={toggleSidebar} 
+        currentRoute={selectedContentId}
+        onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
+        onNavigateToFreeClass={() => setSelectedContentId('free-class')}
+        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class'} 
+      />
 
       {selectedContentId === 'home' ? (
         <Hero

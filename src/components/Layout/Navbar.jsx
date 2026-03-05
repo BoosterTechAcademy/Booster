@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 
-const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle }) => {
+const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute, onNavigateToBusinessServices, onNavigateToFreeClass }) => {
+    const isLearningModuleRoute = currentRoute === 'community-hero' || currentRoute === 'business-services' || currentRoute === 'free-class';
+
     const [darkTheme, setDarkTheme] = useState(() => {
         return localStorage.getItem("theme") === "dark";
     });
@@ -47,8 +49,28 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle }) => {
                 <nav className="navbar-right">
                     <ul className="nav-links">
                         <li>
-                            <button className="nav-link-btn" onClick={onHomeClick}>Home</button>
+                            <button className={`nav-link-btn ${currentRoute === 'home' ? 'active' : ''}`} onClick={onHomeClick}>Home</button>
                         </li>
+                        {isLearningModuleRoute && (
+                            <>
+                                <li>
+                                    <button
+                                        className={`nav-link-btn ${currentRoute === 'business-services' ? 'active' : ''}`}
+                                        onClick={onNavigateToBusinessServices}
+                                    >
+                                        Services
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        className={`nav-link-btn ${currentRoute === 'free-class' ? 'active' : ''}`}
+                                        onClick={onNavigateToFreeClass}
+                                    >
+                                        Free Class
+                                    </button>
+                                </li>
+                            </>
+                        )}
                     </ul>
 
                     <div className="nav-actions">

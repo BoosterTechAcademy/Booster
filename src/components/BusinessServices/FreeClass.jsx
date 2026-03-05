@@ -25,14 +25,7 @@ const upComingClasses = [
 const FreeClass = ({ onHomeClick }) => {
     return (
         <div className="free-class-wrapper">
-            {/* Simple Top Navigation */}
-            <nav className="fc-topbar">
-                <div className="fc-logo" onClick={onHomeClick} style={{ cursor: 'pointer' }}>
-                    <span className="logo-icon blue-text">&lt;/&gt;</span>
-                    <span className="logo-text">Learning<span className="text-secondary">Sheet</span></span>
-                </div>
-                <button className="btn-secondary nav-btn" onClick={onHomeClick}>Home</button>
-            </nav>
+
 
             <div className="fc-container">
                 <header className="fc-header">
