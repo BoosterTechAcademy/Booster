@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommunityHero.css';
 
-const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, onHomeClick }) => {
+const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, onNavigateToMockBeforeLearn, onHomeClick }) => {
     return (
         <div className="ch-wrapper">
 
@@ -54,6 +54,9 @@ const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, on
                         </button>
                         <button className="btn-outline-large" onClick={onNavigateToFreeClass}>
                             Check Free Classes
+                        </button>
+                        <button className="btn-primary-large" onClick={onNavigateToMockBeforeLearn}>
+                            Mock Before Learn
                         </button>
                     </div>
                 </div>

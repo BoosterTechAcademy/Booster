@@ -10,6 +10,7 @@ import WelcomeForm from './components/JoinCommunity/WelcomeForm';
 import CommunityHero from './components/BusinessServices/CommunityHero';
 import BusinessServices from './components/BusinessServices/BusinessServices';
 import FreeClass from './components/BusinessServices/FreeClass';
+import MockBeforeLearn from './components/BusinessServices/MockBeforeLearn';
 import './utils/copyCode';
 
 const App = () => {
@@ -35,13 +36,14 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Navbar 
-        onHomeClick={handleNavHome} 
-        onToggleSidebar={toggleSidebar} 
+      <Navbar
+        onHomeClick={handleNavHome}
+        onToggleSidebar={toggleSidebar}
         currentRoute={selectedContentId}
         onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
         onNavigateToFreeClass={() => setSelectedContentId('free-class')}
-        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class'} 
+        onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
+        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn'}
       />
 
       {selectedContentId === 'home' ? (
@@ -55,12 +57,15 @@ const App = () => {
         <CommunityHero
           onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
           onNavigateToFreeClass={() => setSelectedContentId('free-class')}
+          onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
           onHomeClick={handleNavHome}
         />
       ) : selectedContentId === 'business-services' ? (
         <BusinessServices onNavigateToFreeClass={() => setSelectedContentId('free-class')} onHomeClick={handleNavHome} />
       ) : selectedContentId === 'free-class' ? (
         <FreeClass onHomeClick={handleNavHome} />
+      ) : selectedContentId === 'mock-before-learn' ? (
+        <MockBeforeLearn onHomeClick={handleNavHome} />
       ) : selectedContentId === 'roadmap' ? (
         <div className="learning-environment roadmap-page">
           <Roadmap onNavigate={(id) => setSelectedContentId(id)} />

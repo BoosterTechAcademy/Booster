@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 
-const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute, onNavigateToBusinessServices, onNavigateToFreeClass }) => {
-    const isLearningModuleRoute = currentRoute === 'community-hero' || currentRoute === 'business-services' || currentRoute === 'free-class';
+const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute, onNavigateToBusinessServices, onNavigateToFreeClass, onNavigateToMockBeforeLearn }) => {
+    const isLearningModuleRoute = currentRoute === 'community-hero' || currentRoute === 'business-services' || currentRoute === 'free-class' || currentRoute === 'mock-before-learn';
 
     const [darkTheme, setDarkTheme] = useState(() => {
         return localStorage.getItem("theme") === "dark";
@@ -67,6 +67,14 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                                         onClick={onNavigateToFreeClass}
                                     >
                                         Free Class
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        className={`nav-link-btn ${currentRoute === 'mock-before-learn' ? 'active' : ''}`}
+                                        onClick={onNavigateToMockBeforeLearn}
+                                    >
+                                        Mock Interview
                                     </button>
                                 </li>
                             </>
