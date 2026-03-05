@@ -1,0 +1,220 @@
+.rs-wrapper {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    /* Slightly off-white for contrast against cards */
+    color: #1e293b;
+    padding-top: var(--navbar-height, 80px);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.rs-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rs-success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #dcfce7;
+    color: #16a34a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 0 10px rgba(22, 163, 74, 0.1);
+}
+
+.rs-success-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.rs-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.rs-header h1 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.rs-subtitle {
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.rs-content-card,
+.rs-contact-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    margin-bottom: 2rem;
+}
+
+.rs-content-card h3,
+.rs-contact-card h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.rs-instructions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rs-instructions li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.step-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: #eff6ff;
+    color: #2563eb;
+    border-radius: 50%;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.rs-instructions p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.rs-instructions strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Contact Methods */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item strong {
+    font-size: 1rem;
+    color: #0f172a;
+}
+
+.contact-item span {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.rs-actions {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .rs-container {
+        margin: 2rem 1rem;
+    }
+
+    .rs-header h1 {
+        font-size: 2rem;
+    }
+
+    .rs-content-card,
+    .rs-contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}

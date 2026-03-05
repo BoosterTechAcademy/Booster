@@ -11,6 +11,8 @@ import CommunityHero from './components/BusinessServices/CommunityHero';
 import BusinessServices from './components/BusinessServices/BusinessServices';
 import FreeClass from './components/BusinessServices/FreeClass';
 import MockBeforeLearn from './components/BusinessServices/MockBeforeLearn';
+import ProgramRegistration from './components/BusinessServices/ProgramRegistration';
+import RegistrationSuccess from './components/BusinessServices/RegistrationSuccess';
 import './utils/copyCode';
 
 const App = () => {
@@ -43,7 +45,7 @@ const App = () => {
         onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
         onNavigateToFreeClass={() => setSelectedContentId('free-class')}
         onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
-        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn'}
+        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn' && selectedContentId !== 'program-registration' && selectedContentId !== 'registration-success'}
       />
 
       {selectedContentId === 'home' ? (
@@ -61,11 +63,27 @@ const App = () => {
           onHomeClick={handleNavHome}
         />
       ) : selectedContentId === 'business-services' ? (
-        <BusinessServices onNavigateToFreeClass={() => setSelectedContentId('free-class')} onHomeClick={handleNavHome} />
+        <BusinessServices
+          onNavigateToFreeClass={() => setSelectedContentId('free-class')}
+          onNavigateToRegistration={() => setSelectedContentId('program-registration')}
+          onHomeClick={handleNavHome}
+        />
       ) : selectedContentId === 'free-class' ? (
-        <FreeClass onHomeClick={handleNavHome} />
+        <FreeClass
+          onHomeClick={handleNavHome}
+          onNavigateToRegistration={() => setSelectedContentId('program-registration')}
+        />
       ) : selectedContentId === 'mock-before-learn' ? (
         <MockBeforeLearn onHomeClick={handleNavHome} />
+      ) : selectedContentId === 'program-registration' ? (
+        <ProgramRegistration
+          onNavigateToPayment={() => {
+            // Since the payment step has been removed, map directly to the success page upon form completion.
+            setSelectedContentId('registration-success');
+          }}
+        />
+      ) : selectedContentId === 'registration-success' ? (
+        <RegistrationSuccess onHomeClick={handleNavHome} />
       ) : selectedContentId === 'roadmap' ? (
         <div className="learning-environment roadmap-page">
           <Roadmap onNavigate={(id) => setSelectedContentId(id)} />

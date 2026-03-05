@@ -44,16 +44,14 @@ const servicesList = [
     }
 ];
 
-const BusinessServices = ({ onNavigateToFreeClass, onHomeClick }) => {
+const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onHomeClick }) => {
     const [toastMessage, setToastMessage] = useState('');
 
-    const handleGoogleFormClick = () => {
-        // Simulating opening a google form
-        window.open('https://docs.google.com/forms/', '_blank');
-
-        // Show toast message
-        setToastMessage('We will contact you shortly!');
-        setTimeout(() => setToastMessage(''), 3000);
+    const handleRegistrationClick = (moduleId) => {
+        // We can pass the module ID to the registration form in a real app via context, URL params, or local storage.
+        // For now, we'll store it in localStorage so the registration form can pick it up if needed.
+        localStorage.setItem('selectedModule', moduleId);
+        onNavigateToRegistration();
     };
 
     return (
@@ -90,7 +88,7 @@ const BusinessServices = ({ onNavigateToFreeClass, onHomeClick }) => {
 
                             <div className="details-action mt-auto">
                                 <p className="class-info">Live classes for 1 hr daily. Contact via email/phone based on interest.</p>
-                                <button className="btn-primary action-btn" onClick={handleGoogleFormClick}>
+                                <button className="btn-primary action-btn" onClick={() => handleRegistrationClick(service.id)}>
                                     I am Interested (Fill Form)
                                 </button>
                             </div>
