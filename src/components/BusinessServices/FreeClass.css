@@ -80,6 +80,17 @@
     color: #2563eb;
 }
 
+.medium-text {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    background: #f1f5f9;
+    border-radius: 6px;
+    font-weight: 700;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+}
+
 .fc-list {
     display: flex;
     flex-direction: column;

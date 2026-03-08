@@ -58,6 +58,7 @@ const BookMentor = ({ onNavigateToSuccess, onHomeClick }) => {
                         <div className="pricing-tag">₹300</div>
                         <div className="pricing-info">
                             <span>Duration: 20 min</span>
+                            <span>Medium: Tamil / English</span>
                             <span>Expert Mentorship</span>
                         </div>
                     </div>

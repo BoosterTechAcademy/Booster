@@ -4,16 +4,17 @@ import './BusinessServices.css';
 // Added batch details and registration status to each service
 const servicesList = [
     {
-        id: 'aptitude',
+        id: 'Quantitative Aptitude',
         title: 'Aptitude',
-        description: 'Master quantitative and logical aptitude for competitive exams and interviews.',
-        curriculum: ['Number System', 'Time & Work', 'Percentages', 'Profit & Loss', 'Ratio and Proportion','Average','Time, Speed and Distance'],
+        description: 'Master quantitative aptitude for competitive exams and interviews.',
+        curriculum: ['Number System', 'Time & Work', 'Percentages', 'Profit & Loss', 'Ratio and Proportion', 'Average', 'Time, Speed and Distance'],
         payment: '₹1599 / module',
         totalClasses: '16-18',
         durationPerDay: '1 hr',
         remainingSeats: 10,
         batchDate: '2026-03-27T10:00:00', // Example start date
         registrationOpen: true,
+        language: 'Tamil / English',
         icon: '🧮'
     },
     {
@@ -27,32 +28,35 @@ const servicesList = [
         remainingSeats: 0,
         batchDate: '2026-03-25T14:00:00',
         registrationOpen: false,
+        language: 'Tamil / English',
         icon: '🧩'
     },
     {
         id: 'core-oops',
         title: 'Core and OOPS',
         description: 'Deep dive into Object Oriented Programming principles with real-world examples.',
-        curriculum: ['Data Types & variable ','Conditional Statments','Loops','Exception handling','Classes & Objects', 'Inheritance', 'Polymorphism', 'Abstraction', 'Encapsulation'],
+        curriculum: ['Data Types & variable ', 'Conditional Statments', 'Loops', 'Exception handling', 'Classes & Objects', 'Inheritance', 'Polymorphism', 'Abstraction', 'Encapsulation'],
         payment: '₹1599 / module',
         totalClasses: '16-18',
         durationPerDay: '1 hr',
         remainingSeats: 10,
         batchDate: '2026-03-15T09:00:00',
         registrationOpen: true, // Registration closed
+        language: 'Tamil / English',
         icon: '💻'
     },
     {
         id: 'logical',
         title: 'Logical Building and Programming',
         description: 'Enhance your core logic building skills, essential for cracking tech interviews.',
-        curriculum: ['Pattern Printing', 'basics programs', 'Leetcode problems', 'Bit Manipulation', 'Math for Programmers','Boundary case thinking'],
+        curriculum: ['Pattern Printing', 'basics programs', 'Leetcode problems', 'Bit Manipulation', 'Math for Programmers', 'Boundary case thinking'],
         payment: '₹2099 / module',
         totalClasses: '22-26',
         durationPerDay: '1 hr',
         remainingSeats: 8,
         batchDate: '2026-03-30T16:00:00',
         registrationOpen: true,
+        language: 'Tamil / English',
         icon: '🧠'
     }
 ];
@@ -131,7 +135,10 @@ const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onN
 
                             <div className="module-card-header">
                                 <span className="module-icon-large">{service.icon}</span>
-                                <h2>{service.title}</h2>
+                                <div className="module-title-info">
+                                    <h2>{service.title}</h2>
+                                    <span className="module-language">🗣️ {service.language}</span>
+                                </div>
                             </div>
 
                             <p className="details-desc">{service.description}</p>

@@ -60,7 +60,7 @@ const MockBeforeLearn = ({ onHomeClick }) => {
                             <li><span>1</span> Fill out the interest form below or email us directly.</li>
                             <li><span>2</span> Our mentors from Booster will review your request.</li>
                             <li><span>3</span> We will contact you within 24 hours with meeting details and time.</li>
-                            <li><span>4</span> Attend the mock interview and get a detailed assessment of your level.</li>
+                            <li><span>4</span> Attend the mock interview (provided in <strong>Tamil / English</strong>) and get a detailed assessment of your level.</li>
                         </ul>
 
                         <div className="mbl-email-option">

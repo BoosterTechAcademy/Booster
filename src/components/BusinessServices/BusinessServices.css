@@ -162,6 +162,18 @@
     /* Space for badge */
 }
 
+.module-title-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.module-language {
+    font-size: 0.85rem;
+    color: #2563eb;
+    font-weight: 600;
+}
+
 /* Batch Stats Grid */
 .batch-stats-grid {
     display: grid;

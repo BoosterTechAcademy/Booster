@@ -34,6 +34,8 @@ const FreeClass = ({ onHomeClick }) => {
                         Experience our teaching methodology before committing.
                         We upload live class links 1 day prior. Anyone can join directly!
                         Sessions typically last for <strong>2-3 hours</strong>.
+                        <br />
+                        <span className="medium-text">Medium of Instruction: Tamil / English</span>
                     </p>
                 </header>
 
