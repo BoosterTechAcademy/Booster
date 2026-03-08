@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BusinessServices.css';
 
+// Added batch details and registration status to each service
 const servicesList = [
     {
         id: 'aptitude',
         title: 'Aptitude',
         description: 'Master quantitative and logical aptitude for competitive exams and interviews.',
-        curriculum: ['Number System', 'Time & Work', 'Percentages', 'Profit & Loss', 'Probability'],
-        payment: '₹999 / module',
+        curriculum: ['Number System', 'Time & Work', 'Percentages', 'Profit & Loss', 'Ratio and Proportion','Average','Time, Speed and Distance'],
+        payment: '₹1599 / module',
+        totalClasses: '16-18',
+        durationPerDay: '1 hr',
+        remainingSeats: 10,
+        batchDate: '2026-03-27T10:00:00', // Example start date
+        registrationOpen: true,
         icon: '🧮'
     },
     {
         id: 'dsa',
         title: 'Data Structure and Algorithms',
         description: 'Learn efficient problem solving through pseudo code and implementation in any language.',
-        curriculum: ['Arrays & Strings', 'Linked Lists', 'Trees & Graphs', 'Dynamic Programming', 'Sorting Algorithms'],
-        payment: '₹1499 / module',
+        curriculum: ['Arrays & Strings', 'Linked Lists', 'Trees & Graphs', 'Stack and Queue', 'Sorting Algorithms'],
+        payment: '₹4000 / module',
+        totalClasses: '16-18',
+        durationPerDay: '1 hr',
+        remainingSeats: 0,
+        batchDate: '2026-03-25T14:00:00',
+        registrationOpen: false,
         icon: '🧩'
     },
     {
@@ -24,6 +35,11 @@ const servicesList = [
         description: 'Deep dive into Object Oriented Programming principles with real-world examples.',
         curriculum: ['Classes & Objects', 'Inheritance', 'Polymorphism', 'Abstraction', 'Encapsulation'],
         payment: '₹1299 / module',
+        totalClasses: '16-18',
+        durationPerDay: '1 hr',
+        remainingSeats: 0,
+        batchDate: '2026-03-15T09:00:00',
+        registrationOpen: false, // Registration closed
         icon: '💻'
     },
     {
@@ -32,45 +48,121 @@ const servicesList = [
         description: 'Enhance your core logic building skills, essential for cracking tech interviews.',
         curriculum: ['Pattern Printing', 'Number Logic', 'Recursion', 'Bit Manipulation', 'Math for Programmers'],
         payment: '₹1099 / module',
+        totalClasses: '16-18',
+        durationPerDay: '1 hr',
+        remainingSeats: 8,
+        batchDate: '2026-03-30T16:00:00',
+        registrationOpen: true,
         icon: '🧠'
     }
 ];
 
-const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onHomeClick }) => {
+// Countdown Helper Component
+const CountdownTimer = ({ targetDate }) => {
+    const calculateTimeLeft = () => {
+        const difference = +new Date(targetDate) - +new Date();
+        let timeLeft = {};
+
+        if (difference > 0) {
+            timeLeft = {
+                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                minutes: Math.floor((difference / 1000 / 60) % 60),
+                seconds: Math.floor((difference / 1000) % 60)
+            };
+        }
+        return timeLeft;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+        return () => clearTimeout(timer);
+    });
+
+    const timerComponents = [];
+
+    Object.keys(timeLeft).forEach((interval) => {
+        if (!timeLeft[interval]) return;
+        timerComponents.push(
+            <span key={interval}>
+                {timeLeft[interval]} {interval}{" "}
+            </span>
+        );
+    });
+
+    return (
+        <div className="countdown-display">
+            {timerComponents.length ? timerComponents : <span>Batch Started!</span>}
+        </div>
+    );
+};
+
+const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onNavigateToBookMentor, onHomeClick }) => {
     const [toastMessage, setToastMessage] = useState('');
 
     const handleRegistrationClick = (moduleId) => {
-        // We can pass the module ID to the registration form in a real app via context, URL params, or local storage.
-        // For now, we'll store it in localStorage so the registration form can pick it up if needed.
         localStorage.setItem('selectedModule', moduleId);
         onNavigateToRegistration();
     };
 
     return (
         <div className="bs-wrapper">
-
-
             {/* Services Component */}
             <section id="services" className="bs-services-section">
-                <h2 className="section-title">Our Learning Modules</h2>
-                <p className="section-subtitle">Entire teaching is pseudo-code based, allowing you to implement logic in any language of your choice.</p>
+                <header className="bs-section-header">
+                    <h2 className="section-title">Our Learning Modules</h2>
+                    <p className="section-subtitle">Entire teaching is pseudo-code based, allowing implementation in any language.</p>
+                </header>
 
                 <div className="bs-modules-grid">
                     {servicesList.map(service => (
-                        <div key={service.id} className="bs-module-card">
+                        <div key={service.id} className={`bs-module-card ${!service.registrationOpen ? 'module-closed' : ''}`}>
+                            <div className="status-badge-container">
+                                {service.registrationOpen ? (
+                                    <span className="status-badge open">Registration Open</span>
+                                ) : (
+                                    <span className="status-badge closed">Registration Closed</span>
+                                )}
+                            </div>
+
                             <div className="module-card-header">
                                 <span className="module-icon-large">{service.icon}</span>
                                 <h2>{service.title}</h2>
                             </div>
+
                             <p className="details-desc">{service.description}</p>
 
+                            <div className="batch-stats-grid">
+                                <div className="stat-item">
+                                    <span className="stat-label">Daily Duration</span>
+                                    <span className="stat-value">{service.durationPerDay}</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span className="stat-label">Total Classes</span>
+                                    <span className="stat-value">{service.totalClasses}</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span className="stat-label">Available Seats</span>
+                                    <span className="stat-value">{service.remainingSeats}</span>
+                                </div>
+                            </div>
+
                             <div className="details-curriculum">
-                                <h3>Curriculum Covered:</h3>
+                                <h3>Curriculum Highlights:</h3>
                                 <ul>
                                     {service.curriculum.map((item, index) => (
                                         <li key={index}>⚡ {item}</li>
                                     ))}
                                 </ul>
+                            </div>
+
+                            <div className="batch-countdown-section">
+                                <h4>Next Batch Starts In:</h4>
+                                <CountdownTimer targetDate={service.batchDate} />
                             </div>
 
                             <div className="details-payment flex-between">
@@ -79,9 +171,13 @@ const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onH
                             </div>
 
                             <div className="details-action mt-auto">
-                                <p className="class-info">Live classes for 1 hr daily. Contact via email/phone based on interest.</p>
-                                <button className="btn-primary action-btn" onClick={() => handleRegistrationClick(service.id)}>
-                                    I am Interested (Fill Form)
+                                <p className="class-info">Our team will contact you soon via phone/email based on your interest.</p>
+                                <button
+                                    className={`btn-primary action-btn ${!service.registrationOpen || service.remainingSeats === 0 ? 'btn-disabled' : ''}`}
+                                    onClick={() => handleRegistrationClick(service.id)}
+                                    disabled={!service.registrationOpen || service.remainingSeats === 0}
+                                >
+                                    {service.registrationOpen ? 'I am Interested (Fill Form)' : 'Registrations Closed'}
                                 </button>
                             </div>
                         </div>
@@ -102,7 +198,6 @@ const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onH
                 </div>
             </section>
 
-            {/* Footer Form Toast Notification */}
             {toastMessage && (
                 <div className="toast-notification fade-in">
                     {toastMessage}
