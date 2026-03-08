@@ -83,7 +83,7 @@ const WelcomeForm = ({ onValidationSuccess }) => {
                     <div className="whatsapp-link-container">
                         <span>Or, directly </span>
                         <a
-                            href="https://chat.whatsapp.com/FzBoYKWEw4S5tSvwS5Qxxz"
+                            href="https://chat.whatsapp.com/CKTTNNhokKsJfcRPJPDnca?mode=hq1tcla"
                             target="_blank"
                             rel="noreferrer"
                             className="whatsapp-link"
