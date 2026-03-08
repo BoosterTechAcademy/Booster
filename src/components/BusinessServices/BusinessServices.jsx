@@ -33,14 +33,6 @@ const servicesList = [
         curriculum: ['Pattern Printing', 'Number Logic', 'Recursion', 'Bit Manipulation', 'Math for Programmers'],
         payment: '₹1099 / module',
         icon: '🧠'
-    },
-    {
-        id: 'mentoring',
-        title: 'Mentoring',
-        description: '1-on-1 career guidance, resume review, and interview preparation.',
-        curriculum: ['Resume Building', 'Mock Interviews', 'Career Roadmap', 'Project Review', 'Communication Skills'],
-        payment: '₹1999 / module',
-        icon: '👥'
     }
 ];
 

@@ -13,6 +13,8 @@ import FreeClass from './components/BusinessServices/FreeClass';
 import MockBeforeLearn from './components/BusinessServices/MockBeforeLearn';
 import ProgramRegistration from './components/BusinessServices/ProgramRegistration';
 import RegistrationSuccess from './components/BusinessServices/RegistrationSuccess';
+import BookMentor from './components/BusinessServices/BookMentor';
+import BookingSuccess from './components/BusinessServices/BookingSuccess';
 import './utils/copyCode';
 
 const App = () => {
@@ -45,7 +47,8 @@ const App = () => {
         onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
         onNavigateToFreeClass={() => setSelectedContentId('free-class')}
         onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
-        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn' && selectedContentId !== 'program-registration' && selectedContentId !== 'registration-success'}
+        onNavigateToBookMentor={() => setSelectedContentId('book-mentor')}
+        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn' && selectedContentId !== 'program-registration' && selectedContentId !== 'registration-success' && selectedContentId !== 'book-mentor' && selectedContentId !== 'booking-success'}
       />
 
       {selectedContentId === 'home' ? (
@@ -66,6 +69,7 @@ const App = () => {
         <BusinessServices
           onNavigateToFreeClass={() => setSelectedContentId('free-class')}
           onNavigateToRegistration={() => setSelectedContentId('program-registration')}
+          onNavigateToBookMentor={() => setSelectedContentId('book-mentor')}
           onHomeClick={handleNavHome}
         />
       ) : selectedContentId === 'free-class' ? (
@@ -84,6 +88,13 @@ const App = () => {
         />
       ) : selectedContentId === 'registration-success' ? (
         <RegistrationSuccess onHomeClick={handleNavHome} />
+      ) : selectedContentId === 'book-mentor' ? (
+        <BookMentor
+          onNavigateToSuccess={() => setSelectedContentId('booking-success')}
+          onHomeClick={handleNavHome}
+        />
+      ) : selectedContentId === 'booking-success' ? (
+        <BookingSuccess onHomeClick={handleNavHome} />
       ) : selectedContentId === 'roadmap' ? (
         <div className="learning-environment roadmap-page">
           <Roadmap onNavigate={(id) => setSelectedContentId(id)} />
