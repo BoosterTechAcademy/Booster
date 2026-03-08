@@ -374,3 +374,166 @@
         flex-wrap: wrap;
     }
 }
+
+/* ── Language Chips ────────────────────────────────────────────── */
+.fc-lang-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.lang-chip {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Tamil — warm saffron */
+.lang-chip--tamil {
+    background: #fff3e0;
+    color: #c2550f;
+    border: 1px solid #f9c27e;
+}
+
+/* English — cool blue */
+.lang-chip--english {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+
+/* ── Countdown block ───────────────────────────────────────────── */
+.fc-countdown-block {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f3ff 100%);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+}
+
+.fc-countdown-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.02em;
+}
+
+.fc-countdown-grid {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.cd-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    padding: 0.4rem 0.7rem;
+    min-width: 54px;
+}
+
+.cd-unit span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.cd-unit small {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+}
+
+.cd-sep {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin: 0 2px;
+    line-height: 1;
+    align-self: flex-start;
+    padding-top: 4px;
+}
+
+/* ── Join button states ────────────────────────────────────────── */
+.join-class-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.join-active {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+    animation: pulse-green 1.5s infinite;
+    text-decoration: none;
+}
+
+.join-active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.45);
+}
+
+.join-locked {
+    background: #f1f5f9;
+    color: #94a3b8;
+    border: 2px dashed #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* ── Live card highlight ───────────────────────────────────────── */
+.fc-card-live {
+    border-left: 4px solid #16a34a !important;
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.1), 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+.live-now {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border-color: #bbf7d0 !important;
+    animation: pulse-badge 1.5s infinite;
+}
+
+@keyframes pulse-green {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 4px 24px rgba(22, 163, 74, 0.6);
+    }
+}
+
+@keyframes pulse-badge {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
