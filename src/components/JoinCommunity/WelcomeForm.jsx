@@ -7,7 +7,7 @@ import './WelcomeForm.css';
 // ─────────────────────────────────────────────────────────────────
 const ALLOWED_CREDENTIALS = [
     { college: 'francis', referenceId: 'yogii' },
-    { college: 'francis', referenceId: 'booster1' },
+    { college: 'FXEC', referenceId: 'JMV2020FW' },
     { college: 'francis', referenceId: 'booster2' },
     { college: 'francis', referenceId: 'booster3' },
     { college: 'francis', referenceId: 'booster4' },
