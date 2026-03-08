@@ -1,6 +1,23 @@
 import React, { useState } from 'react';
 import './WelcomeForm.css';
 
+// ─────────────────────────────────────────────────────────────────
+// ALLOWED CREDENTIALS — edit these pairs to add/update access.
+// College name is case-insensitive. Reference ID is case-insensitive.
+// ─────────────────────────────────────────────────────────────────
+const ALLOWED_CREDENTIALS = [
+    { college: 'francis', referenceId: 'yogii' },
+    { college: 'francis', referenceId: 'booster1' },
+    { college: 'francis', referenceId: 'booster2' },
+    { college: 'francis', referenceId: 'booster3' },
+    { college: 'francis', referenceId: 'booster4' },
+    { college: 'francis', referenceId: 'booster5' },
+    { college: 'francis', referenceId: 'booster6' },
+    { college: 'francis', referenceId: 'booster7' },
+    { college: 'francis', referenceId: 'booster8' },
+    { college: 'francis', referenceId: 'booster9' },
+];
+
 const WelcomeForm = ({ onValidationSuccess }) => {
     const [college, setCollege] = useState('');
     const [referenceId, setReferenceId] = useState('');
@@ -9,10 +26,16 @@ const WelcomeForm = ({ onValidationSuccess }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const isCollegeValid = college.trim().toLowerCase() === 'francis';
-        const isRefValid = referenceId.trim().toLowerCase() === 'yogii';
+        const inputCollege = college.trim().toLowerCase();
+        const inputRef = referenceId.trim().toLowerCase();
 
-        if (isCollegeValid && isRefValid) {
+        const isValid = ALLOWED_CREDENTIALS.some(
+            (cred) =>
+                cred.college.toLowerCase() === inputCollege &&
+                cred.referenceId.toLowerCase() === inputRef
+        );
+
+        if (isValid) {
             setError('');
             onValidationSuccess();
         } else {
