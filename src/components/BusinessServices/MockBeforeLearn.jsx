@@ -69,7 +69,7 @@ const MockBeforeLearn = ({ onHomeClick }) => {
                         </ul>
 
                         <div className="mbl-email-option">
-                            <p>Prefer email? Contact us directly at: <a href="mailto:booster@francis.edu" className="blue-text">booster@francis.edu</a></p> // Visible email option
+                            <p>Prefer email? Contact us directly at: <a href="mailto:boostersupport@gmail.com" className="blue-text">boostersupport@gmail.com</a></p>
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@ const MockBeforeLearn = ({ onHomeClick }) => {
                         {status && <div className="mbl-toast">{status}</div>}
 
                         <div className="mbl-gform-option">
-                            <p>Or join our <a href="https://wa.me/919876543210?text=I%20am%20Interested%20with%20their%20resume" target="_blank" rel="noreferrer" className="blue-text">WhatsApp Group</a> to connect instantly!</p>
+                            <p>Or join our <a href="https://chat.whatsapp.com/LtqCUqcEPSN1bRLv55WjIi?mode=gi_t" target="_blank" rel="noreferrer" className="blue-text">WhatsApp Group</a> to connect instantly!</p>
                         </div>
                     </div>
                 </div>

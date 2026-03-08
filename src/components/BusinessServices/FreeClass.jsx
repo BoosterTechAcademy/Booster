@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import './FreeClass.css';
 
@@ -14,7 +15,7 @@ const upComingClasses = [
         duration: '2-3 hrs',
         language: 'Tamil',          // 'Tamil' | 'English' | 'Tamil / English'
         curriculum: 'Learn how to approach any pattern printing interview question using nested loops and mathematical logic (Pseudo code based).',
-        link: 'https://meet.google.com/',
+        link: 'https://meet.google.com/syq-yhso-sfe',
         instructor: 'Senior Mentor',
         linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
     },
@@ -26,7 +27,7 @@ const upComingClasses = [
         duration: '2-3 hrs',
         language: 'English',        // 'Tamil' | 'English' | 'Tamil / English'
         curriculum: 'Break down complex recursion problems into simple DP tabular and memoization approaches.',
-        link: 'https://meet.google.com/',
+        link: 'https://meet.google.com/syq-yhso-sfe',
         instructor: 'DSA Expert',
         linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
     }

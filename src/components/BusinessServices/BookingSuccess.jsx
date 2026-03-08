@@ -1,12 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './BookingSuccess.css';
 
 const BookingSuccess = ({ onHomeClick }) => {
     // Replace with actual phone number
-    const whatsappNumber = "911234567890";
+    const whatsappNumber = "8248833986";
     const whatsappMessage = encodeURIComponent("Hello! I just booked a mentor session on Booster and would like to know the next steps.");
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
+    // https://chat.whatsapp.com/CY0IEpTD1vIHiFxeUcvJfe?mode=gi_t
     return (
         <div className="bsu-wrapper">
             <div className="bsu-container">
@@ -28,7 +30,7 @@ const BookingSuccess = ({ onHomeClick }) => {
                     </div>
 
                     <div className="bsu-actions">
-                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+                        <a href="https://chat.whatsapp.com/CY0IEpTD1vIHiFxeUcvJfe?mode=gi_t" target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                             <span className="icon">💬</span> Contact us on WhatsApp
                         </a>
                         <button className="btn-secondary-outline" onClick={onHomeClick}>
@@ -37,7 +39,7 @@ const BookingSuccess = ({ onHomeClick }) => {
                     </div>
 
                     <footer className="bsu-footer">
-                        <p>Need immediate help? Reach out at <span className="blue-text">support@elearningsheet.com</span></p>
+                        <p>Need immediate help? Reach out at <span className="blue-text">boostersupport@gmail.com</span></p>
                     </footer>
                 </div>
             </div>
