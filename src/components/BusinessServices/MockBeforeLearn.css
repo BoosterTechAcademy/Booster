@@ -70,7 +70,21 @@
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     color: #334155;
-    line-height: 1.5;
+}
+
+.mbl-steps li p {
+    margin: 0;
+    flex: 1;
+    line-height: 1.6;
+}
+
+.mbl-lang-highlight {
+    display: inline-block;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.08);
+    padding: 0 0.4rem;
+    border-radius: 4px;
+    font-weight: 700;
 }
 
 .mbl-steps li span {

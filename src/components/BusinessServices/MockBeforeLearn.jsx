@@ -57,10 +57,10 @@ const MockBeforeLearn = ({ onHomeClick }) => {
                     <div className="mbl-info-card">
                         <h3>How it works</h3>
                         <ul className="mbl-steps">
-                            <li><span>1</span> Fill out the interest form below or email us directly.</li>
-                            <li><span>2</span> Our mentors from Booster will review your request.</li>
-                            <li><span>3</span> We will contact you within 24 hours with meeting details and time.</li>
-                            <li><span>4</span> Attend the mock interview (provided in <strong>Tamil / English</strong>) and get a detailed assessment of your level.</li>
+                            <li><span>1</span> <p>Fill out the interest form below or email us directly.</p></li>
+                            <li><span>2</span> <p>Our mentors from Booster will review your request.</p></li>
+                            <li><span>3</span> <p>We will contact you within 24 hours with meeting details and time.</p></li>
+                            <li><span>4</span> <p>Attend the mock interview (provided in <strong className="mbl-lang-highlight">Tamil / English</strong>) and get a detailed assessment of your level.</p></li>
                         </ul>
 
                         <div className="mbl-email-option">
