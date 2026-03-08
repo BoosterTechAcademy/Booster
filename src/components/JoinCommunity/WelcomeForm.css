@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* Adjust based on navbar height */
-    padding: 2rem;
+    min-height: 100vh;
+    /* Push content below the fixed navbar */
+    padding: calc(var(--navbar-height, 70px) + 2rem) 2rem 2rem;
     background: radial-gradient(circle at top center, rgba(30, 64, 175, 0.1) 0%, transparent 60%);
 }
 

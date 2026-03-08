@@ -1,10 +1,11 @@
 .hero-wrapper {
-    min-height: calc(100vh - var(--navbar-height));
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--bg-main);
-    padding: 40px 20px;
+    /* Top padding pushes content below the fixed navbar */
+    padding: calc(var(--navbar-height, 70px) + 40px) 20px 40px;
     position: relative;
     overflow: hidden;
 }
