@@ -47,7 +47,6 @@ const WelcomeForm = ({ onValidationSuccess }) => {
         <div className="welcome-form-wrapper">
             <div className="welcome-form-container glass-card">
                 <h2 className="welcome-title">Join Our Community</h2>
-                sdhfibadigbriug
                 <p className="welcome-subtitle">Please provide your details to proceed.</p>
 
                 <form onSubmit={handleSubmit} className="welcome-form">
