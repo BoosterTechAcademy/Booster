@@ -60,10 +60,10 @@ const RegistrationSuccess = ({ onHomeClick }) => {
                             <span className="contact-icon">✉️</span>
                             <div>
                                 <strong>Email Us</strong>
-                                <span>support@booster.com</span>
+                                <span>boostercourses@gmail.com</span>
                             </div>
                         </a>
-                        <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="contact-item">
+                        <a href="https://chat.whatsapp.com/Gc6ZLTRNzQF8z4SqVtwTBw?mode=gi_t" target="_blank" rel="noreferrer" className="contact-item">
                             <span className="contact-icon">💬</span>
                             <div>
                                 <strong>WhatsApp</strong>
@@ -74,7 +74,7 @@ const RegistrationSuccess = ({ onHomeClick }) => {
                             <span className="contact-icon">📞</span>
                             <div>
                                 <strong>Call Directly</strong>
-                                <span>+91 98765 43210</span>
+                                <span>+91 82488 33986</span>
                             </div>
                         </a>
                     </div>

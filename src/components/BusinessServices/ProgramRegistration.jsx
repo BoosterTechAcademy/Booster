@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ProgramRegistration.css';
 
-const ProgramRegistration = ({ onNavigateToPayment }) => {
+const ProgramRegistration = ({ onNavigateToPayment, onHomeClick }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
