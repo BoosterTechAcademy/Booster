@@ -118,6 +118,11 @@ const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onN
             {/* Services Component */}
             <section id="services" className="bs-services-section">
                 <header className="bs-section-header">
+                    <div className="header-top">
+                        <button className="btn-back-home" onClick={onHomeClick}>
+                            ← Back to Home
+                        </button>
+                    </div>
                     <h2 className="section-title">Our Learning Modules</h2>
                     <p className="section-subtitle">Entire teaching is pseudo-code based, allowing implementation in any language.</p>
                 </header>

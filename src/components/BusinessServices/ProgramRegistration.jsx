@@ -82,13 +82,16 @@ const ProgramRegistration = ({ onNavigateToPayment }) => {
                                 <option value="dsa">Data Structure and Algorithms</option>
                                 <option value="core-oops">Core and OOPS</option>
                                 <option value="logical">Logical Building and Programming</option>
-                                <option value="mentoring">Mentoring</option>
+                                <option value="mentoring">Book Mentor</option>
                             </select>
                         </div>
 
                         <div className="pr-form-actions">
                             <button type="submit" className="btn-primary-large pr-submit-btn" disabled={isSubmitting}>
                                 {isSubmitting ? 'Processing...' : 'Complete Registration'}
+                            </button>
+                            <button type="button" className="btn-secondary-outline back-btn" onClick={onHomeClick}>
+                                Back to Home
                             </button>
                         </div>
                     </form>

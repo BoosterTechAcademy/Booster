@@ -47,6 +47,11 @@ const MockBeforeLearn = ({ onHomeClick }) => {
         <div className="mbl-wrapper">
             <div className="mbl-container">
                 <header className="mbl-header fade-in-up">
+                    <div className="header-top">
+                        <button className="btn-back-home" onClick={onHomeClick}>
+                            ← Back to Home
+                        </button>
+                    </div>
                     <h1>Mock Before <span className="blue-text">Learn</span></h1>
                     <p className="mbl-subtitle">
                         Test your current skill level through a mock interview or technical discussion. Knowing where you stand is the first step to mastering your craft.

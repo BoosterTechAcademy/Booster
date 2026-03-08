@@ -29,6 +29,11 @@ const FreeClass = ({ onHomeClick }) => {
 
             <div className="fc-container">
                 <header className="fc-header">
+                    <div className="header-top">
+                        <button className="btn-back-home" onClick={onHomeClick}>
+                            ← Back to Home
+                        </button>
+                    </div>
                     <h1>Free Live Masterclasses</h1>
                     <p className="fc-subtitle">
                         Experience our teaching methodology before committing.

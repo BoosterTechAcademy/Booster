@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Layout/Navbar';
 import Sidebar from './components/Layout/Sidebar';
@@ -18,8 +18,14 @@ import BookingSuccess from './components/BusinessServices/BookingSuccess';
 import './utils/copyCode';
 
 const App = () => {
-  const [selectedContentId, setSelectedContentId] = useState('home');
+  const [selectedContentId, setSelectedContentId] = useState(() => {
+    return localStorage.getItem('lastPath') || 'home';
+  });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('lastPath', selectedContentId);
+  }, [selectedContentId]);
 
   // Derive the active content object from the map
   const content =
@@ -32,6 +38,10 @@ const App = () => {
   const handleNavHome = () => {
     setSelectedContentId('home');
     setIsSidebarOpen(false);
+  };
+
+  const handleCommunityHome = () => {
+    setSelectedContentId('community-hero');
   };
 
   const toggleSidebar = () => {
@@ -70,31 +80,32 @@ const App = () => {
           onNavigateToFreeClass={() => setSelectedContentId('free-class')}
           onNavigateToRegistration={() => setSelectedContentId('program-registration')}
           onNavigateToBookMentor={() => setSelectedContentId('book-mentor')}
-          onHomeClick={handleNavHome}
+          onHomeClick={handleCommunityHome}
         />
       ) : selectedContentId === 'free-class' ? (
         <FreeClass
-          onHomeClick={handleNavHome}
+          onHomeClick={handleCommunityHome}
           onNavigateToRegistration={() => setSelectedContentId('program-registration')}
         />
       ) : selectedContentId === 'mock-before-learn' ? (
-        <MockBeforeLearn onHomeClick={handleNavHome} />
+        <MockBeforeLearn onHomeClick={handleCommunityHome} />
       ) : selectedContentId === 'program-registration' ? (
         <ProgramRegistration
           onNavigateToPayment={() => {
             // Since the payment step has been removed, map directly to the success page upon form completion.
             setSelectedContentId('registration-success');
           }}
+          onHomeClick={handleCommunityHome}
         />
       ) : selectedContentId === 'registration-success' ? (
-        <RegistrationSuccess onHomeClick={handleNavHome} />
+        <RegistrationSuccess onHomeClick={handleCommunityHome} />
       ) : selectedContentId === 'book-mentor' ? (
         <BookMentor
           onNavigateToSuccess={() => setSelectedContentId('booking-success')}
-          onHomeClick={handleNavHome}
+          onHomeClick={handleCommunityHome}
         />
       ) : selectedContentId === 'booking-success' ? (
-        <BookingSuccess onHomeClick={handleNavHome} />
+        <BookingSuccess onHomeClick={handleCommunityHome} />
       ) : selectedContentId === 'roadmap' ? (
         <div className="learning-environment roadmap-page">
           <Roadmap onNavigate={(id) => setSelectedContentId(id)} />
