@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BusinessServices.css';
 
 // Added batch details and registration status to each service
@@ -105,12 +106,13 @@ const CountdownTimer = ({ targetDate }) => {
     );
 };
 
-const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onNavigateToBookMentor, onHomeClick }) => {
-    const [toastMessage, setToastMessage] = useState('');
+const BusinessServices = () => {
+    const [toastMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleRegistrationClick = (moduleId) => {
         localStorage.setItem('selectedModule', moduleId);
-        onNavigateToRegistration();
+        navigate('/program-registration');
     };
 
     return (
@@ -119,7 +121,7 @@ const BusinessServices = ({ onNavigateToFreeClass, onNavigateToRegistration, onN
             <section id="services" className="bs-services-section">
                 <header className="bs-section-header">
                     <div className="header-top">
-                        <button className="btn-back-home" onClick={onHomeClick}>
+                        <button className="btn-back-home" onClick={() => navigate('/community-hero')}>
                             ← Back to Home
                         </button>
                     </div>

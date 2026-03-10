@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MockBeforeLearn.css';
 
-const MockBeforeLearn = ({ onHomeClick }) => {
+const MockBeforeLearn = () => {
+    const navigate = useNavigate();
     const [status, setStatus] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -48,7 +50,7 @@ const MockBeforeLearn = ({ onHomeClick }) => {
             <div className="mbl-container">
                 <header className="mbl-header fade-in-up">
                     <div className="header-top">
-                        <button className="btn-back-home" onClick={onHomeClick}>
+                        <button className="btn-back-home" onClick={() => navigate('/community-hero')}>
                             ← Back to Home
                         </button>
                     </div>

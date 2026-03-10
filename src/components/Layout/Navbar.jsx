@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute, onNavigateToBusinessServices, onNavigateToFreeClass, onNavigateToMockBeforeLearn, onNavigateToBookMentor }) => {
+const Navbar = ({ onToggleSidebar, showSidebarToggle }) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const currentRoute = location.pathname === '/' ? 'home' : location.pathname.split('/')[1];
+
     const isLearningModuleRoute = currentRoute === 'community-hero' || currentRoute === 'business-services' || currentRoute === 'free-class' || currentRoute === 'mock-before-learn' || currentRoute === 'book-mentor';
 
     // All routes that appear AFTER the welcome form — must stay in light theme only.
@@ -53,7 +58,7 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                         </button>
                     )}
 
-                    <div className="brand" onClick={onHomeClick}>
+                    <div className="brand" onClick={() => navigate('/')}>
                         <div className="brand-logo">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--primary-color)" width="32" height="32">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -69,14 +74,14 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                 <nav className="navbar-right">
                     <ul className="nav-links">
                         <li>
-                            <button className={`nav-link-btn ${currentRoute === 'home' ? 'active' : ''}`} onClick={onHomeClick}>Home</button>
+                            <button className={`nav-link-btn ${currentRoute === 'home' ? 'active' : ''}`} onClick={() => navigate('/')}>Home</button>
                         </li>
                         {isLearningModuleRoute && (
                             <>
                                 <li>
                                     <button
                                         className={`nav-link-btn ${currentRoute === 'business-services' ? 'active' : ''}`}
-                                        onClick={onNavigateToBusinessServices}
+                                        onClick={() => navigate('/business-services')}
                                     >
                                         Services
                                     </button>
@@ -84,7 +89,7 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                                 <li>
                                     <button
                                         className={`nav-link-btn ${currentRoute === 'free-class' ? 'active' : ''}`}
-                                        onClick={onNavigateToFreeClass}
+                                        onClick={() => navigate('/free-class')}
                                     >
                                         Free Class
                                     </button>
@@ -92,7 +97,7 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                                 <li>
                                     <button
                                         className={`nav-link-btn ${currentRoute === 'book-mentor' ? 'active' : ''}`}
-                                        onClick={onNavigateToBookMentor}
+                                        onClick={() => navigate('/book-mentor')}
                                     >
                                         Book Mentor
                                     </button>
@@ -100,7 +105,7 @@ const Navbar = ({ onHomeClick, onToggleSidebar, showSidebarToggle, currentRoute,
                                 <li>
                                     <button
                                         className={`nav-link-btn ${currentRoute === 'mock-before-learn' ? 'active' : ''}`}
-                                        onClick={onNavigateToMockBeforeLearn}
+                                        onClick={() => navigate('/mock-before-learn')}
                                     >
                                         Mock Interview
                                     </button>

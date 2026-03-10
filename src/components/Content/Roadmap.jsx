@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Roadmap.css';
 
 const roadmapData = [
@@ -40,7 +41,9 @@ const roadmapData = [
     }
 ];
 
-const Roadmap = ({ onNavigate }) => {
+const Roadmap = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="roadmap-view">
             <div className="roadmap-header">
@@ -51,7 +54,7 @@ const Roadmap = ({ onNavigate }) => {
             <div className="timeline-container">
                 {roadmapData.map((phase, index) => (
                     <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={phase.id}>
-                        <div className="timeline-content" onClick={() => onNavigate(phase.targetId)}>
+                        <div className="timeline-content" onClick={() => navigate(`/learn/${phase.targetId}`)}>
                             <div className="phase-header" style={{ borderLeftColor: phase.color }}>
                                 <span className="phase-icon" style={{ backgroundColor: `${phase.color}20`, color: phase.color }}>
                                     {phase.icon}

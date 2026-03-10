@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BookMentor.css';
 
-const BookMentor = ({ onNavigateToSuccess, onHomeClick }) => {
+const BookMentor = () => {
+    const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
@@ -37,7 +39,7 @@ const BookMentor = ({ onNavigateToSuccess, onHomeClick }) => {
                 body: JSON.stringify(submissionData),
             });
 
-            onNavigateToSuccess();
+            navigate('/booking-success');
         } catch (error) {
             console.error("Error submitting booking:", error);
             alert('Something went wrong. Please try again.');
@@ -163,7 +165,7 @@ const BookMentor = ({ onNavigateToSuccess, onHomeClick }) => {
                                 <button type="submit" className="btn-primary-large bm-submit-btn" disabled={isSubmitting}>
                                     {isSubmitting ? 'Processing...' : 'Book Mentor Now'}
                                 </button>
-                                <button type="button" className="btn-secondary bm-back-btn" onClick={onHomeClick}>
+                                <button type="button" className="btn-secondary bm-back-btn" onClick={() => navigate('/community-hero')}>
                                     Back to Home
                                 </button>
                             </div>

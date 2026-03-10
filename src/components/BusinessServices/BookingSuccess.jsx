@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BookingSuccess.css';
 
-const BookingSuccess = ({ onHomeClick }) => {
+const BookingSuccess = () => {
+    const navigate = useNavigate();
+
     // Replace with actual phone number
     const whatsappNumber = "8248833986";
     const whatsappMessage = encodeURIComponent("Hello! I just booked a mentor session on Booster and would like to know the next steps.");
@@ -33,7 +36,7 @@ const BookingSuccess = ({ onHomeClick }) => {
                         <a href="https://chat.whatsapp.com/CY0IEpTD1vIHiFxeUcvJfe?mode=gi_t" target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                             <span className="icon">💬</span> Contact us on WhatsApp
                         </a>
-                        <button className="btn-secondary-outline" onClick={onHomeClick}>
+                        <button className="btn-secondary-outline" onClick={() => navigate('/community-hero')}>
                             Back to Home
                         </button>
                     </div>

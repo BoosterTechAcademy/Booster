@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './RegistrationSuccess.css';
 
-const RegistrationSuccess = ({ onHomeClick }) => {
+const RegistrationSuccess = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="rs-wrapper">
             <div className="rs-container fade-in-up">
@@ -81,7 +84,7 @@ const RegistrationSuccess = ({ onHomeClick }) => {
                 </div>
 
                 <div className="rs-actions fade-in-up delay-2">
-                    <button className="btn-primary-large" onClick={onHomeClick}>
+                    <button className="btn-primary-large" onClick={() => navigate('/community-hero')}>
                         Return to Home Dashboard
                     </button>
                 </div>

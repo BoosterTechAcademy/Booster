@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CommunityHero.css';
 
-const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, onNavigateToMockBeforeLearn, onHomeClick }) => {
+const CommunityHero = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="ch-wrapper">
-
 
             {/* Hero Main Content */}
             <main className="ch-hero-content">
@@ -49,13 +51,13 @@ const CommunityHero = ({ onNavigateToBusinessServices, onNavigateToFreeClass, on
                 <div className="ch-cta-section fade-in-up delay-4">
                     <h2>Ready to explore our offerings?</h2>
                     <div className="cta-buttons">
-                        <button className="btn-primary-large" onClick={onNavigateToBusinessServices}>
+                        <button className="btn-primary-large" onClick={() => navigate('/business-services')}>
                             View Business Services
                         </button>
-                        <button className="btn-outline-large" onClick={onNavigateToFreeClass}>
+                        <button className="btn-outline-large" onClick={() => navigate('/free-class')}>
                             Check Free Classes
                         </button>
-                        <button className="btn-primary-large" onClick={onNavigateToMockBeforeLearn}>
+                        <button className="btn-primary-large" onClick={() => navigate('/mock-before-learn')}>
                             Mock Before Learn
                         </button>
                     </div>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProgramRegistration.css';
 
-const ProgramRegistration = ({ onNavigateToPayment, onHomeClick }) => {
+const ProgramRegistration = () => {
+    const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
@@ -33,7 +35,7 @@ const ProgramRegistration = ({ onNavigateToPayment, onHomeClick }) => {
             // or deploy a separate script/sheet if the schema differs significantly.
 
             // Navigate to the next step (Payment)
-            onNavigateToPayment();
+            navigate('/registration-success');
         } catch (error) {
             console.error("Error submitting form:", error);
             alert('Something went wrong. Please try again or contact support.');
@@ -90,7 +92,7 @@ const ProgramRegistration = ({ onNavigateToPayment, onHomeClick }) => {
                             <button type="submit" className="btn-primary-large pr-submit-btn" disabled={isSubmitting}>
                                 {isSubmitting ? 'Processing...' : 'Complete Registration'}
                             </button>
-                            <button type="button" className="btn-secondary-outline back-btn" onClick={onHomeClick}>
+                            <button type="button" className="btn-secondary-outline back-btn" onClick={() => navigate('/community-hero')}>
                                 Back to Home
                             </button>
                         </div>

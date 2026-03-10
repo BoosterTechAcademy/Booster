@@ -176,13 +176,17 @@ const ClassCard = ({ cls }) => {
 // ──────────────────────────────────────────────────────────────────────────
 // Page component
 // ──────────────────────────────────────────────────────────────────────────
-const FreeClass = ({ onHomeClick, onNavigateToRegistration }) => {
+import { useNavigate } from 'react-router-dom';
+
+const FreeClass = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="free-class-wrapper">
             <div className="fc-container">
                 <header className="fc-header">
                     <div className="header-top">
-                        <button className="btn-back-home" onClick={onHomeClick}>
+                        <button className="btn-back-home" onClick={() => navigate('/community-hero')}>
                             ← Back to Home
                         </button>
                     </div>

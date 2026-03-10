@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Layout/Navbar';
 import Sidebar from './components/Layout/Sidebar';
@@ -17,113 +18,65 @@ import BookMentor from './components/BusinessServices/BookMentor';
 import BookingSuccess from './components/BusinessServices/BookingSuccess';
 import './utils/copyCode';
 
-const App = () => {
-  const [selectedContentId, setSelectedContentId] = useState(() => {
-    return localStorage.getItem('lastPath') || 'home';
-  });
+const ContentRoute = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation();
+  const pathParts = location.pathname.split('/');
+  const contentId = pathParts[pathParts.length - 1] || 'video-tutorials';
 
-  useEffect(() => {
-    localStorage.setItem('lastPath', selectedContentId);
-  }, [selectedContentId]);
-
-  // Derive the active content object from the map
   const content =
-    selectedContentId === 'video-tutorials'
+    contentId === 'video-tutorials'
       ? { type: 'video-tutorials' }
-      : selectedContentId === 'program-sheet'
+      : contentId === 'program-sheet'
         ? { type: 'program-sheet' }
-        : contentMap[selectedContentId];
+        : contentMap[contentId] || contentMap['data-types-variables']; // default fallback
 
-  const handleNavHome = () => {
-    setSelectedContentId('home');
-    setIsSidebarOpen(false);
-  };
+  return (
+    <div className="learning-environment">
+      <Sidebar
+        isOpen={isSidebarOpen}
+        onSelect={() => {
+          if (window.innerWidth <= 900) setIsSidebarOpen(false);
+        }}
+      />
+      <main className="content-area">
+        <ContentView content={content} />
+      </main>
+    </div>
+  );
+};
 
-  const handleCommunityHome = () => {
-    setSelectedContentId('community-hero');
-  };
+const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const showSidebarToggle = location.pathname.startsWith('/learn');
+
   return (
     <div className="app-container">
       <Navbar
-        onHomeClick={handleNavHome}
         onToggleSidebar={toggleSidebar}
-        currentRoute={selectedContentId}
-        onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
-        onNavigateToFreeClass={() => setSelectedContentId('free-class')}
-        onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
-        onNavigateToBookMentor={() => setSelectedContentId('book-mentor')}
-        showSidebarToggle={selectedContentId !== 'home' && selectedContentId !== 'join-community' && selectedContentId !== 'community-hero' && selectedContentId !== 'business-services' && selectedContentId !== 'free-class' && selectedContentId !== 'mock-before-learn' && selectedContentId !== 'program-registration' && selectedContentId !== 'registration-success' && selectedContentId !== 'book-mentor' && selectedContentId !== 'booking-success'}
+        showSidebarToggle={showSidebarToggle}
       />
 
-      {selectedContentId === 'home' ? (
-        <Hero
-          onStartLearning={() => setSelectedContentId('roadmap')}
-          onJoinCommunity={() => setSelectedContentId('join-community')}
-        />
-      ) : selectedContentId === 'join-community' ? (
-        <WelcomeForm onValidationSuccess={() => setSelectedContentId('community-hero')} />
-      ) : selectedContentId === 'community-hero' ? (
-        <CommunityHero
-          onNavigateToBusinessServices={() => setSelectedContentId('business-services')}
-          onNavigateToFreeClass={() => setSelectedContentId('free-class')}
-          onNavigateToMockBeforeLearn={() => setSelectedContentId('mock-before-learn')}
-          onHomeClick={handleNavHome}
-        />
-      ) : selectedContentId === 'business-services' ? (
-        <BusinessServices
-          onNavigateToFreeClass={() => setSelectedContentId('free-class')}
-          onNavigateToRegistration={() => setSelectedContentId('program-registration')}
-          onNavigateToBookMentor={() => setSelectedContentId('book-mentor')}
-          onHomeClick={handleCommunityHome}
-        />
-      ) : selectedContentId === 'free-class' ? (
-        <FreeClass
-          onHomeClick={handleCommunityHome}
-          onNavigateToRegistration={() => setSelectedContentId('program-registration')}
-        />
-      ) : selectedContentId === 'mock-before-learn' ? (
-        <MockBeforeLearn onHomeClick={handleCommunityHome} />
-      ) : selectedContentId === 'program-registration' ? (
-        <ProgramRegistration
-          onNavigateToPayment={() => {
-            // Since the payment step has been removed, map directly to the success page upon form completion.
-            setSelectedContentId('registration-success');
-          }}
-          onHomeClick={handleCommunityHome}
-        />
-      ) : selectedContentId === 'registration-success' ? (
-        <RegistrationSuccess onHomeClick={handleCommunityHome} />
-      ) : selectedContentId === 'book-mentor' ? (
-        <BookMentor
-          onNavigateToSuccess={() => setSelectedContentId('booking-success')}
-          onHomeClick={handleCommunityHome}
-        />
-      ) : selectedContentId === 'booking-success' ? (
-        <BookingSuccess onHomeClick={handleCommunityHome} />
-      ) : selectedContentId === 'roadmap' ? (
-        <div className="learning-environment roadmap-page">
-          <Roadmap onNavigate={(id) => setSelectedContentId(id)} />
-        </div>
-      ) : (
-        <div className="learning-environment">
-          <Sidebar
-            isOpen={isSidebarOpen}
-            onSelect={(id) => {
-              setSelectedContentId(id);
-              if (window.innerWidth <= 900) setIsSidebarOpen(false); // Close on mobile after selection
-            }}
-          />
-          <main className="content-area">
-            <ContentView content={content} />
-          </main>
-        </div>
-      )}
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/join-community" element={<WelcomeForm />} />
+        <Route path="/community-hero" element={<CommunityHero />} />
+        <Route path="/business-services" element={<BusinessServices />} />
+        <Route path="/free-class" element={<FreeClass />} />
+        <Route path="/mock-before-learn" element={<MockBeforeLearn />} />
+        <Route path="/program-registration" element={<ProgramRegistration />} />
+        <Route path="/registration-success" element={<RegistrationSuccess />} />
+        <Route path="/book-mentor" element={<BookMentor />} />
+        <Route path="/booking-success" element={<BookingSuccess />} />
+        <Route path="/roadmap" element={<div className="learning-environment roadmap-page"><Roadmap /></div>} />
+        <Route path="/learn/*" element={<ContentRoute />} />
+      </Routes>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './WelcomeForm.css';
 
 // ─────────────────────────────────────────────────────────────────
@@ -18,10 +19,11 @@ const ALLOWED_CREDENTIALS = [
     { college: 'francis', referenceId: 'booster9' },
 ];
 
-const WelcomeForm = ({ onValidationSuccess }) => {
+const WelcomeForm = () => {
     const [college, setCollege] = useState('');
     const [referenceId, setReferenceId] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -37,7 +39,7 @@ const WelcomeForm = ({ onValidationSuccess }) => {
 
         if (isValid) {
             setError('');
-            onValidationSuccess();
+            navigate('/community-hero');
         } else {
             setError('Invalid College or Reference ID. Please try again or join the WhatsApp group below.');
         }
