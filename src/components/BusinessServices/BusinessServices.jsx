@@ -50,11 +50,11 @@ const servicesList = [
         id: 'logical',
         title: 'Logical Building and Programming',
         description: 'Enhance your core logic building skills, essential for cracking tech interviews.',
-        curriculum: ['Pattern Printing', 'basics programs', 'Leetcode problems', 'Bit Manipulation', 'Math for Programmers', 'Boundary case thinking'],
+        curriculum: ['Pattern Printing', 'basics programs', 'Leetcode problems', 'Bit Manipulation', 'Math for Programmers', 'Boundary case thinking', 'Puzzle Solving'],
         payment: '₹2099 / module',
         totalClasses: '22-26',
         durationPerDay: '1 hr',
-        remainingSeats: 8,
+        remainingSeats: 10,
         batchDate: '2026-03-30T16:00:00',
         registrationOpen: true,
         language: 'Tamil / English',
@@ -165,6 +165,11 @@ const BusinessServices = () => {
                                 </div>
                             </div>
 
+                            <div className="module-schedule-info">
+                                <p>🕒 <strong>Timing:</strong> Mostly starts between 7:00 PM to 9:00 PM</p>
+                                <p>📅 <strong>Frequency:</strong> Weekly 3-4 classes will be conducted</p>
+                            </div>
+
                             <div className="details-curriculum">
                                 <h3>Curriculum Highlights:</h3>
                                 <ul>
@@ -185,6 +190,11 @@ const BusinessServices = () => {
                             </div>
 
                             <div className="details-action mt-auto">
+                                {!service.registrationOpen && (
+                                    <div className="pre-booking-notice">
+                                        <p>Contact: <strong>boostercourses@gmail.com</strong> for pre-booking.</p>
+                                    </div>
+                                )}
                                 <p className="class-info">Our team will contact you soon via phone/email based on your interest.</p>
                                 <button
                                     className={`btn-primary action-btn ${!service.registrationOpen || service.remainingSeats === 0 ? 'btn-disabled' : ''}`}

@@ -208,6 +208,51 @@
     color: #1e293b;
 }
 
+/* Schedule Info */
+.module-schedule-info {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.module-schedule-info p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.module-schedule-info p:last-child {
+    margin: 0;
+}
+
+/* Pre-Booking Notice */
+.pre-booking-notice {
+    background: #fff7ed;
+    border: 1px dashed #fdba74;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.pre-booking-notice p {
+    margin: 0 0 0.4rem 0;
+    font-size: 0.9rem;
+    color: #9a3412;
+}
+
+.pre-booking-notice p.notice-title {
+    font-weight: 700;
+    color: #c2410c;
+    margin-bottom: 0.5rem;
+}
+
+.pre-booking-notice p:last-child {
+    margin: 0;
+}
+
 /* Countdown Section */
 .batch-countdown-section {
     margin-bottom: 2rem;
