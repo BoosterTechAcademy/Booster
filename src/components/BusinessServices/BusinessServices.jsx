@@ -13,7 +13,7 @@ const servicesList = [
         totalClasses: '16-18',
         durationPerDay: '1 hr',
         remainingSeats: 10,
-        batchDate: '2026-03-27T10:00:00', // Example start date
+        batchDate: '2026-04-02', 
         registrationOpen: true,
         language: 'Tamil / English',
         icon: '🧮'
@@ -26,8 +26,8 @@ const servicesList = [
         payment: '₹4000 / module',
         totalClasses: '32-48',
         durationPerDay: '1 hr',
-        remainingSeats: 0,
-        batchDate: '2026-03-25T14:00:00',
+        remainingSeats: 10,
+        batchDate: '2026-05-01',
         registrationOpen: false,
         language: 'Tamil / English',
         icon: '🧩'
@@ -41,7 +41,7 @@ const servicesList = [
         totalClasses: '16-18',
         durationPerDay: '1 hr',
         remainingSeats: 10,
-        batchDate: '2026-03-15T09:00:00',
+        batchDate: '2026-04-02',
         registrationOpen: true, // Registration closed
         language: 'Tamil / English',
         icon: '💻'
@@ -55,7 +55,7 @@ const servicesList = [
         totalClasses: '22-26',
         durationPerDay: '1 hr',
         remainingSeats: 10,
-        batchDate: '2026-03-30T16:00:00',
+        batchDate: '2026-04-02',
         registrationOpen: true,
         language: 'Tamil / English',
         icon: '🧠'
@@ -66,42 +66,30 @@ const servicesList = [
 const CountdownTimer = ({ targetDate }) => {
     const calculateTimeLeft = () => {
         const difference = +new Date(targetDate) - +new Date();
-        let timeLeft = {};
+        let daysLeft = 0;
 
         if (difference > 0) {
-            timeLeft = {
-                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                minutes: Math.floor((difference / 1000 / 60) % 60),
-                seconds: Math.floor((difference / 1000) % 60)
-            };
+            daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
         }
-        return timeLeft;
+        return daysLeft;
     };
 
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [daysLeft, setDaysLeft] = useState(calculateTimeLeft());
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setTimeLeft(calculateTimeLeft());
+            setDaysLeft(calculateTimeLeft());
         }, 1000);
         return () => clearTimeout(timer);
     });
 
-    const timerComponents = [];
-
-    Object.keys(timeLeft).forEach((interval) => {
-        if (!timeLeft[interval]) return;
-        timerComponents.push(
-            <span key={interval}>
-                {timeLeft[interval]} {interval}{" "}
-            </span>
-        );
-    });
-
     return (
         <div className="countdown-display">
-            {timerComponents.length ? timerComponents : <span>Batch Started!</span>}
+            {daysLeft > 0 ? (
+                <span>{daysLeft} days</span>
+            ) : (
+                <span>Batch Started!</span>
+            )}
         </div>
     );
 };
@@ -166,8 +154,8 @@ const BusinessServices = () => {
                             </div>
 
                             <div className="module-schedule-info">
-                                <p>🕒 <strong>Timing:</strong> Mostly starts between 7:00 PM to 9:00 PM</p>
-                                <p>📅 <strong>Frequency:</strong> Weekly 3-4 classes will be conducted</p>
+                                <p><strong>Timing:</strong> Classes usually run between 7–9 PM</p>
+                                <p><strong>Frequency:</strong> Weekly 3-4 classes will be conducted</p>
                             </div>
 
                             <div className="details-curriculum">
@@ -179,8 +167,8 @@ const BusinessServices = () => {
                                 </ul>
                             </div>
 
-                            <div className="batch-countdown-section">
-                                <h4>Next Batch Starts In:</h4>
+                            <div className="batch-countdown-compact">
+                                <span className="countdown-label">Next Batch:</span>
                                 <CountdownTimer targetDate={service.batchDate} />
                             </div>
 
