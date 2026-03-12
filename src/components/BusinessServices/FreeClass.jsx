@@ -7,29 +7,41 @@ import './FreeClass.css';
 // language  : shown as a tag on each card
 // ──────────────────────────────────────────────────────────────────────────
 const upComingClasses = [
+    // {
+    //     id: 1,
+    //     title: 'Mastering Pattern Printing Logic',
+    //     dateTime: '2026-03-10T19:00:00',
+    //     dateLabel: 'Mon 10 Mar, 7:00 PM IST',
+    //     duration: '2-3 hrs',
+    //     language: 'Tamil',          // 'Tamil' | 'English' | 'Tamil / English'
+    //     curriculum: 'Learn how to approach any pattern printing interview question using nested loops and mathematical logic (Pseudo code based).',
+    //     link: 'https://meet.google.com/syq-yhso-sfe',
+    //     instructor: 'Senior Mentor',
+    //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
+    // },
+    // {
+    //     id: 2,
+    //     title: 'Introduction to Dynamic Programming',
+    //     dateTime: '2026-03-16T10:00:00',
+    //     dateLabel: 'Sun 16 Mar, 10:00 AM IST',
+    //     duration: '2-3 hrs',
+    //     language: 'English',        // 'Tamil' | 'English' | 'Tamil / English'
+    //     curriculum: 'Break down complex recursion problems into simple DP tabular and memoization approaches.',
+    //     link: 'https://meet.google.com/syq-yhso-sfe',
+    //     instructor: 'DSA Expert',
+    //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
+    // },
     {
-        id: 1,
-        title: 'Mastering Pattern Printing Logic',
-        dateTime: '2026-03-10T19:00:00',
-        dateLabel: 'Mon 10 Mar, 7:00 PM IST',
+        id: 3,
+        title: 'Think Like a Programmer (Logical Building + Pseudo Code)',
+        dateTime: '2026-04-01T10:00:00', // doesn't matter much since it's on hold
+        dateLabel: 'TBA',
         duration: '2-3 hrs',
-        language: 'Tamil',          // 'Tamil' | 'English' | 'Tamil / English'
-        curriculum: 'Learn how to approach any pattern printing interview question using nested loops and mathematical logic (Pseudo code based).',
-        link: 'https://meet.google.com/syq-yhso-sfe',
-        instructor: 'Senior Mentor',
-        linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
-    },
-    {
-        id: 2,
-        title: 'Introduction to Dynamic Programming',
-        dateTime: '2026-03-16T10:00:00',
-        dateLabel: 'Sun 16 Mar, 10:00 AM IST',
-        duration: '2-3 hrs',
-        language: 'English',        // 'Tamil' | 'English' | 'Tamil / English'
-        curriculum: 'Break down complex recursion problems into simple DP tabular and memoization approaches.',
-        link: 'https://meet.google.com/syq-yhso-sfe',
-        instructor: 'DSA Expert',
-        linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
+        language: 'Tamil',
+        curriculum: 'Learn how to think logically before coding and understand pseudo code based learning. Here You will learn how to break a problem into steps, write pseudo code, and convert it into real code in any programming language like Java, Python, or C.',
+        link: '',
+        instructor: 'Software Developer',
+        onHold: true
     }
 ];
 
@@ -68,14 +80,17 @@ const ClassCard = ({ cls }) => {
     const { days, hours, minutes, seconds, isLive } = useCountdown(cls.dateTime);
 
     return (
-        <div className={`fc-list-card ${isLive ? 'fc-card-live' : ''}`}>
+        <div className={`fc-list-card ${isLive && !cls.onHold ? 'fc-card-live' : ''} ${cls.onHold ? 'fc-card-onhold' : ''}`}>
             <div className="fc-card-info">
                 {/* Header row: badge + duration */}
                 <div className="fc-card-header">
-                    {isLive
-                        ? <div className="live-badge live-now">🔴 Live Now</div>
-                        : <div className="live-badge">Live Scheduled</div>
-                    }
+                    {cls.onHold ? (
+                        <div className="live-badge onhold-badge">⏳ On Hold</div>
+                    ) : isLive ? (
+                        <div className="live-badge live-now">🔴 Live Now</div>
+                    ) : (
+                        <div className="live-badge">Live Scheduled</div>
+                    )}
                     <span className="fc-duration">⏳ {cls.duration}</span>
                 </div>
 
@@ -92,7 +107,7 @@ const ClassCard = ({ cls }) => {
 
                 {/* Date & instructor */}
                 <div className="fc-meta">
-                    <p className="fc-date">📅 {cls.dateLabel}</p>
+                    <p className="fc-date">📅 {cls.onHold ? 'Exact timing TBA' : cls.dateLabel}</p>
                     <div className="fc-instructor-profile">
                         <div className="instructor-avatar">👨‍🏫</div>
                         <div className="instructor-details">
@@ -114,8 +129,8 @@ const ClassCard = ({ cls }) => {
                     </div>
                 </div>
 
-                {/* Countdown — hidden once live */}
-                {!isLive && (
+                {/* Countdown — hidden once live or on hold */}
+                {!isLive && !cls.onHold && (
                     <div className="fc-countdown-block">
                         <p className="fc-countdown-label">⏰ Class starts in:</p>
                         <div className="fc-countdown-grid">
@@ -142,6 +157,12 @@ const ClassCard = ({ cls }) => {
                     </div>
                 )}
 
+                {cls.onHold && (
+                    <div className="fc-countdown-block fc-countdown-tba">
+                        <p className="fc-countdown-label" style={{ marginBottom: 0 }}>⏰ Schedule to be announced shortly. Stay tuned!</p>
+                    </div>
+                )}
+
                 <div className="fc-curriculum">
                     <h3>What you will learn:</h3>
                     <p>{cls.curriculum}</p>
@@ -150,7 +171,15 @@ const ClassCard = ({ cls }) => {
 
             {/* Join button — active only when live */}
             <div className="fc-card-action">
-                {isLive ? (
+                {cls.onHold ? (
+                    <button
+                        className="join-class-btn join-locked"
+                        disabled
+                        title="Exact timing is not mentioned because the class may be rescheduled or cancelled."
+                    >
+                        🔒 Join Meet (Timing TBA)
+                    </button>
+                ) : isLive ? (
                     <a
                         href={cls.link}
                         target="_blank"
