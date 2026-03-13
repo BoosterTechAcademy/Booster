@@ -7,7 +7,7 @@ import './WelcomeForm.css';
 // College name is case-insensitive. Reference ID is case-insensitive.
 // ─────────────────────────────────────────────────────────────────
 const ALLOWED_CREDENTIALS = [
-    { college: 'francis', referenceId: 'yogii' },
+    { college: 'STAFF', referenceId: 'JBADMINB' },
     { college: 'FXEC', referenceId: 'JMV2020FW' },
     { college: 'FXEC', referenceId: 'JB2028B' },
     { college: 'STJC', referenceId: 'JBSTJCB' },
@@ -53,7 +53,7 @@ const WelcomeForm = () => {
 
                 <form onSubmit={handleSubmit} className="welcome-form">
                     <div className="form-group">
-                        <label htmlFor="college">1. Which clg are you from?</label>
+                        <label htmlFor="college">1. Which college are you from?</label>
                         <input
                             type="text"
                             id="college"
