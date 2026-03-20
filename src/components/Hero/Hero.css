@@ -391,13 +391,30 @@ body.dark-theme .glow-orb {
 }
 
 @media (max-width: 600px) {
+    .hero-wrapper {
+        padding: calc(var(--navbar-height, 60px) + 20px) 15px 30px;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+        margin-bottom: 16px;
     }
 
     .hero-cta-group {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
     }
 
     .hero-btn {
@@ -405,11 +422,38 @@ body.dark-theme .glow-orb {
     }
 
     .hero-stats {
-        gap: 20px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .stat-item {
+        align-items: center;
     }
 
     .main-card {
-        width: 95%;
+        width: 100%;
+    }
+
+    .floating-card-1, .floating-card-2 {
+        display: none;
+    }
+
+    .hero-visual-section {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-code {
+        padding: 16px;
+    }
+    
+    .card-code pre {
+        font-size: 0.75rem;
     }
 }
