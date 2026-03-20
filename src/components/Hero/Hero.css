@@ -431,16 +431,45 @@ body.dark-theme .glow-orb {
         align-items: center;
     }
 
-    .main-card {
+    .hero-visual-section {
+        min-height: auto;
+        padding: 40px 0 20px 0;
+    }
+
+    .visual-graphic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         width: 100%;
     }
 
-    .floating-card-1, .floating-card-2 {
-        display: none;
+    .main-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 95%;
+        max-width: 400px;
+        animation: floatDirect 6s ease-in-out infinite;
     }
 
-    .hero-visual-section {
-        min-height: 300px;
+    .floating-card-1 {
+        display: flex;
+        top: -15px;
+        right: 0px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        z-index: 4;
+    }
+
+    .floating-card-2 {
+        display: flex;
+        bottom: -15px;
+        left: 0px;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        z-index: 4;
     }
 }
 
