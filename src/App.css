@@ -110,6 +110,44 @@ body.dark-theme .btn-primary {
   box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
 }
 
+.btn-primary-large {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary-large:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary-large:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+body.dark-theme .btn-primary-large {
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+body.dark-theme .btn-primary-large:disabled {
+  background-color: #3b82f6;
+  opacity: 0.6;
+}
+
 /* Layout Architecture */
 .app-container {
   display: flex;

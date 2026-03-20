@@ -48,6 +48,11 @@ const ProgramRegistration = () => {
         <div className="pr-wrapper">
             <div className="pr-container">
                 <header className="pr-header fade-in-up">
+                    <div className="header-top">
+                        <button className="btn-back-home" onClick={() => navigate('/community-hero')}>
+                            ← Back to Home
+                        </button>
+                    </div>
                     <h1>Register for <span className="blue-text">Learning Module</span></h1>
                     <p className="pr-subtitle">
                         Begin your journey with us. Fill out your details below to proceed to the payment step.
@@ -91,9 +96,6 @@ const ProgramRegistration = () => {
                         <div className="pr-form-actions">
                             <button type="submit" className="btn-primary-large pr-submit-btn" disabled={isSubmitting}>
                                 {isSubmitting ? 'Processing...' : 'Complete Registration'}
-                            </button>
-                            <button type="button" className="btn-secondary-outline back-btn" onClick={() => navigate('/community-hero')}>
-                                Back to Home
                             </button>
                         </div>
                     </form>

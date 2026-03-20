@@ -117,58 +117,132 @@
     font-weight: 600;
 }
 
-/* Contact Methods */
+/* Contact Methods Enhanced */
+.rs-contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.rs-contact-header h3 {
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.rs-contact-header p {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 12px;
-    background-color: #f8fafc;
+    gap: 1.2rem;
+    padding: 1.25rem;
+    border-radius: 16px;
+    background-color: #ffffff;
     border: 1px solid #e2e8f0;
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+.contact-item:hover::before {
+    transform: translateX(100%);
 }
 
 .contact-item:hover {
-    background-color: #eff6ff;
-    border-color: #bfdbfe;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Specific Card Styles */
+.email-card:hover { border-color: #bfdbfe; background-color: #f0f9ff; }
+.whatsapp-card:hover { border-color: #bbf7d0; background-color: #f0fdf4; }
+.phone-card:hover { border-color: #e9d5ff; background-color: #faf5ff; }
+
 .contact-icon {
-    font-size: 1.5rem;
-    background: #ffffff;
-    width: 40px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    z-index: 2;
 }
 
-.contact-item div {
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+.email-icon { background-color: #eff6ff; color: #3b82f6; }
+.whatsapp-icon { background-color: #dcfce7; color: #16a34a; }
+.phone-icon { background-color: #f3e8ff; color: #9333ea; }
+
+.contact-info {
     display: flex;
     flex-direction: column;
+    z-index: 2;
+    flex: 1;
 }
 
-.contact-item strong {
-    font-size: 1rem;
+.contact-info strong {
+    font-size: 1.05rem;
     color: #0f172a;
+    font-weight: 600;
 }
 
-.contact-item span {
-    font-size: 0.85rem;
+.contact-info span {
+    font-size: 0.9rem;
     color: #64748b;
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.contact-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: bold;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.contact-item:hover .contact-arrow {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .rs-actions {
