@@ -33,15 +33,16 @@ const upComingClasses = [
     // },
     {
         id: 3,
-        title: 'Think Like a Programmer (Logical Building + Pseudo Code)',
-        dateTime: '2026-04-01T10:00:00', // doesn't matter much since it's on hold
-        dateLabel: 'TBA',
-        duration: '2-3 hrs',
+        title: 'From Confusion to Clarity: Logical Thinking for Interviews',
+        dateTime: '2026-03-23T19:00:00', // doesn't matter much since it's on hold
+        dateLabel: 'March 23, 7:00 PM',
+        duration: '1 hr',
         language: 'Tamil',
-        curriculum: 'Learn how to think logically before coding and understand pseudo code based learning. Here You will learn how to break a problem into steps, write pseudo code, and convert it into real code in any programming language like Java, Python, or C.',
-        link: '',
-        instructor: 'Software Developer',
-        onHold: true
+        curriculum: "🚀 Want to stand out in interviews? It's not just coding — it's how you think! Join this free class to learn how to break problems, build logic, and answer smarter in interviews.",
+        link: 'https://meet.google.com/fnb-zhub-mpm',
+        instructor: 'SDE • digital.ai',
+        linkedIn: 'https://www.linkedin.com/in/mariaanthonyyokesh/',
+        onHold: false
     }
 ];
 
@@ -223,7 +224,7 @@ const FreeClass = () => {
                     <p className="fc-subtitle">
                         Experience our teaching methodology before committing.
                         We upload live class links <strong>1 day prior</strong>. Anyone can join directly!
-                        Sessions typically last for <strong>2-3 hours</strong>.
+                        Sessions typically last for <strong>1-2 hours</strong>.
                         <br />
                         <span className="medium-text">Medium of Instruction: Tamil / English</span>
                     </p>

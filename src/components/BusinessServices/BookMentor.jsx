@@ -57,7 +57,7 @@ const BookMentor = () => {
                         Get expert advice, resume reviews, and interview prep tailored just for you.
                     </p>
                     <div className="bm-pricing-card">
-                        <div className="pricing-tag">₹300</div>
+                        <div className="pricing-tag">₹100</div>
                         <div className="pricing-info">
                             <span>Duration: 20 min</span>
                             <span>Medium: Tamil / English</span>
