@@ -39,7 +39,7 @@ const upComingClasses = [
         duration: '1 hr',
         language: 'Tamil',
         curriculum: "🚀 Want to stand out in interviews? It's not just coding — it's how you think! Join this free class to learn how to break problems, build logic, and answer smarter in interviews.",
-        link: 'https://meet.google.com/fnb-zhub-mpm',
+        link: 'https://meet.google.com/fko-ybuo-yrj',
         instructor: 'SDE • digital.ai',
         linkedIn: 'https://www.linkedin.com/in/mariaanthonyyokesh/',
         onHold: false
