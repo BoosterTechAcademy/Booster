@@ -31,19 +31,19 @@ const upComingClasses = [
     //     instructor: 'DSA Expert',
     //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
     // },
-    {
-        id: 3,
-        title: 'From Confusion to Clarity: Logical Thinking for Interviews',
-        dateTime: '2026-03-23T19:00:00', // doesn't matter much since it's on hold
-        dateLabel: 'March 23, 7:00 PM',
-        duration: '1 hr',
-        language: 'Tamil',
-        curriculum: "🚀 Want to stand out in interviews? It's not just coding — it's how you think! Join this free class to learn how to break problems, build logic, and answer smarter in interviews.",
-        link: 'https://meet.google.com/fko-ybuo-yrj',
-        instructor: 'SDE • digital.ai',
-        linkedIn: 'https://www.linkedin.com/in/mariaanthonyyokesh/',
-        onHold: false
-    }
+    // {
+    //     id: 3,
+    //     title: 'From Confusion to Clarity: Logical Thinking for Interviews',
+    //     dateTime: '2026-03-23T19:00:00', // doesn't matter much since it's on hold
+    //     dateLabel: 'March 23, 7:00 PM',
+    //     duration: '1 hr',
+    //     language: 'Tamil',
+    //     curriculum: "🚀 Want to stand out in interviews? It's not just coding — it's how you think! Join this free class to learn how to break problems, build logic, and answer smarter in interviews.",
+    //     link: 'https://meet.google.com/fko-ybuo-yrj',
+    //     instructor: 'SDE • digital.ai',
+    //     linkedIn: 'https://www.linkedin.com/in/mariaanthonyyokesh/',
+    //     onHold: false
+    // }
 ];
 
 // ──────────────────────────────────────────────────────────────────────────
