@@ -19,18 +19,18 @@ const upComingClasses = [
     //     instructor: 'Senior Mentor',
     //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
     // },
-    {
-        id: 2,
-        title: 'Introduction to Dynamic Programming',
-        dateTime: '2026-03-16T10:00:00',
-        dateLabel: 'Sun 16 Mar, 10:00 AM IST',
-        duration: '2-3 hrs',
-        language: 'English',        // 'Tamil' | 'English' | 'Tamil / English'
-        curriculum: 'Break down complex recursion problems into simple DP tabular and memoization approaches.',
-        link: 'https://meet.google.com/syq-yhso-sfe',
-        instructor: 'DSA Expert',
-        linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
-    },
+    // {
+    //     id: 2,
+    //     title: 'Introduction to Dynamic Programming',
+    //     dateTime: '2026-03-16T10:00:00',
+    //     dateLabel: 'Sun 16 Mar, 10:00 AM IST',
+    //     duration: '2-3 hrs',
+    //     language: 'English',        // 'Tamil' | 'English' | 'Tamil / English'
+    //     curriculum: 'Break down complex recursion problems into simple DP tabular and memoization approaches.',
+    //     link: 'https://meet.google.com/syq-yhso-sfe',
+    //     instructor: 'DSA Expert',
+    //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-2'  // replace with actual URL
+    // },
     // {
     //     id: 3,
     //     title: 'From Confusion to Clarity: Logical Thinking for Interviews',
