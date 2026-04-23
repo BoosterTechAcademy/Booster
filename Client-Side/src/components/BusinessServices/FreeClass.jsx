@@ -7,18 +7,18 @@ import './FreeClass.css';
 // language  : shown as a tag on each card
 // ──────────────────────────────────────────────────────────────────────────
 const upComingClasses = [
-    // {
-    //     id: 1,
-    //     title: 'Mastering Pattern Printing Logic',
-    //     dateTime: '2026-03-10T19:00:00',
-    //     dateLabel: 'Mon 10 Mar, 7:00 PM IST',
-    //     duration: '2-3 hrs',
-    //     language: 'Tamil',          // 'Tamil' | 'English' | 'Tamil / English'
-    //     curriculum: 'Learn how to approach any pattern printing interview question using nested loops and mathematical logic (Pseudo code based).',
-    //     link: 'https://meet.google.com/syq-yhso-sfe',
-    //     instructor: 'Senior Mentor',
-    //     linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
-    // },
+    {
+        id: 1,
+        title: 'Mastering Pattern Printing Logic',
+        dateTime: '2026-03-10T19:00:00',
+        dateLabel: 'Mon 10 Mar, 7:00 PM IST',
+        duration: '2-3 hrs',
+        language: 'Tamil',          // 'Tamil' | 'English' | 'Tamil / English'
+        curriculum: 'Learn how to approach any pattern printing interview question using nested loops and mathematical logic (Pseudo code based).',
+        link: 'https://meet.google.com/syq-yhso-sfe',
+        instructor: 'Senior Mentor',
+        linkedIn: 'https://linkedin.com/in/your-mentor-profile-1'  // replace with actual URL
+    },
     // {
     //     id: 2,
     //     title: 'Introduction to Dynamic Programming',
